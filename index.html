@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<div class="header">
+
+    <img src="/images/logo.png" alt="awmstrips banner">
+    <hr>
+    <ul align=middle>
+        {% for item in site.data.navigation %}
+        <li>
+            <a href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <br><br>
+    Hi! 
+    Welcome to <b>AWMStrips.com</b>. <br> 
+    Here you'll read comic strips with thoughts and stories about society, life and me. <br><br>
+
+    But be careful, what you will read is enjoyable and fun :). <br><br>
+
+    If you are ready. 
+    All you have to do is start reading my last 
+        {% for post in site.categories.randomthought limit: 1%}
+            <a href = "{{ post.url }}">post</a>
+        {% endfor %}.<br><br>
+
+
+    Smile and Enjoy This Day! 
+
+    
+</div>
+<div class="header__subscription" align="middle">
+        {% include subscription.html %}
+    </div>
+
+
+
+    <div class="blog">
+    <hr>
+    <h2>New posts</h2>
+    <hr>
+    <ul>
+        {% for post in site.categories.randomthought limit: 3%}
+        <li>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+<div class="header__social_media" align="middle">
+<hr>
+        {% include social_media.html %}
+</div>
+

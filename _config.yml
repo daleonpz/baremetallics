@@ -1,0 +1,46 @@
+# Blog settings
+#permalink: /blog/:title
+permalink: /blog/:title
+
+# My variables
+name: AWM strips
+description: Comics about life, society and me. 
+url: https://awmstrips.com
+locale: en-US
+google_verification: null
+
+# Social Media
+twitter_username: awmstrips
+facebook_username: awmstrips-101895098046570
+instagram_username: awmstrips
+
+# Google services
+google_analytics: UA-147073620-3
+
+# File management
+include: [".htaccess"]
+exclude: ["README.md", "LICENSE"]
+
+gems:
+  - jekyll-seo-tag
+
+future: false
+
+# Sass
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+
+page_gen:
+  - data: books
+    name: key
+    dir: goto
+    extention: html

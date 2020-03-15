@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    {% if page.title %}
+    <title>{{ page.title }} - {{site.name}}</title>
+    {% else %}
+        <title>{{ site.name }}</title>
+    {% endif %}
+
+
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    {% if site.google_verification %}
+        <meta name="google-site-verification" content="{{ site.google_verify }}">
+    {% endif %}
+
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
+
+    <link rel="icon" href="/assets/img/favicon.png">
+    <link rel="stylesheet" 
+        href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+    {% seo %}
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <a href="{{ site.url }}/feed.xml"><img src="/images/RSS.png" align="middle" alt="rss feed"/></a>
+        {{ content }}
+    </div>
+
+    <div align=middle >
+        <a href = "{{ site.url }}/datenschutz">Datenschutz</a>
+        <a href = "{{ site.url }}/impressum">Impressum</a>
+    </div>
+
+</body>
+
+</html>

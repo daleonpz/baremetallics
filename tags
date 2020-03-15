@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+bindEvents	_site/assets/js/fun.js	/^    bindEvents: function() {$/;"	m	class:shadowSwag
+bindEvents	assets/js/fun.js	/^    bindEvents: function() {$/;"	m	class:shadowSwag
+cacheDom	_site/assets/js/fun.js	/^    cacheDom: function() {$/;"	m	class:shadowSwag
+cacheDom	_site/assets/js/main.js	/^    cacheDom: function() {$/;"	m	class:nowPlaying
+cacheDom	assets/js/fun.js	/^    cacheDom: function() {$/;"	m	class:shadowSwag
+cacheDom	assets/js/main.js	/^    cacheDom: function() {$/;"	m	class:nowPlaying
+calculateShadow	_site/assets/js/fun.js	/^    calculateShadow: function() {$/;"	m	class:shadowSwag
+calculateShadow	assets/js/fun.js	/^    calculateShadow: function() {$/;"	m	class:shadowSwag
+getJSON	_site/assets/js/main.js	/^    getJSON: function(path, success) {$/;"	m	class:nowPlaying
+getJSON	assets/js/main.js	/^    getJSON: function(path, success) {$/;"	m	class:nowPlaying
+getRecentTracksURL	_site/assets/js/main.js	/^    getRecentTracksURL: "http:\/\/ws.audioscrobbler.com\/2.0\/?method=user.getrecenttracks&user=getmicah&api_key=b4678efadfadbcf8882ed8e5432173b1&format=json",$/;"	p	class:nowPlaying
+getRecentTracksURL	assets/js/main.js	/^    getRecentTracksURL: "http:\/\/ws.audioscrobbler.com\/2.0\/?method=user.getrecenttracks&user=getmicah&api_key=b4678efadfadbcf8882ed8e5432173b1&format=json",$/;"	p	class:nowPlaying
+init	_site/assets/js/fun.js	/^    init: function() {$/;"	m	class:shadowSwag
+init	_site/assets/js/main.js	/^    init: function() {$/;"	m	class:nowPlaying
+init	assets/js/fun.js	/^    init: function() {$/;"	m	class:shadowSwag
+init	assets/js/main.js	/^    init: function() {$/;"	m	class:nowPlaying
+loadMusicInfo	_site/assets/js/main.js	/^    loadMusicInfo: function() {$/;"	m	class:nowPlaying
+loadMusicInfo	assets/js/main.js	/^    loadMusicInfo: function() {$/;"	m	class:nowPlaying
+logPageOrigin	_site/assets/js/fun.js	/^    logPageOrigin: function() {$/;"	m	class:shadowSwag
+logPageOrigin	assets/js/fun.js	/^    logPageOrigin: function() {$/;"	m	class:shadowSwag
+logPointerLocation	_site/assets/js/fun.js	/^    logPointerLocation: function() {$/;"	m	class:shadowSwag
+logPointerLocation	assets/js/fun.js	/^    logPointerLocation: function() {$/;"	m	class:shadowSwag
+originX	_site/assets/js/fun.js	/^    originX: null,$/;"	p	class:shadowSwag
+originX	assets/js/fun.js	/^    originX: null,$/;"	p	class:shadowSwag
+originY	_site/assets/js/fun.js	/^    originY: null,$/;"	p	class:shadowSwag
+originY	assets/js/fun.js	/^    originY: null,$/;"	p	class:shadowSwag
+pageHeight	_site/assets/js/fun.js	/^    pageHeight: null,$/;"	p	class:shadowSwag
+pageHeight	assets/js/fun.js	/^    pageHeight: null,$/;"	p	class:shadowSwag
+pageWidth	_site/assets/js/fun.js	/^    pageWidth: null,$/;"	p	class:shadowSwag
+pageWidth	assets/js/fun.js	/^    pageWidth: null,$/;"	p	class:shadowSwag
+pointerX	_site/assets/js/fun.js	/^    pointerX: 0,$/;"	p	class:shadowSwag
+pointerX	assets/js/fun.js	/^    pointerX: 0,$/;"	p	class:shadowSwag
+pointerY	_site/assets/js/fun.js	/^    pointerY: 0,$/;"	p	class:shadowSwag
+pointerY	assets/js/fun.js	/^    pointerY: 0,$/;"	p	class:shadowSwag
+recentTrack	_site/assets/js/main.js	/^    recentTrack: null,$/;"	p	class:nowPlaying
+recentTrack	assets/js/main.js	/^    recentTrack: null,$/;"	p	class:nowPlaying
+render	_site/assets/js/fun.js	/^    render: function() {$/;"	m	class:shadowSwag
+render	_site/assets/js/main.js	/^    render: function() {$/;"	m	class:nowPlaying
+render	assets/js/fun.js	/^    render: function() {$/;"	m	class:shadowSwag
+render	assets/js/main.js	/^    render: function() {$/;"	m	class:nowPlaying
+setMusicInfo	_site/assets/js/main.js	/^    setMusicInfo: function(data) {$/;"	m	class:nowPlaying
+setMusicInfo	assets/js/main.js	/^    setMusicInfo: function(data) {$/;"	m	class:nowPlaying
+setPageOrigin	_site/assets/js/fun.js	/^    setPageOrigin: function() {$/;"	m	class:shadowSwag
+setPageOrigin	assets/js/fun.js	/^    setPageOrigin: function() {$/;"	m	class:shadowSwag
+setPageSize	_site/assets/js/fun.js	/^    setPageSize: function() {$/;"	m	class:shadowSwag
+setPageSize	assets/js/fun.js	/^    setPageSize: function() {$/;"	m	class:shadowSwag
+setPointerLocation	_site/assets/js/fun.js	/^    setPointerLocation: function(event) {$/;"	m	class:shadowSwag
+setPointerLocation	assets/js/fun.js	/^    setPointerLocation: function(event) {$/;"	m	class:shadowSwag
+shadowBlur	_site/assets/js/fun.js	/^    shadowBlur: '8px',$/;"	p	class:shadowSwag
+shadowBlur	assets/js/fun.js	/^    shadowBlur: '8px',$/;"	p	class:shadowSwag
+shadowColor	_site/assets/js/fun.js	/^    shadowColor: 'rgba(0, 0, 0, 0.2)',$/;"	p	class:shadowSwag
+shadowColor	assets/js/fun.js	/^    shadowColor: 'rgba(0, 0, 0, 0.2)',$/;"	p	class:shadowSwag
+shadowX	_site/assets/js/fun.js	/^    shadowX: null,$/;"	p	class:shadowSwag
+shadowX	assets/js/fun.js	/^    shadowX: null,$/;"	p	class:shadowSwag
+shadowY	_site/assets/js/fun.js	/^    shadowY: null,$/;"	p	class:shadowSwag
+shadowY	assets/js/fun.js	/^    shadowY: null,$/;"	p	class:shadowSwag
+xhr.onreadystatechange	_site/assets/js/main.js	/^        xhr.onreadystatechange = function()$/;"	f
+xhr.onreadystatechange	assets/js/main.js	/^        xhr.onreadystatechange = function()$/;"	f
