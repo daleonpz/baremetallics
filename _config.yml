@@ -3,19 +3,19 @@
 permalink: /blog/:title
 
 # My variables
-name: AWM strips
+name: Baremetallics
 description: Comics about life, society and me. 
-url: https://awmstrips.com
+url: https://baremetallics.com
 locale: en-US
 google_verification: null
 
 # Social Media
 twitter_username: awmstrips
 facebook_username: awmstrips-101895098046570
-instagram_username: awmstrips
+instagram_username: baremetallics
 
 # Google services
-google_analytics: UA-147073620-3
+google_analytics: UA-147073620-4
 
 # File management
 include: [".htaccess"]
