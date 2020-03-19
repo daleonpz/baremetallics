@@ -4,14 +4,14 @@ permalink: /blog/:title
 
 # My variables
 name: Baremetallics
-description: Comics about life, society and me. 
+description: Learning this thing called  embedded systems
 url: https://baremetallics.com
 locale: en-US
 google_verification: null
 
 # Social Media
-twitter_username: awmstrips
-facebook_username: awmstrips-101895098046570
+# twitter_username: awmstrips
+facebook_username: Baremetallics-113402556954726 
 instagram_username: baremetallics
 
 # Google services
