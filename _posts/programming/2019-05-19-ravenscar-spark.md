@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Embedded Ada Journey Extras - Ravenscar/SPARK
+title: Embedded Ada Journey Extras - Ravenscar / SPARK
 category: programming
 ---
 
