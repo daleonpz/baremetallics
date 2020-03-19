@@ -16,13 +16,66 @@ layout: default
 
     <br><br>
     Hi! 
-    Welcome to <b>AWMStrips.com</b>. <br> 
-    Here you'll read comic strips with thoughts and stories about society, life and me. <br><br>
+    <br> <br>
+    Welcome to <b>Baremetallics.com</b>.
+    <br> <br>
+    We, just like you, want to learn more about embedded systems and keep mastering our craft.
+    <br> <br>
+    But, over months or years, we faced the frustration of reading not at all easy to understand tutorials or books.<br><br>
+    Just to mention some...
+    <br><br>
 
-    But be careful, what you will read is enjoyable and fun :). <br><br>
+    <h3>Problem 1: Abuse of passive voice:</h3><br>
+    Please read the following sentences.<br><br>
+    1) "This feature <b>CAN BE USED</b> to read the contents of a characteristic value by using its handle."
+    <br>
+    2) "With this feature <b>you can use</b> characteristic's handle to read its the contents."
+    <br><br>
+    Which one was easier for you to understand?
+    <br><br>
+    The number 2, right? <br><br>
 
-    If you are ready. 
-    All you have to do is start reading my last 
+    The reason is that in the passive voice we aren't sure who or what is doing the action. That's why it's easier to understand sentences in the active voice.
+    <br><br>
+
+
+    <h3>Problem 2: Knowledge gaps:</h3><br>
+    Imagine this situation. You were installing an update on your laptop but suddenly your battery run out of battery and your laptop shut down.
+    <br><br>
+    When you turned it on you read the following message:<br>
+    <code>error: file /boot/vmlinuz-5.1-x86_64 not found</code><br><br>
+
+    The next thing you do is google the error. You ended up one forum that tells you<br><br>
+    <center>You have to chroot your system and from there you mount your kernel image"  <br>
+        -- somebody in manjaro forum -- </center>
+
+    <br><br>
+
+    It's a good answer. But you are still not sure what you need to do because you don't know what <code>chroot</code> is. Or you don't know how to find your kernel image or how to mount it.
+    <br><br> 
+    
+    And... let's be honest <br><br>
+    When we google our problem we expect a step-by-step or how-to answer. 
+    <br><br>
+    For example, it would have been cooler if that guy would have written a summary of this 
+    <a href="https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/">post</a> or at least added also the link to it. 
+    <br><br>
+
+
+    <center><h2>That's why we created BAREMETALLICS</h2></center>
+    We want to share with you everything we learn about embedded systems.<br><br>
+    But we don't you to waste time trying to decipher what we want to say. Instead, we want you to learn as much as possible and enjoy the process.
+    <br><br>
+
+    So... <br><br>
+    <b>Be part of this community!</b><br> <br>
+    <b>Share the knowledge.</b><br><br>
+    Or if you notice errors in our posts, please let us know ...  We want also to learn from you! <br><br>
+ 
+    Send us a mail to <a href="mailto:support@baremetallics.com">support@baremetallics.com</a><br><br>
+
+    If you are ready. <br>
+    All you have to do is start reading our last 
         {% for post in site.categories.randomthought limit: 1%}
             <a href = "{{ post.url }}">post</a>
         {% endfor %}.<br><br>
@@ -33,7 +86,6 @@ layout: default
     
 </div>
 <div class="header__subscription" align="middle">
-        {% include subscription.html %}
     </div>
 
 
@@ -43,7 +95,7 @@ layout: default
     <h2>New posts</h2>
     <hr>
     <ul>
-        {% for post in site.categories.randomthought limit: 3%}
+        {% for post in site.categories.programming limit: 3%}
         <li>
             <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
