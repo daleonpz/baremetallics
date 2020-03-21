@@ -5,18 +5,19 @@ description: Embedded system posts
 ---
 
 <div class="header">
+
+    <a class="header__home" href="/">&lt;-- home</a>
+
     <hr>
     <h1 align=middle> Posts</h1>
     <h2 align=middle> Learning this thing called </h2>
     <h2 align=middle> Embedded Systems</h2>
     <hr>    
-    <ul align=middle>
-        {% for item in site.data.navigation %}
-        <li>
-            <a href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+   
+    <div class="header__navigation" align="middle">
+        {% include navigation.html %}
+    </div>
+     
 </div>
 
 <div class="blog">
