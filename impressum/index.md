@@ -14,7 +14,7 @@ Daniel Paredes merkt an, grundsätzlich für nichts zu haften, wofür er nicht v
 Feltenstraße 54  
 50827 Köln
 
-**eMail**: support@awmstrips.com  
+**eMail**: support@baremetallics.com  
 **Tel**:  +49 0176 45847504  
 **Steuernummer**: 46/745/430/124 
 
