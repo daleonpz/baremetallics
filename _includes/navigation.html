@@ -1,0 +1,9 @@
+<div id="navigation_items" align="center">
+        {% for item in site.data.navigation %}
+            <a href="{{ item.url }}">
+            <input type="submit" value="{{ item.title }}">
+            </a>
+        {% endfor %}
+</div>
+
+
