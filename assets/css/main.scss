@@ -347,7 +347,6 @@ ul.share-buttons .sr-only{
   overflow: hidden;
 }
 
-
 #mailchimp {
 	background: $color_hire_shadow;
 	color: $color_black;
@@ -373,8 +372,36 @@ ul.share-buttons .sr-only{
 			background: $color_black;
 			color: $color_white;
 			cursor: pointer;
-			width: 45%;
+			width: 60%;
 			padding: 8px 0;
 
 		}
-			#mailchimp input[type="submit"]:hover { color: #F2C94C }
+                #mailchimp input[type="submit"]:hover { color: #F2C94C }
+
+#navigation_items{
+	background: $color_white;
+	color: $color_black;
+}
+	#navigation_items input {
+		border: medium none;
+                color: gray;
+                font-family: 'Inconsolata';
+                font-size: 0.7em;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin-bottom: 0px;
+                padding: 8px 10px;
+                width: 300px;
+		border-radius: 5px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+	}
+		#navigation_items input[type="submit"] {
+			background: $color_black;
+			color: $color_white;
+			cursor: pointer;
+			width: 20%;
+			padding: 2px 0;
+
+		}
+                #navigation_items input[type="submit"]:hover { color: #F2C94C }
