@@ -1,0 +1,41 @@
+---
+layout: default
+title: Books recommendations 
+description: Embedded systems related books recommendations
+---
+
+<div class="header">
+
+    <a class="header__home" href="/">&lt;-- home</a>
+
+    <hr>
+    <h1 align=middle> Book List</h1>
+    <h2 align=middle> Improve your craft</h2>
+    <h2 align=middle> with this list</h2>
+    <hr>    
+   
+    <div class="header__navigation" align="middle">
+        {% include navigation.html %}
+    </div>
+     
+</div>
+
+<div class="book_list">
+    <div id="book_list" >
+        {% for item in site.data.books %}
+            <p>
+                <a href="{{ item.destination }}">
+                    <img src="{{ item.image }}" alt="{{item.title}}">
+                </a>
+                <a href="{{ item.destination }}">
+                    <b>{{ item.title }}</b>
+                </a>
+                <br>
+                <b> {{ item.tag }} </b>
+                <br>
+                <li> {{ item.description }} </li>
+                <br><br>
+            </p>
+        {% endfor %}
+    </div>
+</div>
