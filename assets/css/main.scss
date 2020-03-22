@@ -153,6 +153,28 @@ blockquote {
 	}
 }
 
+.book_list{
+	padding-bottom: 30px;
+	h1 {
+		font-size: 1.4em;
+		margin-bottom: 5px;
+	}
+        h2 {
+                font-weight: bold;
+                font-size: 1.4em;
+                text-align: center;
+		margin-bottom: 5px;
+	}
+        img {
+                float: left;
+                margin-right:8px;
+        }
+        b {
+                font-weight: bold;
+		margin-bottom: 0;
+        }
+}
+
 .music {
 	padding-bottom: 30px;
 	h1 {
@@ -405,3 +427,6 @@ ul.share-buttons .sr-only{
 
 		}
                 #navigation_items input[type="submit"]:hover { color: #F2C94C }
+
+
+
