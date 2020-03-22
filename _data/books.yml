@@ -1,6 +1,11 @@
-- title: A cool page
-  key: money-master-the-game
-  destination: https://amzn.to/2KHkJaA
-- title: A test page
-  key: intelligent-investor
-  destination: https://amzn.to/2KDswWJ
+- title: Computer Systems A Programmer's Perspective 
+  key: computer-systems-3er-ed
+  destination: https://amzn.to/2vJNjmY 
+- title: C Programming Language
+  key: c-programming-language-2nd-ed
+  destination: https://amzn.to/2UrLpzD
+- title: Expert C Programming Deep C Secrets
+  key: expert-c-programming-deep-c-secrets
+  destination: https://amzn.to/2wjMBxa
+
+
