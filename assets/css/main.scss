@@ -369,6 +369,7 @@ ul.share-buttons .sr-only{
   overflow: hidden;
 }
 
+
 #mailchimp {
 	background: $color_hire_shadow;
 	color: $color_black;
@@ -429,4 +430,20 @@ ul.share-buttons .sr-only{
                 #navigation_items input[type="submit"]:hover { color: #F2C94C }
 
 
+#nav_items{
+	background: $color_black;
+        background-size: auto;
+    }
+    #nav_items a {
+          color: $color_white;
+          background-size: auto;
+          text-decoration: none;
+          font-weight: bold;
+          margin-right:8px;
+          &:hover {
+                 text-decoration: none;
+                 background: $color_black;
+                 color: #F2C94C;
+          }
+    } 
 
