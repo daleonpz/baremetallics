@@ -67,7 +67,7 @@ blockquote {
 .header {
 	justify-content: space-between;
 	align-items: baseline;
-	padding-bottom: 50px;
+	padding-bottom: 10px;
 	@media screen and (max-width: $br) {
 		display: block;
 	}

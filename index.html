@@ -3,50 +3,30 @@ layout: default
 ---
 
 <div class="header">
-
-    <img src="/images/logo.png" alt="baremetallics banner">
-    <hr>
-    
     <div class="header__navigation" align="middle">
         {% include navigation.html %}
     </div>
-    
-    
-    <br><br>
-    Hi! 
-    <br> <br>
-    We, just like you, want to learn more about embedded systems and keep mastering our craft.
-    <br> <br>
-    But, over months or years, we faced the frustration of reading not at all easy to understand tutorials or books.<br><br>
-
-    <center><h2>That's why we created BAREMETALLICS</h2></center>
-    We want to share with you everything what we learn about embedded systems.<br><br>
-    But we don't you to waste time trying to decipher what tutorials or guides are trying to explain. Instead, we want you to learn as much as possible and enjoy the process.
-    <br><br>
-
-    So... <br><br>
-    <b>Be part of this community!</b><br> <br>
-    <b>Share the knowledge.</b><br><br>
-    If you notice mistakes in our posts, please let us know...  You are part of this community! <br><br>
- 
-    Send us a mail to <a href="mailto:support@baremetallics.com">support@baremetallics.com</a> or create a pull request on <a href="https://github.com/daleonpz/baremetallics">Github.</a> <br><br>
-
-    If you are ready. <br>
-    All you have to do is start reading our last 
-        {% for post in site.categories.programming limit: 1%}
-            <a href = "{{ post.url }}">post</a>
-        {% endfor %}.<br><br>
-
-
-    Smile and Enjoy This Day! 
-
-    
+    <img src="/images/logo.png" alt="baremetallics banner">
 </div>
-    <div class="header__subscription" align="middle">
-        {% include  subscription.html %}
+<div class="header__subscription" align="middle">
+    {% include  subscription.html %}
+</div>
+
+<div class="header">
+   
+    <center><h2>Be Part of This Community!</h2></center>
+    We, just like you, want to learn more about embedded systems and keep mastering our craft.
+    <br><br>
+    So, if you're also tired of wasting time deciphering what tutorials or guides are trying to explain. 
+    <br><br>
+
+    <b>Take Action!</b><br> <br>
+    <b>Be Part of Baremetallics.</b><br><br>
+ 
+    Send us a mail to <a href="mailto:support@baremetallics.com">support@baremetallics.com</a> to find out more about how to collaborate!
     </div>
 
-    <div class="blog">
+<div class="blog">
     <hr>
     <h2>New posts</h2>
     <hr>
@@ -61,6 +41,14 @@ layout: default
 
 
 <hr>
+
+<div class="header">
+
+    If you notice mistakes in our posts, please let us know...  You are part of this community! <br><br>
+ 
+    Send us a mail to <a href="mailto:support@baremetallics.com">support@baremetallics.com</a> or create a pull request on <a href="https://github.com/daleonpz/baremetallics">Github.</a> <br><br>
+
+</div>
 
 <div class="header__social_media" align="middle">
         {% include social_media.html %}
