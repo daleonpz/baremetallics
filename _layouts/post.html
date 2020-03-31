@@ -4,13 +4,6 @@ layout: default
 
 <div class="post">
   <link href="/css/syntax.css" rel="stylesheet">
-	<div class="post__back">
-        <a class="about__back" href="/{{ page.category }}" >&lt; more posts</a>
-
-    </div>
-    <div class="post__shared_buttons" align="right">
-        {% include share_buttons.html %}
-    </div>
     <hr>
     <div class="post__title">
     	<h1>{{ page.title }}</h1>
@@ -23,6 +16,11 @@ layout: default
     <div class="post__meta">
     	<p>{{ tags_content }}</p>
     </div>
+    
+    <div class="post__shared_buttons" align="right">
+        {% include share_buttons.html %}
+    </div>
+
     <div class="post__content"?>
         {{ content }}
     </div>
