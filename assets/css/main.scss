@@ -55,7 +55,7 @@ blockquote {
 }
 
 .wrapper {
-	max-width: 600px;
+	max-width: 800px;
 	margin: auto;
 	padding: 60px 30px 60px 30px;
 	@media screen and (max-width: $br) {
@@ -73,70 +73,87 @@ blockquote {
 	}
 	h1 {
 		font-size: 3.5em;
-                font-weight: bold;
-		margin-bottom: 0;
-	}
-        h2 {
-                font-size: 1.5em;
-		margin-bottom: 0;
-                font-weight: bold;
-        }
-        h3 {
-                font-size: 1.2em;
-                font-weight: bold;
+        @media screen and (max-width: $br) {
+                font-size: 2.0em;
+            }
+        font-weight: bold;
 		margin-bottom: 0;
         }
-        b {
-                font-weight: bold;
+    h2 {
+        font-size: 1.5em;
+		@media screen and (max-width: $br) {
+                font-size: 1.0em;
+            }
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 2.2em;
+        @media screen and (max-width: $br) {
+                font-size: 1.0em;
+            }
+        font-weight: bold;
 		margin-bottom: 0;
+    }
+    p {
+        font-size: 1em;
+        @media screen and (max-width: $br) {
+            font-size: 0.8em;
         }
-        img {
-                margin-top: 10px;
-                margin-bottom: 10px;
-                margin: auto;
-                width: 100%;
-        }
-        i {
-                font-style: italic;
-        }
+        line-height: 110%;
+        margin-bottom: 20px;
+    }
+    b {
+        font-weight: bold;
+		margin-bottom: 0;
+    }
+    img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin: auto;
+        width: 100%;
+    }
+    i {
+        font-style: italic;
+    }
 	center {
-                margin: auto;
-                width: 60%;
-                padding: 10px;
-                font-weight: bold;
-        }
-        ul {
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+        font-weight: bold;
+    }
+    ul {
 		margin-top: 10px;
-		li {
-			display: inline;
-			padding: 0;
-			padding-left: 5px;
-		}
-	}
-        code {
-                padding: 3px;
-                font-size: 0.9em;
-                border-radius: 3px;
-                background: $color-grey;
-            }
-            .highlight {
-                margin: 10px;
-                margin-bottom: 15px;
-                padding: 10px;
-                line-height: 1.2;
-                border-radius: 3px;
-                background: $color-grey;
-                overflow-y: auto;
-                code {
-                        color: $color-black;
-                        background: none;
-                    }
-            }
-            .codebreak {
-                margin: 15px;
-                border: 0;
-                border-bottom: 1px dashed $color-black;
+        li {
+            display: inline;
+            padding: 0;
+            padding-left: 5px;
         }
+    }
+    code {
+            padding: 3px;
+            font-size: 0.9em;
+            border-radius: 3px;
+            background: $color-grey;
+        }
+        .highlight {
+            margin: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            line-height: 1.2;
+            border-radius: 3px;
+            background: $color-grey;
+            overflow-y: auto;
+            code {
+                    color: $color-black;
+                    background: none;
+                }
+            }
+        .codebreak {
+            margin: 15px;
+            border: 0;
+            border-bottom: 1px dashed $color-black;
+            }
 }
 
 .blog {
@@ -151,6 +168,12 @@ blockquote {
                 text-align: center;
 		margin-bottom: 5px;
 	}
+    li{
+        font-size: 1.0em;
+        @media screen and (max-width: $br) {
+                    font-size: 0.7em;
+        }
+    }
 }
 
 .book_list{
@@ -159,20 +182,46 @@ blockquote {
 		font-size: 1.4em;
 		margin-bottom: 5px;
 	}
-        h2 {
-                font-weight: bold;
-                font-size: 1.4em;
-                text-align: center;
+    h2 {
+        font-weight: bold;
+        font-size: 1.4em;
+        @media screen and (max-width: $br) {
+                font-size: 0.9em;
+        }
+        text-align: center;
 		margin-bottom: 5px;
 	}
-        img {
-                float: left;
-                margin-right:8px;
+    img {
+        float: left;
+        margin-right:8px;
+    }
+    b {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    li{
+        font-size: 1.0em;
+        @media screen and (max-width: $br) {
+                    font-size: 0.7em;
+            }
+    }
+    a {
+        padding-bottom: 1px;
+        &:hover {
+            background-color: $color-grey;
+            text-decoration: none;
         }
-        b {
-                font-weight: bold;
-		margin-bottom: 0;
-        }
+        font-size: 1.2em;
+        @media screen and (max-width: $br) {
+                    font-size: 1.0em;
+            }
+    }
+    b{
+        font-size: 0.9em;
+        @media screen and (max-width: $br) {
+                    font-size: 0.7em;
+            }
+    }
 }
 
 .music {
@@ -201,11 +250,14 @@ blockquote {
 		h1 {
 			display: inline-block;
 			font-size: 3.0em;
+            @media screen and (max-width: $br) {
+                font-size: 2.0em;
+            }
 			font-weight: 700;
 			padding-right: 10px;
 			padding-bottom: 2px;
 			text-decoration: none;
-                        overflow-wrap: break-word;                       
+            overflow-wrap: break-word;                       
 		}
 	}
 	&__date {
@@ -216,7 +268,6 @@ blockquote {
 	}
 	&__meta {
 		p {
-
 		}
 	}
 	&__content {
@@ -229,12 +280,18 @@ blockquote {
 		}
 		h2 {
 			font-size: 1.4em;
-			font-weight: 700;
+			@media screen and (max-width: $br) {
+                font-size: 1.1em;
+            }
+            font-weight: 700;
 			margin-top: 25px;
 			margin-bottom: 5px;
 		}
 		p {
 			font-size: 1em;
+			@media screen and (max-width: $br) {
+                font-size: 0.8em;
+            }
 			line-height: 110%;
 			margin-bottom: 20px;
 		}
@@ -254,6 +311,9 @@ blockquote {
 		}
 		ul {
 			font-size: 1em;
+			@media screen and (max-width: $br) {
+                font-size: 0.8em;
+            }
 			list-style: circle;
 			margin-left: 30px;
 			margin-top: -10px;
@@ -287,7 +347,10 @@ blockquote {
                 code {
 			padding: 3px;
 			font-size: 0.9em;
-			border-radius: 3px;
+			@media screen and (max-width: $br) {
+                font-size: 0.7em;
+            }
+            border-radius: 3px;
 			background: $color-grey;
 		}
 		.highlight {
@@ -374,17 +437,29 @@ ul.share-buttons .sr-only{
 	background: $color_hire_shadow;
 	color: $color_black;
 	padding: 20px 15px;
+    @media screen and (max-width: $br) {
+        padding: 10px 5px;
+    }
+    .short-text { display: none; }
+
+    @media screen and (max-width: $br) {
+        .short-text { display: inline-block; }
+        .full-text { display: none; }
+    }
 }
 	#mailchimp input {
-		 border: medium none;
-                color: gray;
-                font-family: 'Inconsolata';
-                font-size: 20px;
-                font-weight: bold;
-                letter-spacing: 1px;
-                margin-bottom: 10px;
-                padding: 8px 10px;
-                width: 300px;
+        border: medium none;
+        color: gray;
+        font-family: 'Inconsolata';
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        @media screen and (max-width: $br) {
+            margin-bottom: 0px;
+        }   
+         padding: 8px 10px;
+        width: 300px;
 		border-radius: 20px;
 		-moz-border-radius: 20px;
 		-webkit-border-radius: 20px;
@@ -399,7 +474,7 @@ ul.share-buttons .sr-only{
 			padding: 8px 0;
 
 		}
-                #mailchimp input[type="submit"]:hover { color: #F2C94C }
+#mailchimp input[type="submit"]:hover { color: #F2C94C }
 
 #navigation_items{
 	background: $color_white;
