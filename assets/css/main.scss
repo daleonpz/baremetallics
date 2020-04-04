@@ -505,14 +505,15 @@ ul.share-buttons .sr-only{
                 #navigation_items input[type="submit"]:hover { color: #F2C94C }
 
 
-#nav_items{
+.nav_items{
 	background: $color_black;
         background-size: auto;
     }
-    #nav_items a {
+    .nav_items a {
           color: $color_white;
           background-size: auto;
           text-decoration: none;
+          font-size: 1.5em;
           font-weight: bold;
           margin-right:8px;
           &:hover {
@@ -520,5 +521,39 @@ ul.share-buttons .sr-only{
                  background: $color_black;
                  color: #F2C94C;
           }
+
     } 
+
+.nav_items .icon {
+  display: none;
+} 
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: $br ) {
+  .nav_items a:not(:first-child) {display: none;}
+  .nav_items a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the nav_items with JavaScript when the user clicks on the icon. This class makes the nav_items look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: $br) {
+  .nav_items.responsive {position: relative;}
+  .nav_items.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav_items.responsive a {
+    float: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+    .nav_items.responsive  a:hover {
+                 text-decoration: none;
+                 background: $color_black;
+                 color: #F2C94C;
+          }
+}
 
