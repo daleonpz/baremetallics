@@ -33,6 +33,29 @@
 
     <div class="wrapper">
         <a href="{{ site.url }}/feed.xml"><img src="/images/RSS.png" align="middle" alt="rss feed"/></a>
+        
+
+        <div id="search-icon" align="right">
+            <a href="{{ site.url }}/search">
+                 Search
+                 <img alt="Qries" src="/assets/img/search-icon.png" width=25" >
+            </a>
+        </div>
+
+
+        <script type='text/javascript'>
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+            var x = document.getElementById("search-icon");
+            
+            if ( path == '/programming/'){
+                x.style.display = 'block';
+            }
+            else{
+                x.style.display = 'none';
+            }
+        </script>
+
         <div class="wrapper__navigation" align="middle">
             {% include navigation.html %}
         </div>

@@ -4,6 +4,7 @@ title: Posts
 description: Embedded system posts
 ---
 
+
 <div class="header">
     <hr>
     <h1 align=middle> Posts</h1>
@@ -12,12 +13,10 @@ description: Embedded system posts
     <hr>    
 </div>
 
-<div class="nav_items" id="nav_bar" align="center">
-    <a href="{{ site.url }}/search">
-                Search
-    </a>
-
+<div class="header__subscription" align="middle">
+    {% include  subscription.html %}
 </div>
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -33,9 +32,7 @@ description: Embedded system posts
     </ul>
 </div>
 
-<div  align="middle">
-        {% include  subscription.html %}
-</div>
+
 <hr>
 
 <div align="middle">
