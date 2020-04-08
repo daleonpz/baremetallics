@@ -26,6 +26,11 @@ gems:
 
 future: false
 
+plugins: [jekyll-paginate]
+
+paginate: 10
+paginate_path: "/programming/page/:num/"
+
 # Sass
 sass:
   style: :compressed

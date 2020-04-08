@@ -47,8 +47,11 @@
             var path = window.location.pathname;
             var page = path.split("/").pop();
             var x = document.getElementById("search-icon");
-            
-            if ( path == '/programming/'){
+            var re = new RegExp("^/programming/.*$");
+
+            console.log(path)
+            console.log(re.test(path))
+            if ( re.test(path) ){
                 x.style.display = 'block';
             }
             else{
