@@ -21,7 +21,7 @@ And how can they [support us](https://www.patreon.com/baremetallics).
 You can also write a post or tutorial. There are two ways to do it:
 
 1. Send us an email:
-Write a post in Markdown format and send us by mail to [support@baremetallics.com](support@baremetallics.com)
+Write a post in Markdown format and send us by mail to [support@baremetallics.com](support@baremetallics.com).
 You can find the template with instructions [here](https://raw.githubusercontent.com/daleonpz/baremetallics/master/_drafts/2017-02-04-getting-started.md).
 
 2. Create a pull request on Github.
@@ -33,10 +33,10 @@ Right now, there are no web-developers or graphic/UI-designers in our team.
 Some of us have software development and marketing experience.
 We try our best to give you the best experience.
 
-**If you have ideas to improve this site.
-We want to hear from you.
+**If you have ideas to improve this site.**
+**We want to hear from you.**
 
-Don't be shy. Take Part**
+**Don't be shy. Take Part**
 
 We are sure that the comunnity will really appreciate it ;).
 
