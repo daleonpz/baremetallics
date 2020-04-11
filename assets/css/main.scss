@@ -46,12 +46,16 @@ ul {
 	}
 }
 blockquote {
-  color: $color-black;
-  border-left: 4px solid $color-black;
-  padding-left: 15px;
-  font-size: 18px;
-  letter-spacing: -1px;
-  font-style: italic;
+    color: $color-black;
+    padding-left: 15px;
+    font-size: 1.5em;
+    @media screen and (max-width: $br) {
+                            font-size: 1.1em;
+                        }
+    letter-spacing: -1px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
 }
 
 .wrapper {
@@ -289,8 +293,8 @@ blockquote {
 		p {
 			font-size: 1em;
 			@media screen and (max-width: $br) {
-                font-size: 0.8em;
-            }
+                            font-size: 0.8em;
+                        }
 			line-height: 110%;
 			margin-bottom: 20px;
 		}
