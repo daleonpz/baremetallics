@@ -10,17 +10,17 @@ To make your blog post, just create a new markdown file in the `_posts/programmi
 # General Notes
 
 - **Focus only on one topic**. One idea. We try to keep our posts short but well explained.  
-    For example, if you want to talk about compilers. Some posts would be "what's a compiler?", "why we need a different compile for ARM?", "Compliing using CMake". 
-- **Think on your reader**. Give a clear and concise idea. **Make it easy to learn**. 
+    For example, if you want to talk about compilers. Some posts would be "what's a compiler?", "why we need a different compile for ARM?", "Compiling using CMake". 
+- **Think about your reader**. Give a clear and concise idea. **Make it easy to learn**. 
 - **Avoid** as much as possible **passive voice** when you write.
-- **Reduce the amount of adverbs**. This code runs _silenlty_ in the background.  _silently_ doesn't add any new information. Removing it won't affect the meaning of the sentence. 
+- **Reduce the number of adverbs**. This code runs _silently_ in the background.  _silently_ doesn't add any new information. Removing it won't affect the meaning of the sentence. 
 - **Keep your paragraphs short**. As well as your sentences. Paragraphs no longer than 3-4 sentences.  
-- **Keep it casual, but well explained**. Avoid as much as possbile complicated words. Instead of _retrieve_ use _get_. Instead of _Nevertheless_ use _but_. I think you got the idea. We recommended this [book](https://amzn.to/2XtlRoX) if you want to improve your writing. 
+- **Keep it casual, but well explained**. Avoid as much as possible complicated words. Instead of _retrieve_ use _get_. Instead of _Nevertheless_ use _but_. I think you got the idea. We recommended this [book](https://amzn.to/2XtlRoX) if you want to improve your writing. 
 - Use tools like [Grammarly](https://www.grammarly.com/) and [Hemingwayapp.com](http://www.hemingwayapp.com/) to check your grammar and keep your writing simple.
-- **Make your own pictures**. Google drawings is a simple and free solution. The font we use is **Comfortaa Bold**.
+- **Make your own pictures**. Google Drawings is a simple and free solution. The font we use is **Comfortaa Bold**.
 - **Add** always a **conclusion or summary**. 
 
-Here are some examples on how to format your Markdown file.
+Here are some examples of how to format your Markdown file.
 
 # This is a header
 
