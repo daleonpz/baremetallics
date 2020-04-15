@@ -37,6 +37,10 @@ sass:
   sass_dir: _sass
 
 
+# Talkyard - Comments
+talkyard_server_url: https://comments-for-baremetallics-com.talkyard.net
+talkyard_script_url: https://c1.ty-cdn.net/-/talkyard-comments.min.js
+
 # Markdown
 markdown: kramdown
 kramdown:
