@@ -6,7 +6,7 @@ description: Test-Driven Development. Breaking third-party dependencies
 ---
 
 This is the fourth post in our Test-Driven Development journey. 
-At the beginning of the project, nothing is well-defined.
+At the beginning of a project, nothing is well-defined.
 Your team is not sure about the microprocessor or communication protocol.
 But you still need to start with the development.  
 
@@ -17,27 +17,29 @@ We already talked about [how to use TDD to break hardware dependency]({% post_ur
 
 The concepts you'll read here are from the book [Test-driven development for embedded C](https://amzn.to/2wsWFnp).
 We recommend you read it. 
-You can find great books in our curated [booklist]({{site.baseurl}}/books).
+And you can find more great books in our curated [booklist]({{site.baseurl}}/books).
 
 # What are third-party libraries?
 Nowadays is common to use libraries or code from external sources. Github. BitBucket. Software development kits (SDKs).  Just to mention some. 
 These libraries are known as **third-party libraries**.
 
-> Don't Reinvent The Wheel. Use third-party libraries.
+> Third-Party Libraries Are Great. You Shouldn't Reinvent The Wheel.
 
-Let's say you use third-party libraries for the I2C bus, UART bus and real-time operating system (RTOS). 
+For example. Let's say you use third-party libraries for the I2C bus, UART bus and real-time operating system (RTOS). 
 Look at the picture to have a better idea. 
 
 ![library dependency](/images/posts/library-dependency.png)
 
-You will build your application based on these libraries. You are ready to apply TDD. **But what if they change?**
+You will build your application based on these libraries. You are ready to apply TDD. Everything sounds great. 
 
-How can you make your application and test code bulletproof? 
+**But what if they change?** What if they don't have support anymore? What if your client decided to change the communication protocol?
+
+So... How can you make your application and test code bulletproof? 
 
 # Bulletproof Code. Breaking Third-party libraries' dependency.
 In our previous [post]({% post_url programming/2020-04-11-tdd-cmock %}), you learned about how to use [CMock](http://www.throwtheswitch.org/cmock) to **emulate libraries' behaviors**
 
-The idea with CMock was to use an alternative version of the original library. But only during testing. Check the next picture. 
+The idea behind CMock was to use an alternative version of the original library. But only during testing. Check the next picture. 
 
 ![cmock](/images/posts/cmock-idea-test.png)
 
@@ -49,7 +51,7 @@ Now, we are going one level higher. Check the next picture.
 
 Let's say that your code may use the I2C or UART bus. But you are not sure. How can you still apply TDD?
 
-The answer is using a **pointer to functions**. This will be the lord of the libraries. One pointer to rule them all.
+The answer is using a **pointer to a function**. This will be the lord of the libraries. One pointer to rule them all.
 
 # Example with Code
 You can find the code for this tutorial [on github](https://github.com/daleonpz/tdd-break-library-dependency).
@@ -99,7 +101,8 @@ uint_8 (*ReadBus)(void);
 ```
 
 ## First Test
-Let's create a test.
+Here you will learn how to use pointers to functions with TDD.
+Like any other TDD cycle. Let's create first a test.
 
 ```c
 /* code/test/test_BusDriver.c */
@@ -163,14 +166,14 @@ uint8_t FakeReadBus(void)
 }
 ```
 
-`test_GetData` calls `FakeReadBus` function. **You will see in the next section the reason behind** `ReadBus = FakeReadBus`. 
+**You will see in the next section the reason behind** `ReadBus = FakeReadBus`. But for now. It makes `test_GetData` call `FakeReadBus` function. 
 
 If you want to emulate more data outputs. You just need to add more **fake functions**. 
 And call them in your tests following this syntax `ReadBus = <FAKE-FUNCTION>`.
 
 
 ## Coding our application 
-Since we need to code a bulletproof code. We need to minimize third-party libraries dependency.  
+Since we want a bulletproof code. We need to minimize third-party libraries dependency.  
 
 Let's start with the header  `BusDriver.h`.
 
@@ -214,6 +217,8 @@ uint8_t GetData(void)
 
 Everything seems to make sense but for one thing. `GenericBus`. This function is there only to initialize the **pointer to function** `ReadBus`. That's all.  
 
+But during testing. `ReadBus` points to `FakeReadBus`. That makes your code adaptable. As we mentioned before. `FakeReadBus` could be virtually any bus.  
+
 ## Testing the code
 
 ```sh
@@ -243,8 +248,8 @@ Now you have a functional and tested code without third-party libraries dependen
 
 
 ## Summary
-At the beginning of the project, nothing is well-defined. Your team is not sure about the microprocessor or communication protocol. But you still need to start with the development.
-Using a simple **pointer to function** is a versatile and powerful tool under those circumstances.
+At the beginning of a project, nothing is well-defined. Your team is not sure about the microprocessor or communication protocol. But you still need to start with the development.
+Using a simple **pointer to function**  you can start your development under those circumstances.
 
 You learned how to still apply TDD even under uncertainty. If you want to learn ever more about TDD. 
 Then get one copy of [Test-driven development for embedded C](https://amzn.to/2wsWFnp) on Amazon.
