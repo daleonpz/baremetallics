@@ -11,6 +11,8 @@ Your team is not sure about the microprocessor or communication protocol.
 But you still need to start with the development.  
 
 **Image about breaking up - Here** 
+![library dependency break up](/images/posts/library-dependency-breakup.png)
+
 
 We already talked about [how to use TDD to break hardware dependency]({% post_url programming/2020-04-11-tdd-cmock %}). Today, you'll learn how to apply TDD to free yourself from external libraries.
 
