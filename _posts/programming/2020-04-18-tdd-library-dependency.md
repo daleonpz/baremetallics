@@ -53,7 +53,7 @@ Let's say that your code may use the I2C or UART bus. But you are not sure. How 
 The answer is using a **pointer to functions**. This will be the lord of the libraries. One pointer to rule them all.
 
 # Example with Code
-You can find the code for this tutorial **here - create repo**.
+You can find the code for this tutorial [in githuba](https://github.com/daleonpz/tdd-break-library-dependency).
 Remember, you aren't sure about which bus you'll use. I2C or UART. Also there are many implementations around there on the internet. 
 It's a hard situation, right?
 
