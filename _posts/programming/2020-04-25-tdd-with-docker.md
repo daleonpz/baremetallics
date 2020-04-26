@@ -8,6 +8,7 @@ description: Test-Driven Development. Use docker for building your system.
 This is the fifth and final post in our Test-Driven Development journey for beginners.
 In this post, you'll learn how to use [Docker](https://www.docker.com/) to build and run your tests.
 
+![docker container comic cartoon](/images/posts/tdd-docker.png)
 
 # Why Docker? 
 Docker is a platform based on container technology.
@@ -15,6 +16,8 @@ In short, a container  is **a piece of software with all its dependencies.**
 That means your TDD workflow won't be affected by things like OS. It doesn't matter if you use Linux, MacOS, or Windows. 
 
 > Because all you need is already inside a container.
+
+
 
 # Docker Benefits
 Docker has many benefits. But the most important for embedded passionates are:
