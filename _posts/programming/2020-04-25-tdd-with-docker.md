@@ -13,7 +13,7 @@ In this post, you'll learn how to use [Docker](https://www.docker.com/) to build
 # Why Docker? 
 Docker is a platform based on container technology.
 In short, a container  is **a piece of software with all its dependencies.**
-That means your TDD workflow won't be affected by things like OS. It doesn't matter if you use Linux, MacOS, or Windows. 
+That means your TDD workflow won't be affected. It doesn't matter if you use Linux, MacOS, or Windows. 
 
 > Because all you need is already inside a container.
 
@@ -21,15 +21,19 @@ That means your TDD workflow won't be affected by things like OS. It doesn't mat
 
 # Docker Benefits
 Docker has many benefits. But the most important for embedded passionates are:
-- Isolation: Every container is independent.
-- Compatibility: Forget about **it works on my machine**. Or large and complicated installations. 
-- Do it once: This is very important. Because there are tons of different compilers. For Atmel, STM32, NXP, and many other microcontroller vendors. Once your toolchain is **Dockerized**. Probably that you don't have to set it up again ever.  
-- Simple and Easy: Docker containers are ready to run with one command. A typical workflow with Docker is like this. Code and run Docker.
+- **Isolation**: Every container is independent.
+- **Compatibility**: Forget about it works on my machine. 
+- **Do it once**: This is very important. Because there are tons of different compilers. For Atmel, STM32, NXP, and many other microcontroller vendors.
+
+> Once your toolchain is **Dockerized**. Probably that you don't have to set it up again ever.  
+
+- **Simple and Easy**: Docker containers are ready to run with one command. A typical workflow with Docker is like this. Code and run Docker.
 
  That's it. 
 
 If want to know more about how to set up your toolchain (compiler + linker) with Docker. 
 Then read this [post]({% post_url programming/2019-03-19-Docker %}).
+
 
 It's time to learn how to **Dockerize** your testing tool [ceedling](http://www.throwtheswitch.org/ceedling).
 
