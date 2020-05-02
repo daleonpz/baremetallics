@@ -6,8 +6,8 @@ description: Learn how to write clean C Code
 ---
 
 
-Developers think that they write code only when it compiles and runs.
-But they forget that they also write for humans.
+Developers think that the code should only compile and run.
+But they forget that humans will also read their code.
 
 > It doesn't matter if you write the most beautiful poetry. If nobody can't read it.
 
