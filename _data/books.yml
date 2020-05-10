@@ -33,6 +33,13 @@
   description: Improve your embedded software development with this book. It teaches you the best practices in software development. 
   tag: BEST PRACTICES (RECOMMENDED)
 
+- title: The Art of Designing Embedded Systems
+  key: the-art-of-designing-embedded-systems
+  destination: https://amzn.to/3ciwhME
+  image: https://m.media-amazon.com/images/I/51BhFlnGrhL._SL110_.jpg
+  description: Learn from Jack Ganssle experience. People still write code the same way they did in the eighties. This book teaches you how to improve your software development.
+  tag: EMBEDDED SYSTEMS 101 (RECOMMENDED) 
+
 - title: Making Embedded Systems - Design Patterns for Great Software
   key: making-embedded-systems-design-patterns-for-great-software
   destination: https://amzn.to/2U9Ejkf
