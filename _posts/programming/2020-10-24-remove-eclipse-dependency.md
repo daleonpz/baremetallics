@@ -9,7 +9,7 @@ Working with makefiles has a huge advantage over working on Eclipse.
 
 > Automatization is the biggest advantage
 
-Tools like [Jenkis](https://www.jenkins.io/) take your development workflow to the next level.
+Tools like [Jenkins](https://www.jenkins.io/) take your development workflow to the next level.
 
 You can automate your builds, tests, and deploy many instances of your software. 
 
