@@ -345,7 +345,7 @@ Working with makefiles has a huge advantage over working on Eclipse. Because mak
 
 That's why in this tutorial I used Rakefile. It's easy to use and uses Ruby's engine. 
 
-As you could see. Writing rakefiles are easy to write and read. 
+As you could see. Rakefiles are easy to write and read. 
 
 In a future post. You'll learn how to integrate your rakefile with docker and gitlab. So you can build your own solid and automated building and testing system.
 
