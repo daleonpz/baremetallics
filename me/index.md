@@ -5,26 +5,13 @@ title: About
 
 Hi ᶘ ᵒᴥᵒᶅ,  
 
-Sometimes you have questions about you, your life or society popping up in your head with no reason.
-Let me tell you... You are not the only one. 
+My name is Daniel. An old computer and good internet connection is what I have. 
+Eclipse, in my opinion, is a big piece of shit. I just wanted to say it ᕕ( ᐛ )ᕗ 
 
-That's why I started this blog. 
+I started this blog to journal my learning process. 
+As a note, I'll try to describe everything I learn as simple and direct as possible. Because I am stupid and I think the rest of the people are too. 
 
-My name is Daniel. 
-I'm passionate about human psychology. 
-And I'm always trying to understand how my mind works. 
-
-Here I share with you my deepest thoughts. 
-But be careful, what you read is enjoyable and almost eye-opener. 
-
-If you are ready. 
-All you have to do is start reading my last [post]({% for post in site.categories.randomthought limit: 1%}{{ post.url }}   {% endfor %}).
-
+Read my last [post]({% for post in site.categories.randomthought limit: 1%}{{ post.url }}   {% endfor %}).
 
 Enjoy this day! 
-
-<!--
-In case you are interested in parkour check this other [site](https://myparkourjournal.com).
---> 
-
 
