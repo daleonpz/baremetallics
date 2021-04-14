@@ -5,7 +5,7 @@ title: About
 
 Hi ᶘ ᵒᴥᵒᶅ,  
 
-My name is Daniel. An old computer and good internet connection is what I have. 
+My name is Daniel. An old computer and good internet connection is what I have. And...  
 Eclipse, in my opinion, is a big piece of shit. I just wanted to say it ᕕ( ᐛ )ᕗ 
 
 I started this blog to journal my learning process. 
