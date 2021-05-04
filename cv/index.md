@@ -29,14 +29,14 @@ I'm a Senior Software Engineer at [Q-Beyond](https://www.qbeyond.de/), based in 
 # Employment
 `2020-` 
 __Qbeyond AG__ Senior Software Engineer  
-__Tools__: Git, CI/CD, Docker, Embeded Linux, Python, C, Test-Driven Development. 
+__Tools__: Git, CI/CD, Docker, Embeded Linux, Python, C, Test-Driven Development, Bulding systems (CMake, Make, Rake), Ruby, Python, Bash.
 \
 &nbsp;
 
 `2018-2019`
 __IDiaL Institute (Dortmund, DE)__ Maintainer of the rover-app repository related to [Eclipse Kuksa project](https://github.com/app4mc-rover/rover-app).  
 __Topics__: Machine Learning, Computer Vision, Embedded Linux.  
-Development was done in C++, python, Automotive Grade Linux (AGL), Raspbian, OpenCV. 
+Development was done in C++, CMake, Docker, python, Automotive Grade Linux (AGL), Raspbian, OpenCV, and Yocto.
 \
 &nbsp;
 
@@ -95,13 +95,15 @@ Daniel Paredes, Paul Rodriguez, "Multi-scale Image Inpainting with Label Selecti
 ---
 # Technical skills
 
-* Python
-* HTML and CSS
-* LaTeX
-* Bash
-* Git 
-* UNIX
+* C, C++, SIMD
 * Docker
+* CMake, Make, Rake
+* Bash
+* Git, CI/CD, Test-Driven Development
+* Python, Ruby
+* JS, HTML and CSS
+* LaTeX
+* UNIX
 
 # Areas of expertise
 
