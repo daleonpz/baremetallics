@@ -276,6 +276,31 @@ If any of the functions would have a CCN greater than 15, Lizard will let you kn
 ...
 ```
 
+[Here](https://github.com/daleonpz/Dockerfiles/blob/master/code-quality-control/checkers/01-code-complexity.sh) you can find a script that parse Lizard's output put but it shows you only the relevant information. 
+
+This is an example:
+
+```
+===========================================================
+      Running Complexity Analysis ...                      
+ Thresholds:                                               
+     NLOC: 255                                           
+     Complexity: 10                                      
+===========================================================
+             Results                                       
+  FAIL                                                     
+  Refactor the following modules:                          
+===========================================================
+src/app_usart_to_extender.c:557: function usart_execute_cmd has 102 NLOC, 19 CCN, 422 token, 2 PARAM, 125 length
+src/main.c:26: function main has 93 NLOC, 13 CCN, 345 token, 1 PARAM, 114 length
+```
+
+## More Tools
+- [CCCC](https://sarnold.github.io/cccc/)
+- [CMetrics](https://github.com/MetricsGrimoire/CMetrics)
+- [CScout](https://www.spinellis.gr/cscout/index.html)
+
+
 # Rules of Thumb 
 
 Usually, you should try to keep your CCN lower than 15, but in some cases is ok to go beyond that. 
