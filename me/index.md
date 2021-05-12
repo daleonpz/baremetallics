@@ -11,7 +11,7 @@ Eclipse, in my opinion, is a big piece of shit. I just wanted to say it ᕕ( ᐛ
 I started this blog to journal my learning process. 
 As a note, I'll try to describe everything I learn as simple and direct as possible. Because I want the future me to get it right away.  And also simplicity is a sign that I really understood the concepts. 
 
-Read my last [post]({% for post in site.categories.randomthought limit: 1%}{{ post.url }}   {% endfor %}).
+Read my last [post]({% for post in site.categories.programming limit: 1%}{{ post.url }}   {% endfor %}).
 
 Enjoy this day! 
 
