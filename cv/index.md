@@ -4,15 +4,6 @@ title: Daniel Paredes's CV
 description: cv 
 ---
 
-<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
-<div id="myLandbot" style="width: 100%; height: 500px"></div>
-<script>
-  var myLandbot = new Landbot.Container({
-    container: '#myLandbot',
-    configUrl: 'https://chats.landbot.io/v3/H-886488-L7PV782RGWS2755N/index.json',
-  });
-</script>
-
 # Daniel Paredes
 Software Engineer
 
