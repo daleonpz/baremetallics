@@ -3,36 +3,35 @@ layout: default
 ---
 
 <div class="header">
-    <center><h1> Baremetallics </h1></center>
-
+    <hr>
+    <center>
+        <h1> Baremetallics </h1>
+        <h2> I try to develop embedded systems.</h2>
+    </center>
+    <hr>
     <!--    <img src="/images/logo.png" alt="baremetallics banner"> -->
 </div>
+
 <div class="header__subscription" align="middle">
     {% include  subscription.html %}
 </div>
 
 <div class="header">
-   
-        
     <p>
     <center>
-        I try to develop embedded systems. <br>
         This blog is a Log of what I'm learning. <br>
         My Moto: If it's not simple. You're doing it wrong.  <br>
         BTW, I use Linux, Vim and Docker for my development.  <br>
     <a href="/me"/ align="middle">Who am I?</a>
     </center>
-
-    
     </p>
 
     <hr>
     <center><h1>Recent Posts</h1></center>
     <hr>
-
 </div>
-<div class="blog">
 
+<div class="blog">
     <ul>
         {% for post in site.categories.programming limit: 3%}
         <li>
