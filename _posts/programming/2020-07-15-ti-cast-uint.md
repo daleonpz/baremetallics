@@ -22,7 +22,7 @@ That would be 256 ("0x0100").
 All the integer values were `unsigned`. In particular `uint32_t`.
 However, I found a bug when the array is `| 0x89 | 0x35 |`.  I got 4294936885 instead of 35125. 
 
-So.. what's the difference between `| 0x89 | 0x35 |` and `| 0x11 | 0xA5 |` ?  BTW, `| 0x11 | 0xA5 |` works.
+So.. what's the difference between `| 0x89 | 0x35 |` and `| 0x01 | 0x00 |` ?  BTW, `| 0x01 | 0x00 |` works.
 
 To find it out ... keep reading. 
 
@@ -134,21 +134,21 @@ Data promotion always goes from **unsigned type with fewer numbers of bits** to 
 
 So...
 
-The compiler casts `0x89`(`0b10001001`) to `int16_t`. 
+The compiler casts `0x89`(`0b10001001`) to `int16_t`.  
 
 **NOTE**: Compiler uses 2'complement to represent **signed** integers. 
-In 2'complement `0x89` is -119. For the compiler -119 should stay as -199 after promotion.
-So -199 as `int16_t` is `0xFF89`.
+In 2'complement `0x89` is -119. For the compiler -119 should stay as -119 after promotion.
+So -119 as `int16_t` is `0xFF89`.
 
 **NOTE**: Compiler **DOESN'T**  use 2'complier to represent **unsigned** integers. 
 So, `0xFF89` as `uint16_t` is still `0xFF89`.
 
 
-At the end -199 as `int32_t` is `0xFFFFFF89`.
+At the end -119 as `int32_t` is `0xFFFFFF89`.
 
 When the code executed `hex_array[0] << 8`.. it performed `0xFFFFFF89 << 8`. That's why the result was then `0xFFFF8900`.
 
-That was why I got 4294936885 (`0xFFFF8935`).
+At the end I got 4294936885 (`0xFFFF8935`).
 
 
 # Why casting works
