@@ -12,28 +12,9 @@ layout: default
     <!--    <img src="/images/logo.png" alt="baremetallics banner"> -->
 </div>
 
-<div class="header__subscription" align="middle">
-    {% include  subscription.html %}
-</div>
-
-<div class="header">
-    <p>
-    <center>
-        This blog is a Log of what I'm learning. <br>
-        My Moto: If it's not simple. You're doing it wrong.  <br>
-        BTW, I use Linux, Vim and Docker for my development.  <br>
-    <a href="/me"/ align="middle">Who am I?</a>
-    </center>
-    </p>
-
-    <hr>
-    <center><h1>Recent Posts</h1></center>
-    <hr>
-</div>
-
 <div class="blog">
     <ul>
-        {% for post in site.categories.programming limit: 3%}
+        {% for post in site.categories.programming limit: 5%}
         <li>
             <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
@@ -47,6 +28,11 @@ layout: default
     <center><h2> Fuck you. I'm a emoji ヘ（。□°）ヘ </h2></center>
     <hr>
 </div>
+
+<div class="header__subscription" align="middle">
+    {% include  subscription.html %}
+</div>
+
 
 <div class="header__social_media" align="middle">
         {% include social_media.html %}
