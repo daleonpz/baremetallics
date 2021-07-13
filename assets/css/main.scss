@@ -5,53 +5,53 @@
 @import "config";
 
 body {
-	color: $color-black;
-	background: $color-white;
-	font-family: 'Inconsolata', ;
-	font-size: 100%;
-	font-weight: 400;
+    color: $color-black;
+    background: $color-white;
+    font-family: 'Inconsolata', ;
+    font-size: 150%;
+    font-weight: 400;
 }
 h1 {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 p {
-	font-size: 1em;
-	line-height: 150%;
+    font-size: 1em;
+    line-height: 150%;
 }
 a {
-  color: $color-hire-black;
-  text-decoration: none;
-  font-weight: bold;
-  &:visited {
-	color: $color-black;
-	text-decoration: none;
-  }
-  &:hover {
-	 background-color: $color-grey;
-	 text-decoration: none;
-  }
-  &:active {
-	color: $color-link;
-	text-decoration: none;
-  }
+    color: $color-hire-black;
+    text-decoration: none;
+    font-weight: bold;
+    &:visited {
+        color: $color-black;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $color-grey;
+        text-decoration: none;
+    }
+    &:active {
+        color: $color-link;
+        text-decoration: none;
+    }
 }
 ul {
-	list-style: none;
-	li {
-		padding: 5px;
-		padding-left: 10px;
-		@media screen and (max-width: $br) {
-			padding: 10px 0 10px 0;
-		}
-	}
+    list-style: none;
+    li {
+        padding: 5px;
+        padding-left: 10px;
+        @media screen and (max-width: $br) {
+            padding: 10px 0 10px 0;
+        }
+    }
 }
 blockquote {
     color: $color-black;
     padding-left: 15px;
     font-size: 1.5em;
     @media screen and (max-width: $br) {
-                            font-size: 1.1em;
-                        }
+        font-size: 1.1em;
+    }
     letter-spacing: -1px;
     font-style: italic;
     text-align: center;
@@ -59,43 +59,43 @@ blockquote {
 }
 
 .wrapper {
-	max-width: 800px;
-	margin: auto;
-	padding: 60px 30px 60px 30px;
-	@media screen and (max-width: $br) {
-		padding: 20px;
-	}
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 30px 60px 30px;
+    @media screen and (max-width: $br) {
+        padding: 20px;
+    }
 }
 
 
 .header {
-	justify-content: space-between;
-	align-items: baseline;
-	padding-bottom: 10px;
-	@media screen and (max-width: $br) {
-		display: block;
-	}
-	h1 {
-		font-size: 2.5em;
-                @media screen and (max-width: $br) {
-                    font-size:1.5em;
-                }
-                font-weight: bold;
-		margin-bottom: 0;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 10px;
+    @media screen and (max-width: $br) {
+        display: block;
+    }
+    h1 {
+        font-size: 2.5em;
+        @media screen and (max-width: $br) {
+            font-size:1.5em;
         }
+        font-weight: bold;
+        margin-bottom: 0;
+    }
     h2 {
         font-size: 1.5em;
-		@media screen and (max-width: $br) {
-                font-size: 1.0em;
-            }
+        @media screen and (max-width: $br) {
+            font-size: 1.0em;
+        }
         margin-bottom: 0;
         font-weight: normal;
     }
     h3 {
         font-size: 1.8em;
         @media screen and (max-width: $br) {
-                font-size: 1.3em;
-            }
+            font-size: 1.3em;
+        }
         font-weight: bold;
         margin-bottom: 0;
     }
@@ -109,7 +109,7 @@ blockquote {
     }
     b {
         font-weight: bold;
-		margin-bottom: 0;
+        margin-bottom: 0;
     }
     img {
         margin-top: 10px;
@@ -134,8 +134,229 @@ blockquote {
         }
     }
     code {
+        padding: 3px;
+        font-size: 1.0em;
+        border-radius: 3px;
+        background: $color-grey;
+    }
+    .highlight {
+        margin: 10px;
+        margin-bottom: 15px;
+        padding: 10px;
+        line-height: 1.2;
+        border-radius: 3px;
+        background: $color-grey;
+        overflow-y: auto;
+        code {
+            color: $color-black;
+            background: none;
+        }
+    }
+    .codebreak {
+        margin: 15px;
+        border: 0;
+        border-bottom: 1px dashed $color-black;
+    }
+}
+
+.blog {
+    padding-bottom: 30px;
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 5px;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    li{
+        font-size: 1.0em;
+        @media screen and (max-width: $br) {
+            font-size: 0.7em;
+        }
+    }
+}
+
+.book_list{
+    padding-bottom: 30px;
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 5px;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 1.4em;
+        @media screen and (max-width: $br) {
+            font-size: 0.9em;
+        }
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    img {
+        float: left;
+        margin-right:8px;
+    }
+    b {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    li{
+        font-size: 1.0em;
+        @media screen and (max-width: $br) {
+            font-size: 0.7em;
+        }
+    }
+    a {
+        padding-bottom: 1px;
+        &:hover {
+            background-color: $color-grey;
+            text-decoration: none;
+        }
+        font-size: 1.2em;
+        @media screen and (max-width: $br) {
+            font-size: 1.0em;
+        }
+    }
+    b{
+        font-size: 0.9em;
+        @media screen and (max-width: $br) {
+            font-size: 0.7em;
+        }
+    }
+}
+
+.music {
+    padding-bottom: 30px;
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 5px;
+    }
+    a {
+        padding: 5px;
+        padding-left: 10px;
+    }
+}
+
+.post {
+    padding-bottom: 30px;
+
+    &__back {
+        a {
+
+        }
+    }
+    &__title {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 6px;
+        h1 {
+            display: inline-block;
+            font-size: 2.5em;
+
+            @media screen and (max-width: $br) {
+                font-size: 2.0em;
+            }
+            font-weight: 700;
+            padding-right: 10px;
+            padding-bottom: 2px;
+            text-decoration: none;
+            overflow-wrap: break-word;                       
+        }
+    }
+    &__date {
+        p {
+            font-size: 1em;
+            font-style: italic;
+        }
+    }
+    &__meta {
+        p {
+        }
+    }
+    &__content {
+        padding-top: 40px;
+        h1 {
+            font-size: 2.0em;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            @media screen and (max-width: $br) {
+                font-size: 1.4em;
+            }
+        }
+        h2 {
+            font-size: 1.4em;
+            @media screen and (max-width: $br) {
+                font-size: 1.1em;
+            }
+            font-weight: 700;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 1em;
+            @media screen and (max-width: $br) {
+                font-size: 0.8em;
+            }
+            line-height: 200%;
+            margin-bottom: 20px;
+        }
+        a {
+            padding-bottom: 1px;
+            border-bottom: 1px solid $color-link;
+            &:hover {
+                background-color: $color-grey;
+                text-decoration: none;
+            }
+        }
+        strong {
+            font-weight: 700;
+        }
+        em {
+            font-style: italic;
+        }
+        ul {
+            font-size: 1em;
+            @media screen and (max-width: $br) {
+                font-size: 0.8em;
+            }
+            list-style: circle;
+            margin-left: 30px;
+            margin-bottom: 15px;
+            li {
+                padding: 5px;
+                padding-left: 5px;
+                @media screen and (max-width: $br) {
+                    padding: 10px 0 10px 0;
+                }
+            }
+            @media screen and (max-width: $br) {
+                margin-left: 10px;
+            }
+        }
+        vzt {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin: auto;
+            width: 100%;
+            &:hover {
+                opacity: 1
+            }
+        }
+        img {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin: auto;
+            width: 100%;
+        }
+        code {
             padding: 3px;
             font-size: 0.9em;
+            @media screen and (max-width: $br) {
+                font-size: 0.7em;
+            }
             border-radius: 3px;
             background: $color-grey;
         }
@@ -148,301 +369,80 @@ blockquote {
             background: $color-grey;
             overflow-y: auto;
             code {
-                    color: $color-black;
-                    background: none;
-                }
+                color: $color-black;
+                background: none;
             }
+        }
         .codebreak {
             margin: 15px;
             border: 0;
             border-bottom: 1px dashed $color-black;
-            }
-}
-
-.blog {
-	padding-bottom: 30px;
-	h1 {
-		font-size: 1.4em;
-		margin-bottom: 5px;
-	}
-        h2 {
-                font-weight: bold;
-                font-size: 1.4em;
-                text-align: center;
-		margin-bottom: 5px;
-	}
-    li{
-        font-size: 1.0em;
-        @media screen and (max-width: $br) {
-                    font-size: 0.7em;
         }
     }
-}
-
-.book_list{
-	padding-bottom: 30px;
-	h1 {
-		font-size: 1.4em;
-		margin-bottom: 5px;
-	}
-    h2 {
-        font-weight: bold;
-        font-size: 1.4em;
-        @media screen and (max-width: $br) {
-                font-size: 0.9em;
-        }
-        text-align: center;
-		margin-bottom: 5px;
-	}
-    img {
-        float: left;
-        margin-right:8px;
-    }
-    b {
-        font-weight: bold;
-        margin-bottom: 0;
-    }
-    li{
-        font-size: 1.0em;
-        @media screen and (max-width: $br) {
-                    font-size: 0.7em;
-            }
-    }
-    a {
-        padding-bottom: 1px;
-        &:hover {
-            background-color: $color-grey;
-            text-decoration: none;
-        }
-        font-size: 1.2em;
-        @media screen and (max-width: $br) {
-                    font-size: 1.0em;
-            }
-    }
-    b{
-        font-size: 0.9em;
-        @media screen and (max-width: $br) {
-                    font-size: 0.7em;
-            }
-    }
-}
-
-.music {
-	padding-bottom: 30px;
-	h1 {
-		font-size: 1.4em;
-		margin-bottom: 5px;
-	}
-	a {
-		padding: 5px;
-		padding-left: 10px;
-	}
-}
-
-.post {
-	padding-bottom: 30px;
-	&__back {
-		a {
-
-		}
-	}
-	&__title {
-		display: block;
-		margin-top: 20px;
-		margin-bottom: 6px;
-		h1 {
-			display: inline-block;
-			font-size: 3.0em;
-            @media screen and (max-width: $br) {
-                font-size: 2.0em;
-            }
-			font-weight: 700;
-			padding-right: 10px;
-			padding-bottom: 2px;
-			text-decoration: none;
-            overflow-wrap: break-word;                       
-		}
-	}
-	&__date {
-		p {
-			font-size: 1em;
-			font-style: italic;
-		}
-	}
-	&__meta {
-		p {
-		}
-	}
-	&__content {
-		padding-top: 40px;
-		h1 {
-			font-size: 1.7em;
-			font-weight: 700;
-			margin-top: 50px;
-			margin-bottom: 10px;
-                        @media screen and (max-width: $br) {
-                            font-size: 1.4em;
-                        }
-		}
-		h2 {
-			font-size: 1.4em;
-			@media screen and (max-width: $br) {
-                            font-size: 1.1em;
-                        }
-                        font-weight: 700;
-			margin-top: 25px;
-			margin-bottom: 5px;
-		}
-		p {
-			font-size: 1em;
-			@media screen and (max-width: $br) {
-                            font-size: 0.8em;
-                        }
-			line-height: 110%;
-			margin-bottom: 20px;
-		}
-		a {
-			padding-bottom: 1px;
-			border-bottom: 1px solid $color-link;
-			&:hover {
-				background-color: $color-grey;
-				text-decoration: none;
-			}
-		}
-		strong {
-			font-weight: 700;
-		}
-		em {
-			font-style: italic;
-		}
-		ul {
-			font-size: 1em;
-			@media screen and (max-width: $br) {
-                font-size: 0.8em;
-            }
-			list-style: circle;
-			margin-left: 30px;
-			margin-top: -10px;
-			margin-bottom: 15px;
-			li {
-				padding: 5px;
-				padding-left: 5px;
-				@media screen and (max-width: $br) {
-					padding: 10px 0 10px 0;
-				}
-			}
-			@media screen and (max-width: $br) {
-				margin-left: 10px;
-			}
-		}
-		vzt {
-			margin-top: 10px;
-			margin-bottom: 10px;
-                        margin: auto;
-                        width: 100%;
-                        &:hover {
-                            opacity: 1
-                        }
-		}
-                img {
-			margin-top: 10px;
-			margin-bottom: 10px;
-                        margin: auto;
-                        width: 100%;
-		}
-                code {
-			padding: 3px;
-			font-size: 0.9em;
-			@media screen and (max-width: $br) {
-                font-size: 0.7em;
-            }
-            border-radius: 3px;
-			background: $color-grey;
-		}
-		.highlight {
-			margin: 10px;
-			margin-bottom: 15px;
-			padding: 10px;
-			line-height: 1.2;
-			border-radius: 3px;
-			background: $color-grey;
-                        overflow-y: auto;
-			code {
-				color: $color-black;
-				background: none;
-			}
-		}
-		.codebreak {
-			margin: 15px;
-			border: 0;
-			border-bottom: 1px dashed $color-black;
-		}
-	}
 }
 
 .about {
-	&__title {
-		font-size: 1.6em;
-		font-weight: 700;
-		margin-top: 20px;
-		margin-bottom: 10px;
-	}
-	&__content {
-		margin-top: 20px;
-		h1 {
-			font-size: 1.2em;
-			font-style: italic;
-			margin-top: 30px;
-			margin-bottom: 5px;
-		}
-                h2 {
-			font-size: 1.2em;
-			font-weight: 700;
-			margin-top: 30px;
-			margin-bottom: 5px;
-		}
-		strong {
-			font-weight: 700;
-		}
-		p {
-			font-size: 1em;
-			line-height: 150%;
-			margin-bottom: 10px;
-		}
-                img {
-			margin-top: 10px;
-			margin-bottom: 10px;
-                        margin: auto;
-                        width: 100%;
-		}
-            }
+    &__title {
+        font-size: 1.6em;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    &__content {
+        margin-top: 20px;
+        h1 {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+        strong {
+            font-weight: 700;
+        }
+        p {
+            font-size: 1em;
+            line-height: 150%;
+            margin-bottom: 10px;
+        }
+        img {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin: auto;
+            width: 100%;
+        }
+    }
 }
 
 ul.share-buttons{
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 ul.share-buttons li{
-  display: inline;
+    display: inline;
 }
 
 ul.share-buttons .sr-only{
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 
 #mailchimp {
-	background: $color_hire_shadow;
-	color: $color_black;
-	padding: 20px 15px;
+    color: $color_black;
+    padding: 20px 15px;
     @media screen and (max-width: $br) {
         padding: 10px 5px;
     }
@@ -453,113 +453,153 @@ ul.share-buttons .sr-only{
         .full-text { display: none; }
     }
 }
-	#mailchimp input {
-        border: medium none;
-        color: gray;
-        font-family: 'Inconsolata';
-        font-size: 20px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        @media screen and (max-width: $br) {
-            margin-bottom: 0px;
-        }   
-         padding: 8px 10px;
-        width: 300px;
-		border-radius: 20px;
-		-moz-border-radius: 20px;
-		-webkit-border-radius: 20px;
-	}
-		#mailchimp input.email { background: #fff }
-		#mailchimp input.name { background: #fff}
-		#mailchimp input[type="submit"] {
-			background: $color_black;
-			color: $color_white;
-			cursor: pointer;
-			width: 60%;
-			padding: 8px 0;
+#mailchimp input {
+    border: medium none;
+    color: gray;
+    font-family: 'Inconsolata';
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    @media screen and (max-width: $br) {
+        margin-bottom: 0px;
+    }   
+    padding: 8px 10px;
+    width: 300px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+#mailchimp input.email { background: #fff }
+#mailchimp input.name { background: #fff}
+#mailchimp input[type="submit"] {
+    background: $color_black;
+    color: $color_white;
+    cursor: pointer;
+    width: 60%;
+    padding: 8px 0;
 
-		}
+}
 #mailchimp input[type="submit"]:hover { color: #F2C94C }
 
 #navigation_items{
-	background: $color_white;
-	color: $color_black;
+    background: $color_white;
+    color: $color_black;
 }
-	#navigation_items input {
-		border: medium none;
-                color: gray;
-                font-family: 'Inconsolata';
-                font-size: 0.7em;
-                font-weight: bold;
-                letter-spacing: 1px;
-                margin-bottom: 0px;
-                padding: 8px 10px;
-                width: 300px;
-		border-radius: 5px;
-		-moz-border-radius: 20px;
-		-webkit-border-radius: 20px;
-	}
-		#navigation_items input[type="submit"] {
-			background: $color_black;
-			color: $color_white;
-			cursor: pointer;
-			width: 20%;
-			padding: 2px 0;
+#navigation_items input {
+    border: medium none;
+    color: gray;
+    font-family: 'Inconsolata';
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    padding: 8px 10px;
+    width: 300px;
+    border-radius: 5px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+#navigation_items input[type="submit"] {
+    margin-bottom: 5px;
+    background: $color_black;
+    color: $color_white;
+    cursor: pointer;
+    width: 20%;
+    padding: 2px 0;
 
-		}
-                #navigation_items input[type="submit"]:hover { color: #F2C94C }
+}
+#navigation_items input[type="submit"]:hover { color: #F2C94C }
 
 
 .nav_items{
-	background: $color_black;
-        background-size: auto;
+    background: $color_white;
+    background-size: auto;
+}
+.nav_items a {
+    color: $color_black;
+    background-size: auto;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0px 10px;
+    &:hover {
+        padding: 0px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        background: $color_black;
+        color: $color_white;
     }
-    .nav_items a {
-          color: $color_white;
-          background-size: auto;
-          text-decoration: none;
-          font-size: 1.5em;
-          font-weight: bold;
-          margin-right:8px;
-          &:hover {
-                 text-decoration: none;
-                 background: $color_black;
-                 color: #F2C94C;
-          }
 
-    } 
-
-.nav_items .icon {
-  display: none;
 } 
 
- /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+.nav_items .icon {
+    display: none;
+} 
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: $br ) {
-  .nav_items a:not(:first-child) {display: none;}
-  .nav_items a.icon {
-    float: right;
-    display: block;
-  }
+    .nav_items a:not(:first-child) {display: none;}
+    .nav_items a.icon {
+        float: right;
+        display: block;
+    }
 }
 
 /* The "responsive" class is added to the nav_items with JavaScript when the user clicks on the icon. This class makes the nav_items look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: $br) {
-  .nav_items.responsive {position: relative;}
-  .nav_items.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .nav_items.responsive a {
-    float: none;
-    display: block;
-    margin-bottom: 5px;
-  }
+    .nav_items.responsive {position: relative;}
+    .nav_items.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav_items.responsive a {
+        float: none;
+        display: block;
+        margin-bottom: 5px;
+    }
     .nav_items.responsive  a:hover {
-                 text-decoration: none;
-                 background: $color_black;
-                 color: #F2C94C;
-          }
+        border-radius: 5px;
+        text-decoration: none;
+        background: $color_black;
+        color: $color_white;
+    }
+}
+
+
+// Adding 'Contents' headline to the TOC
+#markdown-toc::before {
+    content: "Table of Contents";
+    font-size: 2.0em;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+// Using numbers instead of bullets for listing
+#markdown-toc ul {
+    list-style: square;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    @media screen and (max-width: $br) {
+        font-size: 0.8em;
+    }
+}
+
+#markdown-toc {
+    border: 1px solid #aaa;
+    list-style: decimal;
+    display: inline-block;
+    background: $color_grey;
+    color: $color_black;
+    padding: 20px 10px 20px 100px;
+    width: 500px;
+    @media screen and (max-width: $br) {
+        padding: 20px 10px 20px 50px;
+        width: 250px;
+    }
+    border-radius: 0px;
 }
 
