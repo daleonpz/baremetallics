@@ -19,6 +19,9 @@ You could check:
 
 You can find the repo of this post [here](https://github.com/daleonpz/Dockerfiles/tree/master/code-quality-control).
 
+* 
+{:toc}
+
 # Solution
 Most of the tools to check the quality of your code can run from the CLI or Command Line Interface. For that reason, I created bash scripts to adapt the tools to my needs, because some of them display more information than I need. 
 

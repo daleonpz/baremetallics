@@ -9,6 +9,10 @@ This is a short introduction to Rakefiles.
 
 I use rakefiles for building C projects because it's easier than CMake and Makefiles.
 
+* 
+{:toc}
+
+
 # What are rakefiles?
 
 Rakefiles is a ruby version of Makefiles. It uses Ruby syntax.

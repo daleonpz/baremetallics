@@ -26,6 +26,8 @@ This is a tutorial on how to have an indenpendent workflow to Eclipse.
 
 If you never heard about Rake. There is a [post]({% post_url programming/2020-10-17-rakefile-short-tutorial %}) with all you need to know. It's a 2-3 minutes introduction. 
 
+* 
+{:toc}
 
 # Writing your Rakefile
 

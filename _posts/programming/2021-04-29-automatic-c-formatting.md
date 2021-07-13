@@ -13,6 +13,8 @@ When working alone or in a team, it's important to keep a consistent code style.
 
 ![code format](/images/posts/c-code-formatting.jpg)
 
+* 
+{:toc}
 
 # Why you should format your code
 Automatic code formating has the following benefits: 

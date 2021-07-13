@@ -26,6 +26,10 @@ So.. what's the difference between `| 0x89 | 0x35 |` and `| 0x01 | 0x00 |` ?  BT
 
 To find it out ... keep reading. 
 
+* 
+{:toc}
+
+
 # Setup of the function
 
 - Inputs: 

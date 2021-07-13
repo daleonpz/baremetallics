@@ -9,6 +9,8 @@ Best practices are methods that have been demonstrated to be effective and can b
 
 ![top 5 books best practices C embedded](/images/posts/5-books-best-practices.jpg)
 
+* 
+{:toc}
 
 # Forgotten Gem: The Pragmatic Programmer
 ["The Pragmatic Programmer - From Journeyman to Master"](https://amzn.to/3acWAmz)  by Andrew Hunt teaches you the best practices in software development. Andrew gives you a list of tips that you can implement right away to improve the speed, quality, and performance of your work.

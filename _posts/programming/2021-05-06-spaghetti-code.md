@@ -10,13 +10,11 @@ description: reduce complexity in C spaghetti code
 ![Spaguetti code](/images/posts/spaghetti.jpg)
 
 
-I already talked about [How to write clean code]({% post_url programming/2020-05-02-write-clean-code %}), but I didn't talk about code complexity. In this post you'll read:
+I already talked about [How to write clean code]({% post_url programming/2020-05-02-write-clean-code %}), but I didn't talk about code complexity. 
 
-- What's Spaghetti Code
-- What's Code Complexity
-- Tools to Estimate Your Code Complexity
-- Rules of Thumb
-- Conclusions
+
+* 
+{:toc}
 
 # What's a Spaghetti Code
 It's code that's hard to maintain. Some reasons why a code can be denoted as "Spaghetti Code" are:

@@ -13,6 +13,10 @@ Having said that, let's start!
 
 ![top 5 books](/images/posts/top-5-books-to-start-es.jpg)
 
+* 
+{:toc}
+
+
 # Learn the Foundation
 First of all, you need to understand how computers work.
 The book  [Computer Systems - A Programmer's Perspective](https://amzn.to/2vJNjmY ) explains the underlying elements common among all computer systems and how they affect general application performance. If you master this book, you'll have the most solid base for embedded systems.  
