@@ -5,7 +5,7 @@ category: programming
 description: minimalist assert function for embedded c
 ---
 
-Asserts is a great tool to find errors, bugs, or unintended behaviors on runtime. If implemented correctly, asserts give developer context information about when and where in the code an issue showed up.
+Assert is a great tool to find errors, bugs, or unintended behaviors on runtime. If implemented correctly, asserts give developer context information about when and where in the code an issue showed up.
 
 In this post, I will discuss a minimalist assert implementation in C suitable for bare-metal implementations. 
 
@@ -31,9 +31,9 @@ For example, in the following code,
     printf("y = %i\r\n", y);
 ```
 
-in the function call `y = funcA()`, one the code is inside `funcA()`.  The value of LR will be the address of `y = funcA()`. You can verify it looking at dissambly with, for example, `objdump -D`.  If you want to know how? Read this [post]({% post_url programming/2017-03-30-hack-main %}).
+in the function call `y = funcA()`, once the code is inside `funcA()`.  The value of LR will be the address of `y = funcA()`. You can verify it by looking at dissambly with, for example, `objdump -D`.  If you want to know how? Read this [post]({% post_url programming/2017-03-30-hack-main %}).
 
-In order to save LR and PC, I created a struct called `sAssertInfo` and defined a function `my_assert()`. This function will save the values of LR and PC in variable `g_assert_info`. 
+In order to save the LR and PC, I created a struct called `sAssertInfo` and defined a function `my_assert()`. This function will save the values of LR and PC in variable `g_assert_info`. 
 
 ```c
 typedef struct sAssertInfo {
@@ -50,7 +50,7 @@ void my_assert(const uint64_t *pc, const uint64_t *lr) {
 }
 ```
 
-**Note** that there is a `while(1){}` at the end of my function. For debugging purposes is useful, because the code will stop there and that allows you to solve one problem at a time.
+**Note** that there is a `while(1){}` at the end of my function. For debugging purposes it is useful, because the code will stop there and that allows you to solve one problem at a time.
 That means, for production, you may use a recovery and logging mechanism. 
 
 # Base Implementation 
@@ -59,9 +59,8 @@ Let's start with the C file. **Note** that `my_assert()` needs `uint64_t` pointe
 
 ## *.c File
 ```c
-// asserts.c
+// my_asserts.c
 #include "my_asserts.h"
-#include <strings.h>
 
 static sAssertInfo g_assert_info;
 
@@ -121,58 +120,22 @@ Things to notice:
 
 # Simple Example
 
-I packed the assert library with the example code in one file for education purposes. I was lazy, that's the truth :).
-
-There are two functions `funcA()` and `funcB()`.  `funcB()` calls `funcA()`, and this one contains a failing assert. `MY_ASSERT(0)` means that the code will crash there, because 0 is interpreted as false .
+There are two functions `funcA()` and `funcB()`.  `funcB()` calls `funcA()`, and this one contains a failing assert. `ASSERT_EXP(0)` means that the code will crash there, because 0 is interpreted as false .
 
 ```c
 #include <stdio.h>
 #include <inttypes.h>
-
-#define GET_LR() __builtin_return_address(0)
-// #define GET_PC(_a) __asm volatile ("mov %0, pc" : "=r" (_a))
-#define GET_PC(_a) __asm volatile("1: lea 1b(%%rip), %0;": "=a"(pc)); 
-
-// void pointer -> generic pointer to capture the register value
-#define MY_ASSERT_RECORD()     \
-    do {                         \
-        void *pc = NULL;               \
-        GET_PC(pc);                 \
-        const void *lr = GET_LR(); \
-        my_assert(pc, lr);         \
-    } while (0)
-
-#define MY_ASSERT(exp)         \
-    do {                         \
-        if (!(exp)) {              \
-            MY_ASSERT_RECORD();      \
-        }                          \
-    } while (0)
-
-
-typedef struct sAssertInfo {
-    uint64_t pc;
-    uint64_t lr;
-} sAssertInfo;
-
-sAssertInfo g_assert_info;
-
-void my_assert(const uint64_t *pc, const uint64_t *lr) {
-    g_assert_info.pc = pc;
-    g_assert_info.lr = lr;
-    while(1){};
-}
-
+#include "my_asserts.h"
 
 uint64_t x = 0;
 uint64_t funcA(void)
 {
     x = 8;
-    MY_ASSERT(0);
+    ASSERT_EXP(0);
     return x;
 }
 
-uint64_t funcB(void)
+uint64_t funB(void)
 {
     uint64_t y = 0;
     y = funcA();
@@ -180,24 +143,26 @@ uint64_t funcB(void)
 }
 
 
-uint64_t main ()
+void main ()
 {
-    funcB();
+    funB();
 }
+
 ```
 
 Let's compile the code:
 
 ```sh
-$ gcc -g -m64 main.c
+$ gcc -g -c -m64 main.c
+$ gcc -g -c -m64 my_asserts.c
+$ gcc my_asserts.o main.o -o example_assert
 ```
 
 I use **gdb** to get the values of PC/LR held by `g_assert_info`.
 
 ```sh
-$ gdb a.out
-# Inside GDB run  and then ctrl-D
-
+$ gdb example_assert 
+# Inside GDB execute run and then ctrl-D
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -212,26 +177,28 @@ Find the GDB manual and other documentation resources online at:
 <http://www.gnu.org/software/gdb/documentation/>.
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
-Reading symbols from a.out...done.
+Reading symbols from example_assert...done.
+
+
 (gdb) run
-Starting program: /home/me/Documents/git/t/a.out 
+Starting program: /home/me/Documents/git/t/example_assert 
 ^C
-
-
 Program received signal SIGINT, Interrupt.
-my_assert (pc=0x555555554639 <funcA+27>, lr=0x55555555467d <funcB+21>) at main.c:35
-35          while(1){};
-(gdb) quit
 
+
+my_assert (pc=0x555555554639 <funcA+27>, lr=0x55555555467d <funB+21>) at my_asserts.c:8
+8           while(1){};
+
+(gdb) quit
 ```
 
-As you can see, the function `my_assert()` is called and gdb also prints the PC/LR. 
+As you can see, the function `my_assert()` is called and gdb prints the values of PC/LR. 
 
 ```sh
 my_assert (pc=0x555555554639 <funcA+27>, lr=0x55555555467d <funcB+21>) at main.c:35
 ```
 
-That means that: PC was 0x639 and LR was 0x67d, when the program crashed due to `MY_ASSERT(0)`.
+That means that: PC was 0x639 and LR was 0x67d, when the program crashed due to `ASSERT_EXP(0)`.
 
 ## Retrieving Code Info
 
@@ -240,29 +207,31 @@ With the tool `addr2line` you can convert addresses into file names and line num
 Let's start with the PC:
 
 ```sh
-addr2line -e a.out 0x639
-/home/me/main.c:43
+$  addr2line -e example_assert 0x639
+/home/me/main.c:9
 
-$  sed -n '43,1p' main.c
-    MY_ASSERT(0);
+$  sed -n '9,1p' main.c
+    ASSERT_EXP(0);
 ```
 
 And now the LR:
 
 ```sh
-$  addr2line -e a.out 0x67d
-/home/me/main.c:50
+$  addr2line -e example_assert 0x67d
+/home/me/main.c:16
 
-sed -n '50,1p' main.c
+$  sed -n '16,1p' main.c
     y = funcA();
 
 ```
 
-As expected, PC is the address where the code stopped, and LR is where `funcA()` was called.
+As expected, PC is the address where the code stopped `ASSERT_EXP(0)`, and LR is where `funcA()` was called.
+
+As a note, I encourage you to check the dissambly of `example_assert` to actually see which instructions the addresses correspond to. Try it with `objdump -D example_assert`. 
 
 # Conclusion
-Asserts is a great tool to find errors, bugs or unintended behaviors on runtime. If implemented correctly, asserts give developer context information about when and where in the code an issue showed up.
+Asserts are great tools to find errors, bugs or unintended behaviors on runtime. If implemented correctly, asserts give developer context information about when and where in the code an issue showed up.
 
-I discussed a minimalist assert implementation in C suitable for baremetal implementations. It's not as straightforward as a simple `printf`, but it way more lightway and most likely useful.
+I discussed a minimalist assert implementation in C suitable for bare-metal implementations. It's not as straightforward as a simple `printf`, but it's way more lightweight and most likely useful.
 
 
