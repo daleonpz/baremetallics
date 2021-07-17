@@ -70,9 +70,9 @@ Each partition had a header, which gives us information about how big the partit
 
 "It is located at the beginning of the partition, and there exist two copies to avoid file system crash. It contains basic partition information and some default parameters of f2fs."
 
-I had to find the source code of the f2fs filesystem in order to know recognize the superblock.
+I had to find the source code of the f2fs filesystem to know how to recognize the superblock.
 
-The answer was the structure `struct f2fs_super_block`. At lines 34-66 of the [source code](https://www.kernel.org/doc/html/latest/filesystems/f2fs.html).
+The answer was the structure `struct f2fs_super_block`. Lines 34-66 of the [source code](https://www.kernel.org/doc/html/latest/filesystems/f2fs.html).
 
 
 ```c
@@ -126,7 +126,7 @@ xxd -s "${_offset}" -l 16 ${RAW_FILE}  | grep "400: 1020 f5f2" | sed 's/:.*//'
 ```
 
 Things to notice:
-- I search with `grep` for **1020 f5f2** and not **f2f5 2010**. That's because I created a test f2fs partition to understand better the superblock structure and I noticed that bytes inverted. 
+- I search with `grep` for **1020 f5f2** and not **f2f5 2010**. That's because I created a test f2fs partition to understand better the superblock structure and I noticed that bytes were inverted. 
 
 - In the beginning, there is a **400**. The superblock has an offset of `0x400`, defined at line 29 of the [source code](https://www.kernel.org/doc/html/latest/filesystems/f2fs.html).  
 
@@ -134,7 +134,7 @@ Things to notice:
 #define F2FS_SB1_OFFSET     0x400       // offset for 1:st superblock
 ```
 
-I automate the superblock search with:
+I automated the superblock search with:
 
 ```sh
 echo "Retrieving f2fs volume..."
@@ -167,7 +167,7 @@ Now that we have the address, the next problem is to find out how big the image 
 There are two ways to find it out. 
 
 ## Non-scriptable Way To Get Image size
-I did this way the first time. First, I copied a big chunk (16 MB) from the image to another file `__Image`.  
+First, copy a big chunk (16 MB) from the image to another file `__Image`.  
 
 ```sh
 $  dd if=out.bin iflag=skip_bytes,count_bytes skip=$((0xaa800000)) count=$((0x1000000)) bs=4096 of=__Image      
@@ -205,7 +205,7 @@ Info: checkpoint state = 44 :  crc compacted_summary sudden-power-off
 Info: total FS sectors = 9674752 (4724 MB)
 ```
 
-With that info we can run againd `dd`.
+With that info we can run again `dd`.
 
 ```sh
 $  dd if=out.bin iflag=skip_bytes,count_bytes skip=$((0xaa800000)) count=$((4724*1024*1024)) bs=4096 of=__Image.img
