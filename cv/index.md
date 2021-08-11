@@ -24,6 +24,7 @@ I'm a Senior Software Engineer at [Q-Beyond](https://www.qbeyond.de/), based in 
 __Qbeyond AG__ Senior Software Engineer  
 __Tools__: Git, CI/CD, Docker, Embeded Linux, Python, C, Test-Driven Development, Bulding systems (CMake, Make, Rake), Ruby, Python, Bash.  
 **Tasks:**  
+- Development of a debugging tool for a Propetary Android Device based on a Rockchip processor with disable Android Debug Bridge. Used Binary Walk and Bash to read the raw flash memory; search, extract and mount the Linux F2FS filesystem; extract relevant databases and csv files, and show them in the terminal.  
 - Development of a POC (proof of concept) with the MSP430 microcontroller from TI, a LPWA module from Quectel and 2G in C. Developed a interface between a pump (UART) and Cloud (MQTT).
 - Development of small test gateway based on a DA1468X Dialog MCU for communication between devices based on DA1468X and Cloud (REST). The development involved Python and C.
 - Worked in the development of a industrial gateway using Python based Embedded Linux and the Teamviewer API. 
