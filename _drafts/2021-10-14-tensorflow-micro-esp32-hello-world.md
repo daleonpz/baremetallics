@@ -42,7 +42,7 @@ docker run --rm -v $PWD:/project -w /project --device=/dev/ttyUSB0 espressif/idf
 to debug 
 ```sh
 docker run --rm -v $PWD:/project -w /project --device=/dev/ttyUSB0 -it espressif/idf
-idf.py flash
+idf.py flash -p /dev/ttyUSB0
 idf.py monitor
 ```
 
