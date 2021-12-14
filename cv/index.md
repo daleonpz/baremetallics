@@ -19,11 +19,19 @@ Software Engineer
 I'm a Senior Software Engineer at [Q-Beyond](https://www.qbeyond.de/), based in Cologne, GE. I'm working on embedded systems projects with BLE, 2G and Embedded Linux.
 
 ---
+# On my freetime currently working on
+TinyML applications for STM32F746G and ESP32-EYE. Exploring tensorflow lite/micro, Cube-AI from ST Microelectronics and low-power video/audio/autoencoders applications. 
+
+why not combine my two areas of expertise :)
+
+
+---
 # Employment
 `2020-` 
 __Qbeyond AG__ Senior Software Engineer  
 __Tools__: Git, CI/CD, Docker, Embeded Linux, Python, C, Test-Driven Development, Bulding systems (CMake, Make, Rake), Ruby, Python, Bash.  
 **Tasks:**  
+- Development of features for home automation devices. Linux based gateways with wifi (through MQTT) and radio (823 MHz) connectivity and end-point devices based on STM32 M0 with radio (823 MHz) connectivity. In charge also of the maintenance of radio protocol repository. Development with Keil and Gitlab-CI.
 - Development of a debugging tool for a Propetary Android Device based on a Rockchip processor with disable Android Debug Bridge. Used Binary Walk and Bash to read the raw flash memory; search, extract and mount the Linux F2FS filesystem; extract relevant databases and csv files, and show them in the terminal.  
 - Development of a POC (proof of concept) with the MSP430 microcontroller from TI, a LPWA module from Quectel and 2G in C. Developed a interface between a pump (UART) and Cloud (MQTT).
 - Development of small test gateway based on a DA1468X Dialog MCU for communication between devices based on DA1468X and Cloud (REST). The development involved Python and C.
