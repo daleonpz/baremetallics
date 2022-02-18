@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://baremetallics.com/sitemap.xml

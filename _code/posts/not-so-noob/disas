@@ -1,0 +1,47 @@
+
+array_vs_pointer1.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 20          	sub    $0x20,%rsp
+   8:	c7 45 eb 61 62 63 64 	movl   $0x64636261,-0x15(%rbp)
+   f:	c6 45 ef 00          	movb   $0x0,-0x11(%rbp)
+  13:	0f b6 45 ed          	movzbl -0x13(%rbp),%eax
+  17:	88 45 ff             	mov    %al,-0x1(%rbp)
+  1a:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  1d:	48 98                	cltq   
+  1f:	0f b6 44 05 eb       	movzbl -0x15(%rbp,%rax,1),%eax
+  24:	88 45 ff             	mov    %al,-0x1(%rbp)
+  27:	0f be 45 ff          	movsbl -0x1(%rbp),%eax
+  2b:	89 c6                	mov    %eax,%esi
+  2d:	bf 00 00 00 00       	mov    $0x0,%edi
+  32:	b8 00 00 00 00       	mov    $0x0,%eax
+  37:	e8 00 00 00 00       	callq  3c <main+0x3c>
+  3c:	48 8d 45 eb          	lea    -0x15(%rbp),%rax
+  40:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
+  44:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  48:	0f b6 40 02          	movzbl 0x2(%rax),%eax
+  4c:	88 45 ff             	mov    %al,-0x1(%rbp)
+  4f:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  52:	48 63 d0             	movslq %eax,%rdx
+  55:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  59:	48 01 d0             	add    %rdx,%rax
+  5c:	0f b6 00             	movzbl (%rax),%eax
+  5f:	88 45 ff             	mov    %al,-0x1(%rbp)
+  62:	0f be 45 ff          	movsbl -0x1(%rbp),%eax
+  66:	89 c6                	mov    %eax,%esi
+  68:	bf 00 00 00 00       	mov    $0x0,%edi
+  6d:	b8 00 00 00 00       	mov    $0x0,%eax
+  72:	e8 00 00 00 00       	callq  77 <main+0x77>
+  77:	ba 05 00 00 00       	mov    $0x5,%edx
+  7c:	be 08 00 00 00       	mov    $0x8,%esi
+  81:	bf 00 00 00 00       	mov    $0x0,%edi
+  86:	b8 00 00 00 00       	mov    $0x0,%eax
+  8b:	e8 00 00 00 00       	callq  90 <main+0x90>
+  90:	b8 00 00 00 00       	mov    $0x0,%eax
+  95:	c9                   	leaveq 
+  96:	c3                   	retq   
