@@ -7,7 +7,7 @@ description: cv
 # "Course of life" (ง •̀ω•́)ง✧
 
 # Daniel Paredes
-Software Engineer
+Software Engineer 
 
 <div id="webaddress">
 <a href="mailto:daniel@baremetallics.com">daniel@baremetallics.com</a>
