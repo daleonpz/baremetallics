@@ -1,50 +1,33 @@
-# Baremetallics 
+![banner](https://github.com/z-bj/Coming_soon/blob/master/Coming_Soon_Mockup.webp)
 
-## About Us - Why we care
-Embedded Systems are cool and fun. And more than anything else, easy.
+# Coming Soon Landing Page Template
 
-But it's a sad fact that most of the content/information out there is not easy to process.
-Specially for a beginner.
+Welcome to my Coming Soon Landing Page template repository! This is a modern and customizable landing page that I designed to showcase my upcoming portfolio or any other upcoming projects. The landing page has an elegant and minimalistic design that aligns with my personal graphic chart. The principal font used is Permanent Marker and the secondary font is Raleway, both are Google Fonts. The color scheme used in the template can be found in the code.
 
-We are a community that wants to spread knowledge.
-**Our goal is to make our content as easy as possible to understand.**
+## Status
 
-We don't want you to decipher tutorials, guides or books to learn.
+As of now, the landing page is not yet released, and it's currently an empty status page. But stay tuned for its upcoming release!
 
-## How Can You Take Part in the Community
+## Getting Started
 
-### Spread the Word
-Let people know about this proyect.
-And how can they [support us](https://www.patreon.com/baremetallics).
+To customize the landing page to your liking, follow these simple steps:
 
-### Write a Post
-You can also write a post or tutorial. There are two ways to do it:
+1.  Clone this repository to your local machine.
+2.  Navigate to the repository's root directory.
+3.  Open the `src/html/index.html` file and edit the title and description tags according to your preference.
+4.  Open the `src/css/style.css` file and edit the CSS rules to change the layout, fonts, colors, etc.
+5.  To add your social media profile links and icons, use Font Awesome and replace the links in the HTML code.
 
-1. Send us an email:
-Write a post in Markdown format and send us by mail to [support@baremetallics.com](support@baremetallics.com).
-You can find the template with instructions [here](https://raw.githubusercontent.com/daleonpz/baremetallics/master/_drafts/2017-02-04-getting-started.md).
+## Demo
 
-2. Create a pull request on Github.
-Detailed instructions are not yet ready. But we'll post it soon ;).
+To see the landing page in action, you can check out the live demo at [z-bj.github.io/Coming_soon/](https://z-bj.github.io/Coming_soon/).
 
+## License
 
-### Improve the Website
-Right now, there are no web-developers or graphic/UI-designers in our team.
-Some of us have software development and marketing experience.
-We try our best to give you the best experience.
+This project is licensed under the [MIT License](https://chat.openai.com/LICENSE.md).
 
-**If you have ideas to improve this site.**
-**We want to hear from you.**
+## Acknowledgments
 
-**Don't be shy. Take Part**
+I would like to thank [Font Awesome](https://fontawesome.com/) for providing the social media icons used in this landing page.
 
-We are sure that the comunnity will really appreciate it ;).
-
-## Still Not Sure?
-If you still don't know how you can help. No problem.
-Send us a mail to [support@baremetallics.com](support@baremetallics.com)
-And let's us know your interest! :)
-
-
-### License
-All this stuff is under the [MIT License](https://raw.githubusercontent.com/getmicah/getmicah.github.io/master/LICENSE)
+Thank you for checking out my Coming Soon Landing Page template repository. Feel free to fork and customize it to your liking!

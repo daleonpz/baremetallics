@@ -1,40 +1,51 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="header">
-    <hr>
-    <center>
-        <h1> Baremetallics </h1>
-        <h2> I try to develop embedded systems.</h2>
-    </center>
-    <hr>
-    <!--    <img src="/images/logo.png" alt="baremetallics banner"> -->
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baremetallics</title>
+    
+<!--     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    
+    
+    
+<link rel="stylesheet" href="style.css">
 
-<div class="blog">
-    <ul>
-        {% for post in site.categories.programming limit: 5%}
-        <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+<!-- <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="./fonts/Permanent_Marker/PermanentMarker-Regular.ttf">
+<link rel="stylesheet" type="text/css" href="./fonts/Raleway/Raleway-VariableFont_wght.ttf"> -->
+
+<script src="https://kit.fontawesome.com/f071670ffd.js" crossorigin="anonymous"></script>
+
+</head>
+
+<script defer src="./script.js"></script>
+
+<body>
+    <div class="wrapper">
+        <div>
+            <p>COMING SOON</p>
+        <h2>Baremetallics<span class="dot">.</span></h2>
+
+        <p>Revolutionize industry with AI-powered IoT solutions for predictive maintenance and quality control.</p>
 
 
-<div class="header">
-    <hr>
-    <center><h2> Fuck you. I'm an emoji ヘ（。□°）ヘ </h2></center>
-    <hr>
-</div>
 
-<div class="header__subscription" align="middle">
-    {% include  subscription.html %}
-</div>
+        <div class="icons">
+            
+    
+            
+        </div>
+        
+        </div>
+    </div>
 
+</body>
 
-<div class="header__social_media" align="middle">
-        {% include social_media.html %}
-</div>
+</html>
+
 
