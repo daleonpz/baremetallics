@@ -7,10 +7,10 @@ description: cv
 # "Course of life" (ง •̀ω•́)ง✧
 
 # Daniel Paredes
-Software Engineer
+Software Engineer 
 
 <div id="webaddress">
-<a href="mailto:daleonpz@gmail.com">daleonpz@gmail.com</a>
+<a href="mailto:daniel@baremetallics.com">daniel@baremetallics.com</a>
 |
 <i class="fa fa-github"></i> <a href="http://github.com/daleonpz">daleonpz</a>
 </div>

@@ -11,11 +11,11 @@ google_verification: null
 
 # Social Media
 # twitter_username: baremetallics 
-facebook_username: Baremetallics-113402556954726 
-instagram_username: baremetallics
+#facebook_username: Baremetallics-113402556954726 
+#instagram_username: baremetallics
 
 # Google services
-google_analytics: UA-147073620-4
+#google_analytics: UA-147073620-4
 
 # File management
 include: [".htaccess"]
