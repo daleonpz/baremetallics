@@ -8,7 +8,7 @@ body {
     color: $color-black;
     background: $color-white;
     font-family: 'Inconsolata', ;
-    font-size: 150%;
+    font-size: 100%;
     font-weight: 400;
 }
 h1 {
@@ -27,7 +27,8 @@ a {
         text-decoration: none;
     }
     &:hover {
-        background-color: $color-grey;
+        background-color: $color-white;
+        color: #0000FF;
         text-decoration: none;
     }
     &:active {
@@ -59,7 +60,7 @@ blockquote {
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
     padding: 60px 30px 60px 30px;
     @media screen and (max-width: $br) {
@@ -76,9 +77,9 @@ blockquote {
         display: block;
     }
     h1 {
-        font-size: 2.5em;
+        font-size: 4.5em;
         @media screen and (max-width: $br) {
-            font-size:1.5em;
+            font-size:2.5em;
         }
         font-weight: bold;
         margin-bottom: 0;
@@ -135,7 +136,7 @@ blockquote {
     }
     code {
         padding: 3px;
-        font-size: 1.0em;
+        font-size: 1.2em;
         border-radius: 3px;
         background: $color-grey;
     }
@@ -278,7 +279,7 @@ blockquote {
     &__content {
         padding-top: 40px;
         h1 {
-            font-size: 2.0em;
+            font-size: 1.7em;
             font-weight: 700;
             margin-top: 50px;
             margin-bottom: 10px;
@@ -324,6 +325,7 @@ blockquote {
             }
             list-style: circle;
             margin-left: 30px;
+            margin-top: -10px;
             margin-bottom: 15px;
             li {
                 padding: 5px;
@@ -441,6 +443,7 @@ ul.share-buttons .sr-only{
 
 
 #mailchimp {
+    background: $color_hire_shadow;
     color: $color_black;
     padding: 20px 15px;
     @media screen and (max-width: $br) {
@@ -520,15 +523,13 @@ ul.share-buttons .sr-only{
     color: $color_black;
     background-size: auto;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.0em;
     font-weight: bold;
-    padding: 0px 10px;
+    margin-right:8px;
     &:hover {
-        padding: 0px 10px;
-        border-radius: 5px;
         text-decoration: none;
-        background: $color_black;
-        color: $color_white;
+        background: $color_white;
+        color: #0000FF;
     }
 
 } 
