@@ -44,7 +44,7 @@ These constraints simplified the problem, making it easier to reduce the model s
 - **Simplify the Head**: Removed multi-scale predictions since the object sizes were fixed, reducing parameters drastically.
 - **Quantize the Model**: Converted weights and activations to uint8, significantly reducing memory usage.
 
-In the picture below, I marked the parts I removed from the original YOLOv5 model:
+In the picture below, I marked in red the flow of the blocks I keep from the original YOLOv5 model:
 
 ![YOLOv5 Simplified Architecture](/images/posts/yolov5-model-modified.png)
 
@@ -67,6 +67,12 @@ The simplified model had fewer layers and filters, making it suitable for the ES
 ```
 
 You can reproduce these results using my [project repository](https://github.com/daleonpz/POC_CV_tinyml).
+
+Here are some metrics of the simplified model:
+
+![YOLOv5 Simplified Model Metrics](/images/posts/yolov5-model_results.png)
+![YOLOv5 Simplified Model Metrics](/images/posts/yolov5-model_PR_curve.png)
+![YOLOv5 Simplified Model Metrics](/images/posts/yolov5-model_F1_curve.png)
 
 # Lessons Learned
 
