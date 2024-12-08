@@ -6,7 +6,7 @@ description: Learn how to run YOLOv5 on a microcontroller. Optimize the model fo
 ---
 
 
-Running YOLOv5 on a microcontroller is no small task, given the model's computational requirements. In this post, I’ll share how I successfully ran a simplified YOLOv5 model on an ESP32 microcontroller and optimized it for performance and memory constraints.
+Running YOLOv5 on a microcontroller is no small task, given the model's computational requirements (>20MB). In this post, I’ll share how I successfully ran a simplified YOLOv5 model on an ESP32 microcontroller and optimized it for performance and memory constraints, achieving a model size of just 23KB.
 
 * 
 {:toc}
@@ -15,7 +15,7 @@ Running YOLOv5 on a microcontroller is no small task, given the model's computat
 
 YOLOv5 from [Ultralytics](https://docs.ultralytics.com/) follows a Backbone, Neck, and Head architecture:
 
-- The Backbone is responsible for extracting features from the input image.
+- The Backbone is responsible for extracting features from the input image at different resolutions, scales or levels.
 - The Neck combines features from different levels of the backbone.
 - The Head generates bounding boxes and class predictions based on the features extracted by the backbone and neck.
 
@@ -28,10 +28,11 @@ However, the ESP32 microcontroller has just 4MB of flash memory and 8MB of PSRAM
 
 # Use Case: Screw Type Detection
 
-I focused on detecting screw types (e.g., "Big," "Medium," "Black") using an ESP-EYE module. The setup had fixed conditions:
+The first step to simplifying YOLOv5 was to define a specific use case, with fixed conditions that could be optimized for.
+I focused on detecting screw types (e.g., "Big," "Medium," "Black") using an ESP-EYE module. The constraints were as follows:
 
-- Images were 96x96 pixels.
-- The camera and screws were at a fixed distance.
+- Images were 96x96 pixels: After some tests, I found that this resolution was minimum to detect the screws with acceptable accuracy and speed on the deployed hardware.
+- The camera and screws were at a fixed distance: This allowed me to have fixed sizes, so I didn't have to look for objects at different scales or levels.
 
 ![Screws](/images/posts/yolov5-sampledata.png)
 
@@ -40,9 +41,9 @@ These constraints simplified the problem, making it easier to reduce the model s
 # How I Simplified the Model
 
 - **Reduce Input Size**: Input images were resized to 96x96 pixels, reducing the parameters and memory usage.
-- **Simplify the Backbone**: I reduced the number of layers and filters using trial and error, maintaining acceptable accuracy while cutting computational demands.
-- **Simplify the Head**: Removed multi-scale predictions since the object sizes were fixed, reducing parameters drastically.
-- **Quantize the Model**: Converted weights and activations to uint8, significantly reducing memory usage.
+- **Simplify the Backbone**: I reduced the number of layers and filters by trial and error, keeping acceptable accuracy while cutting computational demands.
+- **Simplify the Head**: Removed multi-scale predictions since the object sizes were fixed.
+- **Quantize the Model**: Converted weights and activations from float32 to uint8, reducing memory usage.
 
 In the picture below, I marked in red the flow of the blocks I keep from the original YOLOv5 model:
 
@@ -68,12 +69,6 @@ The simplified model had fewer layers and filters, making it suitable for the ES
 
 You can reproduce these results using my [project repository](https://github.com/daleonpz/POC_CV_tinyml).
 
-Here are some metrics of the simplified model:
-
-![YOLOv5 Simplified Model Metrics](/images/posts/yolov5-model_results.png)
-![YOLOv5 Simplified Model Metrics](/images/posts/yolov5-model_PR_curve.png)
-![YOLOv5 Simplified Model Metrics](/images/posts/yolov5-model_F1_curve.png)
-
 # Lessons Learned
 
 - **Fixed Scenarios Simplify the Problem**: The controlled environment (fixed camera and object size) allowed me to remove unnecessary complexity.
@@ -82,4 +77,4 @@ Here are some metrics of the simplified model:
 
 # Conclusion
 
-By reducing input size, simplifying the architecture, and quantizing the model, I was able to run YOLOv5 on a resource-constrained ESP32 microcontroller. This process demonstrates how deep learning can extend to edge devices, even with strict memory and processing limits. I hope this inspires you to explore similar optimizations for your embedded projects!
+By choosing a specific use case, reducing input size, simplifying the architecture, and quantizing the model, I was able to run YOLOv5 on a resource-constrained ESP32 microcontroller. This process demonstrates how deep learning can extend to edge devices, even with strict memory and processing limits. I hope this inspires you to explore similar optimizations for your embedded projects!
