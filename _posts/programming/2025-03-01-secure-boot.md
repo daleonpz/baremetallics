@@ -62,14 +62,13 @@ openssl ec -in second_private.pem -pubout -out second_public.pem
 ### Step 2: Store FSBL Public Key Hash
 
 ```bash
-openssl dgst -sha256 -binary root_public.pem | openssl base64 > otp.txt
+openssl dgst -sha256 -binary root_public.pem | openssl base64 > OTP.txt
 ```
 
 ### Step 3: Sign Bootloader
 
 ```bash
 echo "bootloader code" > bootloader.txt
-cat second_public.pem >> bootloader.txt  # Embed second public key
 openssl dgst -sha256 -sign root_private.pem -out bootloader.sig bootloader.txt
 ```
 
@@ -86,9 +85,11 @@ The following script (`secure_boot.sh`) checks each step before executing it:
 
 ```bash
 #!/bin/bash
-set -e  # Exit on error
 
-ROOT_HASH_FILE="otp.txt"
+set -e  # Exit on error (remove this if you want to continue on failure)
+
+# File paths
+ROOT_HASH_FILE="OTP.txt"
 BOOTLOADER_FILE="bootloader.txt"
 BOOTLOADER_SIG="bootloader.sig"
 APPLICATION_FILE="application.txt"
@@ -99,8 +100,10 @@ SECOND_PUBLIC_KEY="second_public.pem"
 echo "[*] Starting Secure Boot Verification"
 
 # Step 1: Verify Root Public Key Hash
+echo "[*] Checking root public key against OTP memory"
 computed_hash=$(openssl dgst -sha256 -binary "$ROOT_PUBLIC_KEY" | openssl base64)
 stored_hash=$(cat "$ROOT_HASH_FILE")
+
 if [ "$computed_hash" != "$stored_hash" ]; then
     echo "FAILED on root public key verification"
     exit 1
@@ -108,21 +111,15 @@ fi
 echo "[+] Root public key is valid"
 
 # Step 2: Verify Bootloader Signature
+echo "[*] Verifying bootloader signature"
 if ! openssl dgst -sha256 -verify "$ROOT_PUBLIC_KEY" -signature "$BOOTLOADER_SIG" "$BOOTLOADER_FILE"; then
     echo "FAILED on bootloader signature verification"
     exit 1
 fi
 echo "[+] Bootloader signature is valid"
 
-# Step 3: Extract Second Public Key
-awk '/-----BEGIN PUBLIC KEY-----/{flag=1} flag; /-----END PUBLIC KEY-----/{flag=0}' "$BOOTLOADER_FILE" > "$SECOND_PUBLIC_KEY"
-if ! openssl pkey -in "$SECOND_PUBLIC_KEY" -pubin -noout; then
-    echo "FAILED on extracting second public key"
-    exit 1
-fi
-echo "[+] Extracted and validated second public key"
-
 # Step 4: Verify Application Signature
+echo "[*] Verifying application signature"
 if ! openssl dgst -sha256 -verify "$SECOND_PUBLIC_KEY" -signature "$APPLICATION_SIG" "$APPLICATION_FILE"; then
     echo "FAILED on application signature verification"
     exit 1
@@ -145,14 +142,24 @@ Expected output:
 
 ```bash
 [*] Starting Secure Boot Verification
+[*] Checking root public key against OTP memory
 [+] Root public key is valid
+[*] Verifying bootloader signature
+Verified OK
 [+] Bootloader signature is valid
-[+] Extracted and validated second public key
+[*] Verifying application signature
+Verified OK
 [+] Application signature is valid
 [SUCCESS] Secure boot verification completed
 ```
 
 ### Testing Failure Cases
+
+If you modify `root_public.pem`, the root public key verification fails:
+
+```bash
+FAILED on root public key verification
+```
 
 If you modify `bootloader.txt` with unauthorized content, the bootloader verification fails:
 
