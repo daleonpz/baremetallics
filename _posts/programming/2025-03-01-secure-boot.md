@@ -226,5 +226,5 @@ Understanding and implementing secure boot is critical for securing embedded dev
 - [Intel® Stratix® 10 SoC FPGA Boot User Guide](https://www.intel.com/content/www/us/en/docs/programmable/683847/21-4/boot-flow-overview.html)
 - [Asymmetric-Key Encryption and Digital Signatures in Practice](https://sergioprado.blog/asymmetric-key-encryption-and-digital-signatures-in-practice/)
 - [Engineering Secure Devices by  Dominik Merli](https://www.oreilly.com/library/view/engineering-secure-devices/9781098182205/)
-
+- [PSA Level 1 Questionnaire](https://www.psacertified.org/app/uploads/2024/08/JSADEN001-L1-V3.1-Beta-01_.pdf)
 
