@@ -1,3 +1,6 @@
+well designde interfaces plug holes of ill-defined or undefined operations, define what is undefined, and make explicit decisions about behaviors thta the language specifies as undefined.
+
+
 - 4.1.5 Noncompliant Code Example
 The order of evaluation for function arguments is unspecified. This noncompliant code example exhibits unspecified behavior but not undefined behavior:
 
