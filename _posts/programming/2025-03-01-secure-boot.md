@@ -107,7 +107,7 @@ echo "[*] Storing root public key hash in OTP.txt"
 openssl dgst -sha256 -binary root_public.pem | openssl base64 > OTP.txt
 
 # Create bootloader.txt
-echo "[*] Embedding second public key in bootloader.txt"
+echo "[*] Create bootloader.txt"
 echo "bootloader code" > bootloader.txt
 
 # Sign bootloader.txt with root private key
