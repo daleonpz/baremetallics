@@ -9,3 +9,5 @@ _site/
 *.swp
 .bundle/
 vendor/
+.cache/
+.local/
