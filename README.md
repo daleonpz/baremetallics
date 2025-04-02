@@ -46,5 +46,43 @@ Send us a mail to [support@baremetallics.com](support@baremetallics.com)
 And let's us know your interest! :)
 
 
+## How to Run the Site Locally
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/daleonpz/baremetallics.git
+```
+
+2. Install ruby
+
+```bash
+sudo apt-get install ruby-full build-essential zlib1g-dev
+```
+
+3. Install Jekyll
+
+```bash
+gem install jekyll bundler
+```
+
+4. Install dependencies
+
+```bash
+bundle install
+```
+
+5. Run the site
+
+```bash
+bundle exec jekyll serve
+```
+
+6. Open your browser and go to `http://localhost:4000`
+
+And that's it! You should see the site running locally.
+
+An alternative is using Nix. If you have Nix installed, you can run `nix develop --ignore-environment` and then `bundle exec jekyll serve`.
+
 ### License
 All this stuff is under the [MIT License](https://raw.githubusercontent.com/getmicah/getmicah.github.io/master/LICENSE)
