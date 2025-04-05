@@ -7,6 +7,9 @@ description: Learn how to implement secure boot for embedded devices using an ex
 
 Secure boot is a critical security feature for embedded devices. It ensures that only authorized firmware runs on a device, protecting against unauthorized modifications or attacks. In this post, I'll explain how secure boot works using a simple example.
 
+* 
+{:toc}
+
 ## Chain of Trust
 
 Secure boot relies on the **chain of trust**—a sequence of steps where each step verifies the integrity of the next before executing it.
