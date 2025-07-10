@@ -3,8 +3,7 @@ layout: default
 ---
 
 <div class="about">
-    <a class="about__back" href="/">&lt;-- home</a>
-    <h1 class="about__title">Datenschutz:</h1>
+    <h1 class="about__title">Datenschutz</h1>
     <div class="about__content">
         {{ content }}
     </div>
