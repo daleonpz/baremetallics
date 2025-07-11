@@ -521,8 +521,8 @@ footer {
   padding: 2rem;
   border-radius: 12px;
   color: #333;
-  font-family: 'Inter', sans-serif;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  font-family: inherit;
+  box-shadow: none;
 }
 
 #mailchimp-form input[type="email"],
@@ -569,7 +569,7 @@ footer {
 .legal-small {
   font-size: 0.75rem;
   color: #666;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .required {
