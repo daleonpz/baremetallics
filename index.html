@@ -12,28 +12,48 @@ layout: default
   <br>
 </div>
 
+<!-- Projects Section -->
 <div class="blog">
     <center><h2 style="font-weight: bold;" > Projects </h2></center>
-    <ul>
-        <li><a href="https://github.com/daleonpz/POC_CV_tinyml">- [Repo] </a> Screw Type Detection Using ESP-EYE with a Camera and TensorFlow Lite Micro</li>
-        <li><a href="https://dagshub.com/daleonpz/stwin_AI_vowel_recognition">- [Repo] </a> Hand Movements recognition based on Inertial Movement Unit (IMU) measurements and Machine Learning</li>
-        <li><a href="https://github.com/daleonpz/iot_cloud_infrastructure">- [Repo] </a> Simple IoT cloud infrastructure using docker-compose</li>
-        <li><a href="https://github.com/daleonpz/cmake-project-skeleton">- [Repo] </a> CMake project skeleton</li>
+    <ul class="project-list">
+        <li>
+            <a href="https://github.com/daleonpz/POC_CV_tinyml" target="_blank">
+                <i class="fa fa-github"></i> Screw Type Detection Using ESP-EYE with a Camera and TensorFlow Lite Micro
+            </a>
+        </li>
+        <li>
+            <a href="https://dagshub.com/daleonpz/stwin_AI_vowel_recognition" target="_blank">
+                <i class="fa fa-github"></i> Hand Movements Recognition with IMU and Machine Learning
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/daleonpz/iot_cloud_infrastructure" target="_blank">
+                <i class="fa fa-cloud"></i> Simple IoT Cloud Infrastructure with Docker Compose
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/daleonpz/cmake-project-skeleton" target="_blank">
+                <i class="fa fa-code"></i> CMake Project Skeleton
+            </a>
+        </li>
     </ul>
-    <br>
 </div>
 
+<!-- Blog Posts Section -->
 <div class="blog">
-    <center><h2> Posts</h2></center>
-    <ul>
-        {% for post in site.categories.programming limit: 5%}
+    <center><h2> Recent Posts</h2></center>
+    <ul class="post-list">
+        {% for post in site.categories.programming limit: 5 %}
         <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> – 
+            <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
+    <div style="text-align: right;">
+        <a href="/programming">View all posts →</a>
+    </div>
 </div>
-
 
 <!--
 <div class="header">

@@ -28,32 +28,39 @@ description: Embedded system posts
     </ul>
 </div>
 
-<div class="blog" align="middle">
-    {% if paginator.total_pages > 1 %}
-        <div class="pagination">
-          {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-          {% else %}
-                <span>&laquo; Prev</span>
-          {% endif %}
-
-          {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                      <span class="webjeda">{{ page }}</span>
-                {% elsif page == 1 %}
-                    <a href="{{site.url}}/programming">{{ page }}</a>
-                {% else %}
-                      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                {% endif %}
-          {% endfor %}
-
-          {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-          {% else %}
-                <span>Next &raquo;</span>
-          {% endif %}
-        </div>
+<div class="blog" align="center">
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    <!-- Prev Button -->
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-link">
+      <i class="fa fa-angle-left"></i> Prev
+    </a>
+    {% else %}
+    <span class="page-link disabled"><i class="fa fa-angle-left"></i> Prev</span>
     {% endif %}
+
+    <!-- Page Numbers -->
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <span class="page-link current">{{ page }}</span>
+    {% elsif page == 1 %}
+    <a href="{{site.baseurl}}/programming" class="page-link">{{ page }}</a>
+    {% else %}
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-link">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
+
+    <!-- Next Button -->
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-link">
+      Next <i class="fa fa-angle-right"></i>
+    </a>
+    {% else %}
+    <span class="page-link disabled">Next <i class="fa fa-angle-right"></i></span>
+    {% endif %}
+  </div>
+  {% endif %}
 </div>
 
 <hr>
