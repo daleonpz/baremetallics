@@ -13,6 +13,7 @@ body {
 }
 h1 {
     margin-bottom: 5px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 p {
     font-size: 1em;
@@ -82,7 +83,7 @@ blockquote {
             font-size:2.5em;
         }
         font-weight: bold;
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
     h2 {
         font-size: 1.5em;
@@ -475,50 +476,120 @@ ul.share-buttons .sr-only{
     overflow: hidden;
 }
 
-
-#mailchimp {
-    background: $color_hire_shadow;
-    color: $color_black;
-    padding: 20px 15px;
-    @media screen and (max-width: $br) {
-        padding: 10px 5px;
+footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
     }
-    .short-text { display: none; }
 
-    @media screen and (max-width: $br) {
-        .short-text { display: inline-block; }
-        .full-text { display: none; }
-    }
+// Projects css
+.project-list {
+  list-style: none;
+  padding-left: 0;
 }
-#mailchimp input {
-    border: medium none;
-    color: gray;
-    font-family: 'Inconsolata';
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    @media screen and (max-width: $br) {
-        margin-bottom: 0px;
-    }   
-    padding: 8px 10px;
-    width: 300px;
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-}
-#mailchimp input.email { background: #fff }
-#mailchimp input.name { background: #fff}
-#mailchimp input[type="submit"] {
-    background: $color_black;
-    color: $color_white;
-    cursor: pointer;
-    width: 60%;
-    padding: 8px 0;
 
+.project-list li {
+  margin-bottom: 1.5rem;
 }
-#mailchimp input[type="submit"]:hover { color: #F2C94C }
 
+.project-list a {
+  font-weight: bold;
+  display: block;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+
+// Mailchimp Form Styles
+#mailchimp-form {
+  max-width: 100%;
+  margin: 2rem auto;
+  background: transparent; /* or use #fff if you want solid white */
+  padding: 2rem;
+  border-radius: 12px;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+#mailchimp-form input[type="email"],
+#mailchimp-form input[type="text"],
+#mailchimp-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  display: block;
+  cursor: pointer;
+  color: #333;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.form-actions input[type="submit"] {
+  background-color: #f2c94c;
+  color: #000;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.form-actions input[type="submit"]:hover {
+  background-color: #ffe27d;
+}
+
+.legal-small {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.required {
+  color: #f2c94c;
+}
+
+.error {
+  color: #d93025;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.field-shift {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+
+// Navigation Items
 #navigation_items{
     background: $color_white;
     color: $color_black;

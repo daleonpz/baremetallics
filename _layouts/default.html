@@ -28,32 +28,16 @@
 <body>
 
     <div class="wrapper">
-        <a href="{{ site.url }}/feed.xml"><img src="/images/RSS.png" align="middle" alt="rss feed"/></a>
+        <a href="{{ site.url }}/feed.xml">
+              <img src="/images/rss-svgrepo-com.svg" width="24" height="24" alt="rss feed" />
+        </a>
         
         <div id="search-icon" align="right">
             <a href="{{ site.url }}/search">
-                 <img alt="Qries" src="/assets/img/search-icon.png" width=25" >
+                <img alt="Qries" src="/images/search.svg" width="24" height="24" />
             </a>
         </div>
 
-<!--
-        <script type='text/javascript'>
-            var path = window.location.pathname;
-            var page = path.split("/").pop();
-            var x = document.getElementById("search-icon");
-            var re = new RegExp("^/programming/.*$");
-
-            console.log(path)
-            console.log(re.test(path))
-            if ( re.test(path) ){
-                x.style.display = 'block';
-            }
-            else{
-                x.style.display = 'none';
-            }
-        </script>
-
--->
         <div class="wrapper__navigation" align="middle">
             {% include navigation.html %}
         </div>
@@ -61,16 +45,22 @@
         {{ content }}
     </div>
 
+<div class="header__social_media" align="middle">
+    <p>
+        {% include social_media.html %}
+    </p>
+</div>
 
-<!-- 
     <div align=middle >
         <a href = "{{ site.url }}/datenschutz">Datenschutz</a>
         <a href = "{{ site.url }}/impressum">Impressum</a>
     </div>
 
+<footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
 
-    <div id="amzn-assoc-ad-0001a57c-4948-4284-85fa-78ad8c85fe40"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=0001a57c-4948-4284-85fa-78ad8c85fe40"></script>
--->
+
 </body>
 
 </html>
