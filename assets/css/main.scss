@@ -275,6 +275,7 @@ blockquote {
     }
 }
 
+
 .post {
     padding-bottom: 30px;
 
@@ -290,7 +291,6 @@ blockquote {
         h1 {
             display: inline-block;
             font-size: 2.5em;
-
             @media screen and (max-width: $br) {
                 font-size: 2.0em;
             }
@@ -360,7 +360,7 @@ blockquote {
             }
             list-style: circle;
             margin-left: 30px;
-            margin-top: -10px;
+            margin-top: 10px;
             margin-bottom: 15px;
             li {
                 padding: 5px;
@@ -513,7 +513,7 @@ footer {
 }
 
 .project-desc {
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   color: #666;
   margin: 0;
   padding-left: 1.5rem;
@@ -634,7 +634,7 @@ footer {
     color: $color_black;
     background-size: auto;
     text-decoration: none;
-    font-size: 1.0em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-right:8px;
     &:hover {
