@@ -415,8 +415,15 @@ blockquote {
             border: 0;
             border-bottom: 1px dashed $color-black;
         }
+
     }
 }
+
+.post-excerpt {
+      font-size: 1.3rem;
+      color: #444;
+      margin: 0.2rem 0 2rem;
+  }
 
 .about {
     &__title {
@@ -518,7 +525,6 @@ footer {
   max-width: 100%;
   margin: 2rem auto;
   background: transparent; /* or use #fff if you want solid white */
-  padding: 2rem;
   border-radius: 12px;
   color: #333;
   font-family: inherit;
@@ -567,7 +573,7 @@ footer {
 }
 
 .legal-small {
-  font-size: 0.75rem;
+  font-size: 0.70rem;
   color: #666;
   margin-bottom: 1rem;
 }
