@@ -7,46 +7,24 @@ layout: default
         <h1> Baremetallics </h1>
         <h2> I try to develop embedded systems.</h2>
     </center>
-    <!--    <img src="/images/logo.png" alt="baremetallics banner"> -->
-  <br>
-  <br>
 </div>
 
-<div class="blog">
-    <center><h2 style="font-weight: bold;" > Projects </h2></center>
-    <ul>
-        <li><a href="https://github.com/daleonpz/POC_CV_tinyml">- [Repo] </a> Screw Type Detection Using ESP-EYE with a Camera and TensorFlow Lite Micro</li>
-        <li><a href="https://dagshub.com/daleonpz/stwin_AI_vowel_recognition">- [Repo] </a> Hand Movements recognition based on Inertial Movement Unit (IMU) measurements and Machine Learning</li>
-        <li><a href="https://github.com/daleonpz/iot_cloud_infrastructure">- [Repo] </a> Simple IoT cloud infrastructure using docker-compose</li>
-        <li><a href="https://github.com/daleonpz/cmake-project-skeleton">- [Repo] </a> CMake project skeleton</li>
-    </ul>
-    <br>
+<div class="header__subscription" align="middle">
+    <p> {% include subscription.html %} </p>
 </div>
 
+<!-- Blog Posts Section -->
 <div class="blog">
-    <center><h2> Posts</h2></center>
-    <ul>
-        {% for post in site.categories.programming limit: 5%}
+    <ul class="post-list">
+        {% for post in site.categories.programming limit: 5 %}
         <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> – 
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 250 }}</p>
         </li>
         {% endfor %}
     </ul>
+    <div style="text-align: right;">
+        <a href="/programming">View all posts →</a>
+    </div>
 </div>
-
-
-<!--
-<div class="header">
-    <hr>
-    <center><h2> Look at me, I'm an emoji ヘ（。□°）ヘ </h2></center>
-    <hr>
-</div>
--->
-
-
-<div class="header__social_media" align="middle">
-    <p>
-        {% include social_media.html %}
-    </p>
-</div>
-

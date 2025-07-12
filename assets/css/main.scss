@@ -13,6 +13,7 @@ body {
 }
 h1 {
     margin-bottom: 5px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 p {
     font-size: 1em;
@@ -27,8 +28,9 @@ a {
         text-decoration: none;
     }
     &:hover {
-        background-color: $color-white;
-        color: #0000FF;
+        background-color: transparent;
+        color: #d88a12;
+        border-bottom-color: #d88a12;
         text-decoration: none;
     }
     &:active {
@@ -46,25 +48,26 @@ ul {
         }
     }
 }
+
 blockquote {
     color: $color-black;
     padding-left: 15px;
     font-size: 1.5em;
-    @media screen and (max-width: $br) {
-        font-size: 1.1em;
-    }
-    letter-spacing: -1px;
     font-style: italic;
     text-align: center;
     font-weight: bold;
+    @media screen and (max-width: $br) {
+        font-size: 1.1em;
+    }
 }
 
 .wrapper {
-    max-width: 800px;
+    max-width: 60%;
     margin: auto;
     padding: 60px 30px 60px 30px;
     @media screen and (max-width: $br) {
         padding: 20px;
+        max-width: 90%;
     }
 }
 
@@ -72,41 +75,42 @@ blockquote {
 .header {
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 30px;
     @media screen and (max-width: $br) {
         display: block;
     }
     h1 {
         font-size: 4.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
         @media screen and (max-width: $br) {
             font-size:2.5em;
         }
-        font-weight: bold;
-        margin-bottom: 0;
     }
     h2 {
         font-size: 1.5em;
+        margin-bottom: 0;
+        font-weight: normal;
         @media screen and (max-width: $br) {
             font-size: 1.0em;
         }
-        margin-bottom: 0;
-        font-weight: normal;
     }
     h3 {
         font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 0;
         @media screen and (max-width: $br) {
             font-size: 1.3em;
         }
-        font-weight: bold;
-        margin-bottom: 0;
     }
     p {
         font-size: 1em;
+        line-height: 110%;
+        margin-bottom: 20px;     
         @media screen and (max-width: $br) {
             font-size: 0.8em;
         }
-        line-height: 110%;
-        margin-bottom: 20px;
     }
     b {
         font-weight: bold;
@@ -134,30 +138,6 @@ blockquote {
             padding-left: 5px;
         }
     }
-    code {
-        padding: 3px;
-        font-size: 1.2em;
-        border-radius: 3px;
-        background: $color-grey;
-    }
-    .highlight {
-        margin: 10px;
-        margin-bottom: 15px;
-        padding: 10px;
-        line-height: 1.2;
-        border-radius: 3px;
-        background: $color-grey;
-        overflow-y: auto;
-        code {
-            color: $color-black;
-            background: none;
-        }
-    }
-    .codebreak {
-        margin: 15px;
-        border: 0;
-        border-bottom: 1px dashed $color-black;
-    }
 }
 
 .blog {
@@ -173,10 +153,48 @@ blockquote {
         margin-bottom: 5px;
     }
     li{
-        font-size: 1.0em;
+        font-size: 1.3em;
+        @media screen and (max-width: $br) {
+            font-size: 0.9em;
+        }
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1em;
+        font-family: sans-serif;
         @media screen and (max-width: $br) {
             font-size: 0.7em;
+            gap: 0.2rem;
         }
+    }
+
+    .page-link {
+        padding: 0.4em 0.8em;
+        border-radius: 6px;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .page-link:hover {
+        background-color: #f0f0f0;
+        color: #000;
+    }
+
+    .page-link.current {
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        cursor: default;
+    }
+
+    .page-link.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
     }
 }
 
@@ -189,11 +207,11 @@ blockquote {
     h2 {
         font-weight: bold;
         font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 5px;
         @media screen and (max-width: $br) {
             font-size: 0.9em;
         }
-        text-align: center;
-        margin-bottom: 5px;
     }
     img {
         float: left;
@@ -240,6 +258,7 @@ blockquote {
     }
 }
 
+
 .post {
     padding-bottom: 30px;
 
@@ -255,15 +274,14 @@ blockquote {
         h1 {
             display: inline-block;
             font-size: 2.5em;
-
-            @media screen and (max-width: $br) {
-                font-size: 2.0em;
-            }
             font-weight: 700;
             padding-right: 10px;
             padding-bottom: 2px;
             text-decoration: none;
-            overflow-wrap: break-word;                       
+            overflow-wrap: break-word;
+            @media screen and (max-width: $br) {
+                font-size: 2.0em;
+            }
         }
     }
     &__date {
@@ -289,26 +307,25 @@ blockquote {
         }
         h2 {
             font-size: 1.4em;
-            @media screen and (max-width: $br) {
-                font-size: 1.1em;
-            }
             font-weight: 700;
             margin-top: 25px;
             margin-bottom: 5px;
+            @media screen and (max-width: $br) {
+                font-size: 1.1em;
+            }
         }
         p {
-            font-size: 1em;
+            font-size: 1.2em;
+            line-height: 200%;
+            margin-bottom: 20px;
             @media screen and (max-width: $br) {
                 font-size: 0.8em;
             }
-            line-height: 200%;
-            margin-bottom: 20px;
         }
         a {
             padding-bottom: 1px;
             border-bottom: 1px solid $color-link;
             &:hover {
-                background-color: $color-grey;
                 text-decoration: none;
             }
         }
@@ -318,15 +335,15 @@ blockquote {
         em {
             font-style: italic;
         }
-        ul {
+        ol,ul {
             font-size: 1em;
+            list-style: circle;
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
             @media screen and (max-width: $br) {
                 font-size: 0.8em;
             }
-            list-style: circle;
-            margin-left: 30px;
-            margin-top: -10px;
-            margin-bottom: 15px;
             li {
                 padding: 5px;
                 padding-left: 5px;
@@ -337,6 +354,9 @@ blockquote {
             @media screen and (max-width: $br) {
                 margin-left: 10px;
             }
+        }
+        ol {
+            list-style: decimal;
         }
         vzt {
             margin-top: 10px;
@@ -353,33 +373,20 @@ blockquote {
             margin: auto;
             width: 100%;
         }
-        code {
-            padding: 3px;
-            font-size: 0.9em;
-            @media screen and (max-width: $br) {
-                font-size: 0.7em;
-            }
-            border-radius: 3px;
-            background: $color-grey;
-        }
         .highlight {
-            margin: 10px;
-            margin-bottom: 15px;
-            padding: 10px;
-            line-height: 1.2;
-            border-radius: 3px;
-            background: $color-grey;
-            overflow-y: auto;
-            code {
-                color: $color-black;
-                background: none;
+            @media screen and (max-width: $br) {
+                font-size: 0.8em;
             }
         }
-        .codebreak {
-            margin: 15px;
-            border: 0;
-            border-bottom: 1px dashed $color-black;
-        }
+    }
+}
+
+.post-excerpt {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 0.2rem 0 2rem;
+    @media screen and (max-width: $br) {
+        font-size: 0.9rem;
     }
 }
 
@@ -441,50 +448,126 @@ ul.share-buttons .sr-only{
     overflow: hidden;
 }
 
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
 
-#mailchimp {
-    background: $color_hire_shadow;
-    color: $color_black;
-    padding: 20px 15px;
-    @media screen and (max-width: $br) {
-        padding: 10px 5px;
-    }
-    .short-text { display: none; }
+// Projects css
+.project-list {
+    list-style: none;
+    padding-left: 0;
+}
 
+.project-list li {
+    margin-bottom: 1.5rem;
     @media screen and (max-width: $br) {
-        .short-text { display: inline-block; }
-        .full-text { display: none; }
+        margin-bottom: 0.1rem;
+        font-size: 1.1rem;
     }
 }
-#mailchimp input {
-    border: medium none;
-    color: gray;
-    font-family: 'Inconsolata';
-    font-size: 20px;
+
+.project-list a {
     font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    display: block;
+    color: #222;
+    text-decoration: none;
+    margin-bottom: 0.3rem;
+}
+
+.project-list a:hover {
+    text-decoration: underline;
+}
+
+.project-desc {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+    padding-left: 1.5rem;
     @media screen and (max-width: $br) {
-        margin-bottom: 0px;
-    }   
-    padding: 8px 10px;
-    width: 300px;
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+        font-size: 0.9rem;
+    }
 }
-#mailchimp input.email { background: #fff }
-#mailchimp input.name { background: #fff}
-#mailchimp input[type="submit"] {
-    background: $color_black;
-    color: $color_white;
+
+
+// Mailchimp Form Styles
+#mailchimp-form {
+    max-width: 60%;
+    margin: 2rem auto;
+    background: transparent; /* or use #fff if you want solid white */
+    border-radius: 12px;
+    color: #333;
+    font-family: inherit;
+    box-shadow: none;
+}
+
+#mailchimp-form input[type="email"],
+#mailchimp-form input[type="text"],
+#mailchimp-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.checkbox-group label {
+    font-size: 0.9rem;
+    display: block;
     cursor: pointer;
-    width: 60%;
-    padding: 8px 0;
-
+    color: #333;
 }
-#mailchimp input[type="submit"]:hover { color: #F2C94C }
 
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.form-actions input[type="submit"] {
+    background-color: #f2c94c;
+    color: #000;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.form-actions input[type="submit"]:hover {
+    background-color: #ffe2b9;
+}
+
+.legal-small {
+    font-size: 0.70rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.required {
+    color: #f2c94c;
+}
+
+.error {
+    color: #d93025;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.field-shift {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+}
+
+// Navigation Items
 #navigation_items{
     background: $color_white;
     color: $color_black;
@@ -523,13 +606,14 @@ ul.share-buttons .sr-only{
     color: $color_black;
     background-size: auto;
     text-decoration: none;
-    font-size: 1.0em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-right:8px;
     &:hover {
         text-decoration: none;
         background: $color_white;
-        color: #0000FF;
+        color: #d88a12;
+        border-bottom-color: #d88a12;
     }
 
 } 
@@ -572,35 +656,120 @@ ul.share-buttons .sr-only{
 // Adding 'Contents' headline to the TOC
 #markdown-toc::before {
     content: "Table of Contents";
-    font-size: 2.0em;
-    font-weight: 700;
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
-
-// Using numbers instead of bullets for listing
-#markdown-toc ul {
-    list-style: square;
-    margin-left: 30px;
-    margin-bottom: 15px;
-    font-size: 1em;
-    @media screen and (max-width: $br) {
-        font-size: 0.8em;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    @media screen and (max-width: 600px) {
+        font-size: 1.3em;
     }
 }
 
 #markdown-toc {
-    border: 1px solid #aaa;
-    list-style: decimal;
-    display: inline-block;
-    background: $color_grey;
-    color: $color_black;
-    padding: 20px 10px 20px 100px;
-    width: 500px;
-    @media screen and (max-width: $br) {
-        padding: 20px 10px 20px 50px;
-        width: 250px;
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Reset counter only on top-level */
+#markdown-toc > ul {
+    counter-reset: toc-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Number top-level items */
+#markdown-toc > ul > li {
+    counter-increment: toc-counter;
+    margin: 0.5em 0;
+    list-style: none;
+}
+
+#markdown-toc > ul > li::before {
+    content: counter(toc-counter) ". ";
+    font-weight: bold;
+    color: #555;
+    margin-right: 0.3em;
+}
+
+/* Sublist: square bullets */
+#markdown-toc ul ul {
+    list-style-type: square;
+    margin-left: 1.2em;
+    margin-top: 0.4em;
+}
+
+/* Links */
+#markdown-toc a {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px dashed #ccc;
+    transition: all 0.2s ease-in-out;
+}
+
+#markdown-toc a:hover {
+    color: #d88a12;
+    border-bottom-color: #d88a12;
+    background-color: transparent;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    #markdown-toc {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
-    border-radius: 0px;
+}
+
+.post__prev_next {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2em;
+    font-family: sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    align-items: center;
+    @media screen and (max-width: $br) {
+        font-size: 0.9em;
+        gap: 0.5rem;
+    }
+}
+
+.post__prev_next .post__btn {
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post__prev_next .post__btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.post__prev_next .post__btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.post__prev_next .post__btn.current {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
 }
 

@@ -4,7 +4,7 @@ layout: search
 
 <!-- Html Elements for Search -->
 <div id="search-container">
-<input type="text" id="search-input" placeholder="Search post..">
+<input type="text" id="search-input" placeholder="Search posts..">
         <ul id="results-container"></ul>
 </div>
 
