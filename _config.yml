@@ -47,9 +47,3 @@ kramdown:
   input: GFM
   hard_wrap: false
 highlighter: rouge
-
-page_gen:
-  - data: books
-    name: key
-    dir: goto
-    extention: html
