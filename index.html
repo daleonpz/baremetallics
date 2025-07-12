@@ -20,7 +20,7 @@ layout: default
         <li>
             <span class="date">{{ post.date | date: '%Y %b %d' }}</span> – 
             <a href="{{ post.url }}">{{ post.title }}</a>
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 250 }}</p>
         </li>
         {% endfor %}
     </ul>

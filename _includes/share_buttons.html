@@ -1,8 +1,20 @@
 <ul class="share-buttons" align="center">
-  <li><a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="images/flat_web_icon_set/inverted/Twitter.png" /></a></li>
-  <!--
-  <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fdaleonpz.com" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="images/flat_web_icon_set/inverted/Google+.png" /></a></li>
-  -->
-  <li><a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Submit to Reddit" src="images/flat_web_icon_set/inverted/Reddit.png" /></a></li>
+  <!-- Reddit -->
+  <li>
+    <a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+       target="_blank" title="Submit to Reddit"
+       onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+      <img alt="Submit to Reddit" src="images/flat_web_icon_set/inverted/Reddit.png" />
+    </a>
+  </li>
+
+  <!-- LinkedIn -->
+  <li>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+       target="_blank" title="Share on LinkedIn"
+       onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;">
+      <img alt="Share on LinkedIn" src="images/flat_web_icon_set/inverted/LinkedIn.png" />
+    </a>
+  </li>
 </ul>
 

@@ -6,11 +6,9 @@ description: Embedded system posts
 
 
 <div class="header">
-    <hr>
     <h1 align=middle> Posts</h1>
     <h2 align=middle> Learning this thing called </h2>
     <h2 align=middle> Embedded Systems</h2>
-    <hr>    
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,6 +21,7 @@ description: Embedded system posts
             <li>
                 <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - 
                 <a href="{{ post.url }}">{{ post.title }}</a>
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 250 }}</p>
             </li>
         {% endfor %}
     </ul>

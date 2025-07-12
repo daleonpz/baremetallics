@@ -62,11 +62,12 @@ blockquote {
 }
 
 .wrapper {
-    max-width: 800px;
+    max-width: 60%;
     margin: auto;
     padding: 60px 30px 60px 30px;
     @media screen and (max-width: $br) {
         padding: 20px;
+        max-width: 90%;
     }
 }
 
@@ -74,7 +75,8 @@ blockquote {
 .header {
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 30px;
     @media screen and (max-width: $br) {
         display: block;
     }
@@ -337,7 +339,7 @@ blockquote {
             }
         }
         p {
-            font-size: 1em;
+            font-size: 1.2em;
             line-height: 200%;
             margin-bottom: 20px;
             @media screen and (max-width: $br) {
@@ -508,6 +510,10 @@ footer {
 
 .project-list li {
     margin-bottom: 1.5rem;
+    @media screen and (max-width: $br) {
+        margin-bottom: 0.1rem;
+        font-size: 1.1rem;
+    }
 }
 
 .project-list a {
@@ -523,16 +529,19 @@ footer {
 }
 
 .project-desc {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #666;
     margin: 0;
     padding-left: 1.5rem;
+    @media screen and (max-width: $br) {
+        font-size: 0.9rem;
+    }
 }
 
 
 // Mailchimp Form Styles
 #mailchimp-form {
-    max-width: 100%;
+    max-width: 60%;
     margin: 2rem auto;
     background: transparent; /* or use #fff if you want solid white */
     border-radius: 12px;
@@ -766,4 +775,3 @@ footer {
         font-size: 0.9rem;
     }
 }
-
