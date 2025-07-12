@@ -1,0 +1,31 @@
+<div id="comments">
+  <!-- Button to load comments -->
+  <button id="load-comments" class="load-comments-button">Load Comments</button>
+  <!-- Utterances iframe initially hidden -->
+  <div id="utterances-container" style="display:none;">
+    <script src="https://utteranc.es/client.js"
+            repo="daleonpz/baremetallics"
+            issue-term="pathname"
+            label="comment"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+
+<script>
+  // Add event listener to the "Load Comments" button
+  document.getElementById('load-comments').addEventListener('click', function() {
+    var commentsContainer = document.getElementById('utterances-container');
+    var button = document.getElementById('load-comments');
+
+    // Display the comments iframe container
+    commentsContainer.style.display = 'block';
+    
+    // Change button text
+    // dissapear the button completely
+    button.style.display = 'none';
+    button.disabled = true; // Disable the button after loading
+  });
+</script>
