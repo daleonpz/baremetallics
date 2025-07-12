@@ -28,9 +28,10 @@ a {
         text-decoration: none;
     }
     &:hover {
-        background-color: $color-white;
-        color: #0000FF;
-        text-decoration: none;
+        background-color: transparent;
+          color: #d88a12;
+          border-bottom-color: #d88a12;
+          text-decoration: none;
     }
     &:active {
         color: $color-link;
@@ -47,17 +48,17 @@ ul {
         }
     }
 }
+
 blockquote {
     color: $color-black;
     padding-left: 15px;
     font-size: 1.5em;
-    @media screen and (max-width: $br) {
-        font-size: 1.1em;
-    }
-    letter-spacing: -1px;
     font-style: italic;
     text-align: center;
     font-weight: bold;
+    @media screen and (max-width: $br) {
+        font-size: 1.1em;
+    }
 }
 
 .wrapper {
@@ -79,35 +80,35 @@ blockquote {
     }
     h1 {
         font-size: 4.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
         @media screen and (max-width: $br) {
             font-size:2.5em;
         }
-        font-weight: bold;
-        margin-bottom: 10px;
     }
     h2 {
         font-size: 1.5em;
+        margin-bottom: 0;
+        font-weight: normal;
         @media screen and (max-width: $br) {
             font-size: 1.0em;
         }
-        margin-bottom: 0;
-        font-weight: normal;
     }
     h3 {
         font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 0;
         @media screen and (max-width: $br) {
             font-size: 1.3em;
         }
-        font-weight: bold;
-        margin-bottom: 0;
     }
     p {
         font-size: 1em;
+        line-height: 110%;
+        margin-bottom: 20px;     
         @media screen and (max-width: $br) {
             font-size: 0.8em;
         }
-        line-height: 110%;
-        margin-bottom: 20px;
     }
     b {
         font-weight: bold;
@@ -174,9 +175,9 @@ blockquote {
         margin-bottom: 5px;
     }
     li{
-        font-size: 1.0em;
+        font-size: 1.3em;
         @media screen and (max-width: $br) {
-            font-size: 0.7em;
+            font-size: 0.9em;
         }
     }
     .pagination {
@@ -186,6 +187,10 @@ blockquote {
         gap: 0.5rem;
         margin-top: 1em;
         font-family: sans-serif;
+        @media screen and (max-width: $br) {
+            font-size: 0.7em;
+            gap: 0.2rem;
+        }
     }
 
     .page-link {
@@ -224,11 +229,11 @@ blockquote {
     h2 {
         font-weight: bold;
         font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 5px;
         @media screen and (max-width: $br) {
             font-size: 0.9em;
         }
-        text-align: center;
-        margin-bottom: 5px;
     }
     img {
         float: left;
@@ -291,14 +296,14 @@ blockquote {
         h1 {
             display: inline-block;
             font-size: 2.5em;
-            @media screen and (max-width: $br) {
-                font-size: 2.0em;
-            }
             font-weight: 700;
             padding-right: 10px;
             padding-bottom: 2px;
             text-decoration: none;
-            overflow-wrap: break-word;                       
+            overflow-wrap: break-word;
+            @media screen and (max-width: $br) {
+                font-size: 2.0em;
+            }
         }
     }
     &__date {
@@ -324,26 +329,25 @@ blockquote {
         }
         h2 {
             font-size: 1.4em;
-            @media screen and (max-width: $br) {
-                font-size: 1.1em;
-            }
             font-weight: 700;
             margin-top: 25px;
             margin-bottom: 5px;
+            @media screen and (max-width: $br) {
+                font-size: 1.1em;
+            }
         }
         p {
             font-size: 1em;
+            line-height: 200%;
+            margin-bottom: 20px;
             @media screen and (max-width: $br) {
                 font-size: 0.8em;
             }
-            line-height: 200%;
-            margin-bottom: 20px;
         }
         a {
             padding-bottom: 1px;
             border-bottom: 1px solid $color-link;
             &:hover {
-                background-color: $color-grey;
                 text-decoration: none;
             }
         }
@@ -353,15 +357,15 @@ blockquote {
         em {
             font-style: italic;
         }
-        ul {
+        ol,ul {
             font-size: 1em;
-            @media screen and (max-width: $br) {
-                font-size: 0.8em;
-            }
             list-style: circle;
             margin-left: 30px;
             margin-top: 10px;
             margin-bottom: 15px;
+            @media screen and (max-width: $br) {
+                font-size: 0.8em;
+            }
             li {
                 padding: 5px;
                 padding-left: 5px;
@@ -372,6 +376,9 @@ blockquote {
             @media screen and (max-width: $br) {
                 margin-left: 10px;
             }
+        }
+        ol {
+            list-style: decimal;
         }
         vzt {
             margin-top: 10px;
@@ -391,16 +398,16 @@ blockquote {
         code {
             padding: 3px;
             font-size: 0.9em;
+            border-radius: 3px;
+            background: $color-grey;
             @media screen and (max-width: $br) {
                 font-size: 0.7em;
             }
-            border-radius: 3px;
-            background: $color-grey;
         }
         .highlight {
             margin: 10px;
             margin-bottom: 15px;
-            padding: 10px;
+            padding: 5px;
             line-height: 1.2;
             border-radius: 3px;
             background: $color-grey;
@@ -420,9 +427,12 @@ blockquote {
 }
 
 .post-excerpt {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: #444;
       margin: 0.2rem 0 2rem;
+      @media screen and (max-width: $br) {
+          font-size: 0.9rem;
+      }
   }
 
 .about {
@@ -569,7 +579,7 @@ footer {
 }
 
 .form-actions input[type="submit"]:hover {
-  background-color: #ffe27d;
+  background-color: #ffe2b9;
 }
 
 .legal-small {
@@ -640,7 +650,8 @@ footer {
     &:hover {
         text-decoration: none;
         background: $color_white;
-        color: #0000FF;
+        color: #d88a12;
+        border-bottom-color: #d88a12;
     }
 
 } 
@@ -682,36 +693,77 @@ footer {
 
 // Adding 'Contents' headline to the TOC
 #markdown-toc::before {
-    content: "Table of Contents";
-    font-size: 2.0em;
-    font-weight: 700;
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
-
-// Using numbers instead of bullets for listing
-#markdown-toc ul {
-    list-style: square;
-    margin-left: 30px;
-    margin-bottom: 15px;
-    font-size: 1em;
-    @media screen and (max-width: $br) {
-        font-size: 0.8em;
-    }
+  content: "Table of Contents";
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  @media screen and (max-width: 600px) {
+    font-size: 1.3em;
+  }
 }
 
 #markdown-toc {
-    border: 1px solid #aaa;
-    list-style: decimal;
-    display: inline-block;
-    background: $color_grey;
-    color: $color_black;
-    padding: 20px 10px 20px 100px;
-    width: 500px;
-    @media screen and (max-width: $br) {
-        padding: 20px 10px 20px 50px;
-        width: 250px;
-    }
-    border-radius: 0px;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Reset counter only on top-level */
+#markdown-toc > ul {
+  counter-reset: toc-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Number top-level items */
+#markdown-toc > ul > li {
+  counter-increment: toc-counter;
+  margin: 0.5em 0;
+  list-style: none;
+}
+
+#markdown-toc > ul > li::before {
+  content: counter(toc-counter) ". ";
+  font-weight: bold;
+  color: #555;
+  margin-right: 0.3em;
+}
+
+/* Sublist: square bullets */
+#markdown-toc ul ul {
+  list-style-type: square;
+  margin-left: 1.2em;
+  margin-top: 0.4em;
+}
+
+/* Links */
+#markdown-toc a {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px dashed #ccc;
+  transition: all 0.2s ease-in-out;
+}
+
+#markdown-toc a:hover {
+  color: #d88a12;
+  border-bottom-color: #d88a12;
+  background-color: transparent;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  #markdown-toc {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
 }
 
