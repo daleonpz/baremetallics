@@ -138,6 +138,15 @@ blockquote {
             padding-left: 5px;
         }
     }
+    &__subscription {
+        background-color: $color-black;
+        margin-top: 2rem;
+        background-color: #f7f7f7;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-family: 'Inter', sans-serif;
+
+    }
 }
 
 .blog {
@@ -379,6 +388,12 @@ blockquote {
             }
         }
     }
+    &__comments{
+        margin-top: 2rem;
+        margin-top: 2rem;
+        padding: 2rem;
+        font-family: 'Inter', sans-serif;
+    }
 }
 
 .post-excerpt {
@@ -495,6 +510,7 @@ footer {
 // Mailchimp Form Styles
 #mailchimp-form {
     max-width: 60%;
+    padding: 2rem;
     margin: 2rem auto;
     background: transparent; /* or use #fff if you want solid white */
     border-radius: 12px;
@@ -771,5 +787,30 @@ footer {
     color: #fff;
     font-weight: bold;
     cursor: default;
+}
+
+// Comment
+/* General Comment Section */
+#comments .utterances-frame {
+    margin-top: 2rem;
+}
+
+/* Style for the "Load Comments" button to match the h3 font style */
+.load-comments-button {
+    background-color: transparent;
+    color: #000;
+    font-weight: 600; /* Same weight as h3 */
+    font-size: 1.5rem; /* Same size as h3 */
+    font-family: 'Inter', sans-serif; /* Ensure the font is the same */
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.load-comments-button:hover {
+    background-color: #ffe27d;
 }
 
