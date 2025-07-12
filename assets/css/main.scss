@@ -29,9 +29,9 @@ a {
     }
     &:hover {
         background-color: transparent;
-          color: #d88a12;
-          border-bottom-color: #d88a12;
-          text-decoration: none;
+        color: #d88a12;
+        border-bottom-color: #d88a12;
+        text-decoration: none;
     }
     &:active {
         color: $color-link;
@@ -427,13 +427,13 @@ blockquote {
 }
 
 .post-excerpt {
-      font-size: 1.1rem;
-      color: #444;
-      margin: 0.2rem 0 2rem;
-      @media screen and (max-width: $br) {
-          font-size: 0.9rem;
-      }
-  }
+    font-size: 1.1rem;
+    color: #444;
+    margin: 0.2rem 0 2rem;
+    @media screen and (max-width: $br) {
+        font-size: 0.9rem;
+    }
+}
 
 .about {
     &__title {
@@ -494,115 +494,115 @@ ul.share-buttons .sr-only{
 }
 
 footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
 
 // Projects css
 .project-list {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 .project-list li {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-list a {
-  font-weight: bold;
-  display: block;
-  color: #222;
-  text-decoration: none;
-  margin-bottom: 0.3rem;
+    font-weight: bold;
+    display: block;
+    color: #222;
+    text-decoration: none;
+    margin-bottom: 0.3rem;
 }
 
 .project-list a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .project-desc {
-  font-size: 1.3rem;
-  color: #666;
-  margin: 0;
-  padding-left: 1.5rem;
+    font-size: 1.3rem;
+    color: #666;
+    margin: 0;
+    padding-left: 1.5rem;
 }
 
 
 // Mailchimp Form Styles
 #mailchimp-form {
-  max-width: 100%;
-  margin: 2rem auto;
-  background: transparent; /* or use #fff if you want solid white */
-  border-radius: 12px;
-  color: #333;
-  font-family: inherit;
-  box-shadow: none;
+    max-width: 100%;
+    margin: 2rem auto;
+    background: transparent; /* or use #fff if you want solid white */
+    border-radius: 12px;
+    color: #333;
+    font-family: inherit;
+    box-shadow: none;
 }
 
 #mailchimp-form input[type="email"],
 #mailchimp-form input[type="text"],
 #mailchimp-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  background: #fff;
-  color: #000;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #000;
+    box-sizing: border-box;
 }
 
 .checkbox-group label {
-  font-size: 0.9rem;
-  display: block;
-  cursor: pointer;
-  color: #333;
+    font-size: 0.9rem;
+    display: block;
+    cursor: pointer;
+    color: #333;
 }
 
 .checkbox-group input[type="checkbox"] {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .form-actions input[type="submit"] {
-  background-color: #f2c94c;
-  color: #000;
-  padding: 0.75rem 2rem;
-  border-radius: 999px;
-  border: none;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
+    background-color: #f2c94c;
+    color: #000;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
 }
 
 .form-actions input[type="submit"]:hover {
-  background-color: #ffe2b9;
+    background-color: #ffe2b9;
 }
 
 .legal-small {
-  font-size: 0.70rem;
-  color: #666;
-  margin-bottom: 1rem;
+    font-size: 0.70rem;
+    color: #666;
+    margin-bottom: 1rem;
 }
 
 .required {
-  color: #f2c94c;
+    color: #f2c94c;
 }
 
 .error {
-  color: #d93025;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
-  display: none;
+    color: #d93025;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: none;
 }
 
 .field-shift {
-  position: absolute;
-  left: -9999px;
-  visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
 }
 
 // Navigation Items
@@ -693,77 +693,77 @@ footer {
 
 // Adding 'Contents' headline to the TOC
 #markdown-toc::before {
-  content: "Table of Contents";
-  font-size: 1.5em;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.5rem;
-  @media screen and (max-width: 600px) {
-    font-size: 1.3em;
-  }
+    content: "Table of Contents";
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    @media screen and (max-width: 600px) {
+        font-size: 1.3em;
+    }
 }
 
 #markdown-toc {
-  background: #fdfdfd;
-  border: 1px solid #ddd;
-  padding: 1.5rem 2rem;
-  border-radius: 0.5rem;
-  max-width: 100%;
-  font-family: monospace;
-  font-size: 1rem;
-  line-height: 1.6;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Reset counter only on top-level */
 #markdown-toc > ul {
-  counter-reset: toc-counter;
-  list-style: none;
-  padding-left: 0;
+    counter-reset: toc-counter;
+    list-style: none;
+    padding-left: 0;
 }
 
 /* Number top-level items */
 #markdown-toc > ul > li {
-  counter-increment: toc-counter;
-  margin: 0.5em 0;
-  list-style: none;
+    counter-increment: toc-counter;
+    margin: 0.5em 0;
+    list-style: none;
 }
 
 #markdown-toc > ul > li::before {
-  content: counter(toc-counter) ". ";
-  font-weight: bold;
-  color: #555;
-  margin-right: 0.3em;
+    content: counter(toc-counter) ". ";
+    font-weight: bold;
+    color: #555;
+    margin-right: 0.3em;
 }
 
 /* Sublist: square bullets */
 #markdown-toc ul ul {
-  list-style-type: square;
-  margin-left: 1.2em;
-  margin-top: 0.4em;
+    list-style-type: square;
+    margin-left: 1.2em;
+    margin-top: 0.4em;
 }
 
 /* Links */
 #markdown-toc a {
-  color: #222;
-  text-decoration: none;
-  border-bottom: 1px dashed #ccc;
-  transition: all 0.2s ease-in-out;
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px dashed #ccc;
+    transition: all 0.2s ease-in-out;
 }
 
 #markdown-toc a:hover {
-  color: #d88a12;
-  border-bottom-color: #d88a12;
-  background-color: transparent;
+    color: #d88a12;
+    border-bottom-color: #d88a12;
+    background-color: transparent;
 }
 
 /* Responsive */
 @media screen and (max-width: 600px) {
-  #markdown-toc {
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
+    #markdown-toc {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
 }
 
