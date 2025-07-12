@@ -373,6 +373,11 @@ blockquote {
             margin: auto;
             width: 100%;
         }
+        .highlight {
+            @media screen and (max-width: $br) {
+                font-size: 0.8em;
+            }
+        }
     }
 }
 
@@ -724,4 +729,47 @@ footer {
     }
 }
 
-// social media
+.post__prev_next {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2em;
+    font-family: sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    align-items: center;
+    @media screen and (max-width: $br) {
+        font-size: 0.9em;
+        gap: 0.5rem;
+    }
+}
+
+.post__prev_next .post__btn {
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post__prev_next .post__btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.post__prev_next .post__btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.post__prev_next .post__btn.current {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+
