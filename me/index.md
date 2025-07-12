@@ -15,3 +15,7 @@ Read my last [post]({% for post in site.categories.programming limit: 1%}{{ post
 
 Enjoy this day! 
 
+<div class="header__subscription" align="middle">
+    <p> {% include social_media.html %} </p>
+</div>
+
