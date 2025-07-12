@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    {% if page.title %}
-    <title>{{ page.title }} - {{site.name}}</title>
-    {% else %}
+        {% if page.title %}
+        <title>{{ page.title }} - {{site.name}}</title>
+        {% else %}
         <title>{{ site.name }}</title>
-    {% endif %}
+        {% endif %}
 
 
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    {% if site.google_verification %}
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+        {% if site.google_verification %}
         <meta name="google-site-verification" content="{{ site.google_verify }}">
-    {% endif %}
+        {% endif %}
 
-    <link rel="icon" href="/assets/img/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-</head>
+        <link rel="icon" href="/assets/img/favicon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
+        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+        <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+    </head>
 
-<body>
-
-    <div class="wrapper">
-        <a href="{{ site.url }}/feed.xml">
-              <img src="/images/rss-svgrepo-com.svg" width="24" height="24" alt="rss feed" />
-        </a>
-        
-        <div id="search-icon" align="right">
-            <a href="{{ site.url }}/search">
-                <img alt="Qries" src="/images/search.svg" width="24" height="24" />
+    <body>
+        <div class="wrapper">
+            <a href="{{ site.url }}/feed.xml">
+                <img src="/images/rss-svgrepo-com.svg" width="24" height="24" alt="rss feed" />
             </a>
+
+            <div id="search-icon" align="right">
+                <a href="{{ site.url }}/search">
+                    <img alt="Qries" src="/images/search.svg" width="24" height="24" />
+                </a>
+            </div>
+
+            <div class="wrapper__navigation" align="middle">
+                {% include navigation.html %}
+            </div>
+
+            {{ content }}
         </div>
 
-        <div class="wrapper__navigation" align="middle">
-            {% include navigation.html %}
+        <div align=middle >
+            <a href = "{{ site.url }}/datenschutz">Datenschutz</a>
+            <a href = "{{ site.url }}/impressum">Impressum</a>
         </div>
-     
-        {{ content }}
-    </div>
 
-    <div align=middle >
-        <a href = "{{ site.url }}/datenschutz">Datenschutz</a>
-        <a href = "{{ site.url }}/impressum">Impressum</a>
-    </div>
+        <footer>
+            &copy; 2025 Baremetallics. All rights reserved. Created by Daniel Paredes (daleonpz)
+        </footer>
 
-<footer>
-    &copy; 2025 Baremetallics. All rights reserved. Created by Daniel Paredes (daleonpz)
-  </footer>
-
-
-</body>
+    </body>
 
 </html>
