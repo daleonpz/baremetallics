@@ -814,3 +814,59 @@ footer {
     background-color: #ffe27d;
 }
 
+// Post Tags
+.post-tags {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+.post-tags .tag {
+  display: inline-block;
+  background: #f2c94c;
+  color: #000;
+  padding: 0.2em 0.6em;
+  margin-right: 5px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.post-tags .tag:hover {
+  background: #ffe27d;
+}
+
+.tag-index {
+  list-style: none;
+  padding-left: 0;
+}
+.tag-index li {
+  margin: 4px 0;
+}
+
+// Tags html
+.tag-block {
+    margin-bottom: 1rem;
+}
+
+.tag-link {
+    font-weight: normal;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.tag-link:hover {
+    text-decoration: underline;
+}
+
+.tag-posts {
+    margin-left: 1rem;
+}
+
+.tag-posts.hidden {
+    display: none;
+}
+
+.tag-posts li {
+    margin-bottom: 0.2rem;
+}
+
