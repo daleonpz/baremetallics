@@ -3,6 +3,7 @@ layout: post
 title: Tools for C quality code 
 category: programming
 description: tools for c  quality code 
+tags: [c, quality, tools, tips]
 ---
 
 > “Quality is not an act; it is a habit” - Aristotle 

@@ -3,6 +3,7 @@ layout: post
 title: Secure Boot for Embedded Devices - An Example
 category: programming
 description: Learn how to implement secure boot for embedded devices using an example. Secure boot ensures that only authorized firmware is executed on the device, protecting it from unauthorized modifications.
+tags: [security, cryptography]
 ---
 
 Secure boot is a critical security feature for embedded devices. It ensures that only authorized firmware runs on a device, protecting against unauthorized modifications or attacks. In this post, I'll explain how secure boot works using a simple example.

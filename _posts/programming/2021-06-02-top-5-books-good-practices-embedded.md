@@ -3,6 +3,7 @@ layout: post
 title: Top 5 Books About Best Practices in Embedded Systems 
 category: programming
 description: top 5 books about best practices embedded systems C 
+tags: [books, best practices, tips]
 ---
 
 Best practices are methods that have been demonstrated to be effective and can be replicable in other contexts. 

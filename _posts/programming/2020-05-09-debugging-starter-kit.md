@@ -3,6 +3,7 @@ layout: post
 title: The Debugging Starter Kit
 category: programming
 description: Which tools you need to use to reduce your debugging time
+tags: [tips, hack, debug, tools]
 ---
 
 

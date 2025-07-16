@@ -3,6 +3,7 @@ layout: post
 title: Minimalist Assert Function for Embedded C 
 category: programming
 description: minimalist assert function for embedded c
+tags: [c, debug, tips, howto, arm]
 ---
 
 Assert is a great tool to find errors, bugs, or unintended behaviors on runtime. If implemented correctly, asserts give developer context information about when and where in the code an issue showed up.

@@ -2,6 +2,7 @@
 layout: post
 title: Sync Taskwarrior with Dropbox
 category: programming
+tags: [tools, tips]
 ---
 
 I found this tool called [Task Warrior](https://taskwarrior.org/), which I think is pretty impressive. 

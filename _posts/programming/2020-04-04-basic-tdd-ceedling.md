@@ -3,6 +3,7 @@ layout: post
 title: Test-Driven Development (TDD) with ceedling 
 category: programming
 description: Test-Driven Development example with ceedling
+tags: [testing, tools, quality]
 ---
 
 We gave already an introduction to Test-Driven Development based on the  book [Test driven development for embedded C](https://amzn.to/2wsWFnp) in a previous [post]({% post_url programming/2020-03-28-tdd-intro %}).

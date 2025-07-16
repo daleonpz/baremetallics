@@ -2,6 +2,7 @@
 layout: post
 title: Linking basics
 category: programming
+tags: [ basics, binary, compiler ]
 ---
 
 In my journey to master the most obscure and secrets arts of computer systems, I started by mastering the basics. 

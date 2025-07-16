@@ -2,6 +2,7 @@
 layout: post
 title: Linker scripts 
 category: programming
+tags: [basics, linker]
 ---
 
 I while ago I wrote a post about [linking basics]({% post_url programming/2017-02-11-linking-basics %}), where I talked about ELF files and their structure. 

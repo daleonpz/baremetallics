@@ -2,6 +2,7 @@
 layout: post
 title: Embedded Ada Journey 003 - Project structure
 category: programming
+tags: [ada, stm32]
 ---
 
 It's more than year that I stopped learning Ada, but I'm back!!!. 

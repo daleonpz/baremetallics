@@ -2,6 +2,7 @@
 layout: post
 title: Understanding C declarations 
 category: programming
+tags: [c, declarations, noob ]
 ---
 
 In this journey to learn the most obscure secrets of C, I realized that somehow I could read C declarations but I didn't have a deep understanding of it. 

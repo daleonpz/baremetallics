@@ -2,6 +2,7 @@
 layout: post
 title: The C Coding Standard 
 category: programming
+tags: [c, coding standard, security, quality ]
 ---
 
 Whenever I read a programming book I do notes, test the examples and try to solve the problems.

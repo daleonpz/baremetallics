@@ -2,6 +2,7 @@
 layout: post
 title: Details of C that every not so noob forgets
 category: programming
+tags: [c, noob ]
 ---
 
 I already wrote a post about [Details of C that every noob forgets]({% post_url programming/2017-04-10-C-noob-details %}).

@@ -3,6 +3,7 @@ layout: post
 title: Lock, Unlock, Blocked? 
 category: programming
 description: Learn how to manage threading in C++ with mutexes and condition variables. Avoid common pitfalls in multi-threaded applications by optimizing lock usage and preventing queue blocking during long operations.
+tags: [story, debug, c++, threading]
 ---
 
 I’ve been working on a multi-threaded C++ app with threads. It’s pretty simple on paper: think of it like a mail service that gets letters (requests) and puts them in a queue. Then there’s a worker thread who picks up the letters and checks if they’re formatted right. Easy, right? Just throw a mutex on the queue, and call it a day. Yeah, not quite!
