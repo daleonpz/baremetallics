@@ -8,45 +8,43 @@ permalink: /tags/
     <h1 align=middle> All Tags</h1>
 </div>
 
-<ul id="tag-list">
+
+<input type="text" id="tagSearch" placeholder="Search tags..." onkeyup="filterTags()" style="width: 100%; padding: 0.5em; margin-bottom: 1em; font-size: 1rem;">
+
+<ul id="tagList">
   {% for tag in site.tags %}
-    <li class="tag-block">
-      <a href="#{{ tag[0] | slugify }}" class="tag-link" data-tag="{{ tag[0] | slugify }}">
+  <li class="tag-item">
+    <a href="#{{ tag[0] | slugify }}" class="tag-toggle" data-tag="{{ tag[0] | slugify }}" onclick="togglePosts(this)">
         {{ tag[0] }} ({{ tag[1].size }})
       </a>
-      <ul class="tag-posts hidden" id="tag-{{ tag[0] | slugify }}">
-        {% for post in tag[1] %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </li>
+    <ul class="tag-posts" style="display: none;">
+      {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
   {% endfor %}
 </ul>
 
-<script>
-  // Toggle tag posts on click
-  document.querySelectorAll('.tag-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const tag = this.dataset.tag;
-      const posts = document.getElementById(`tag-${tag}`);
-      posts.classList.toggle('hidden');
+ <script>
+     function togglePosts(button) {
+           const postList = button.nextElementSibling;
+           const isVisible = postList.style.display === 'block';
+           postList.style.display = isVisible ? 'none' : 'block';
+         }
 
-      // Update URL hash without scrolling
-      history.replaceState(null, null, `#${tag}`);
-    });
-  });
+       function filterTags() {
+             const input = document.getElementById('tagSearch').value.toLowerCase();
+             const tags = document.querySelectorAll('#tagList .tag-item');
 
-  // If hash is present on page load, open the relevant tag
-  window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-      const posts = document.getElementById(`tag-${hash}`);
-      if (posts) {
-        posts.classList.remove('hidden');
-        // Optional: scroll into view
-        document.querySelector(`[data-tag="${hash}"]`)?.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-</script>
+             tags.forEach(tag => {
+                     const tagName = tag.querySelector('.tag-toggle').textContent.toLowerCase();
+                     const match = tagName.includes(input);
+                     tag.style.display = match ? '' : 'none';
+
+                     // Expand matching tags during search
+                     const postList = tag.querySelector('.tag-posts');
+                     postList.style.display = input && match ? 'block' : 'none';
+                   });
+           }
+ </script>
