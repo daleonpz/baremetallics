@@ -48,3 +48,38 @@ permalink: /tags/
                    });
            }
  </script>
+
+ <script>
+   function togglePosts(button) {
+     const postList = button.nextElementSibling;
+     const isVisible = postList.style.display === 'block';
+     postList.style.display = isVisible ? 'none' : 'block';
+   }
+
+   function filterTags() {
+     const input = document.getElementById('tagSearch').value.toLowerCase();
+     const tags = document.querySelectorAll('#tagList .tag-item');
+
+     tags.forEach(tag => {
+       const tagName = tag.querySelector('.tag-toggle').textContent.toLowerCase();
+       const match = tagName.includes(input);
+       tag.style.display = match ? '' : 'none';
+
+       const postList = tag.querySelector('.tag-posts');
+       postList.style.display = input && match ? 'block' : 'none';
+     });
+   }
+
+   // Auto-expand tag if it's in the URL hash
+   window.addEventListener('DOMContentLoaded', () => {
+     const hash = decodeURIComponent(location.hash.substring(1)); // Remove the '#' and decode
+     if (hash) {
+       const match = document.querySelector(`[data-tag="${hash}"]`);
+       if (match) {
+         togglePosts(match);
+         match.scrollIntoView({ behavior: 'smooth', block: 'start' });
+       }
+     }
+   });
+ </script>
+
