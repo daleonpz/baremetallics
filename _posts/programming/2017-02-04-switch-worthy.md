@@ -2,6 +2,7 @@
 layout: post
 title: When does it worthy to use switch instead of if-else in C?
 category: programming
+tags: [c, compiler, optimization]
 ---
 
 In college I asked this all the time, specially when there were a small set of choices. I read the book [Computer Systems: A Programmer's Perspective ](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X/ref=sr_1_1?ie=UTF8&qid=1490718500&sr=8-1&keywords=computer+systems) and it explains with examples what compiler does when facing either a switch or if-else statement.

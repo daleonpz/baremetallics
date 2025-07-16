@@ -3,6 +3,7 @@ layout: post
 title: Rakefile 101 for Embedded Projects
 category: programming
 description: rake for C embedded projects
+tags: [build, tools]
 ---
 
 This is a short introduction to Rakefiles.

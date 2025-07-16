@@ -3,6 +3,7 @@ layout: post
 title: Running YOLOv5 on a Microcontroller 
 category: programming
 description: Learn how to run YOLOv5 on a microcontroller. Optimize the model for performance and memory constraints to run object detection on edge devices.
+tags: [machine learning, tinyml, esp32, computer vision, c++]
 ---
 
 

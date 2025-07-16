@@ -3,6 +3,7 @@ layout: post
 title: Always cast. A Left-shift story
 category: programming
 description: debugging stories. left shift and C Programming 
+tags: [debug, c, arm, basics]
 ---
 
 I was working on a small project with a Texas Instruments microcontroller. 

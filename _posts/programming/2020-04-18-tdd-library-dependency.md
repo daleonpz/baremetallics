@@ -3,6 +3,7 @@ layout: post
 title: TDD with third-party libraries dependency
 category: programming
 description: Test-Driven Development. Breaking third-party dependencies
+tags: [testing, quality, tips, debug]
 ---
 
 This is the fourth post in our Test-Driven Development journey. 

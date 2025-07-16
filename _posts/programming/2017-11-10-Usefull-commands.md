@@ -2,6 +2,7 @@
 layout: post
 title: Usefull tools
 category: programming
+tags: [tools]
 ---
 
 Here is the list of tools I often use and I think they are superuseful:

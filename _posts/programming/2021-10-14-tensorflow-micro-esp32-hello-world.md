@@ -3,6 +3,7 @@ layout: post
 title: ESP32 Tensorflow Micro Hello World
 category: programming
 description: hello world for tensorflow micro esp32 
+tags: [tinyml, esp32, howto, machine learning, tensorflow]
 ---
 
 I'm starting learing about TinyML a.k.a "Machine Learning for Embedded Systems", and I'm logging my journey. This post is about how to setup your toolchain, and deploy the "Hello World" on the [ESP-EYE](https://www.mouser.de/ProductDetail/Espressif-Systems/ESP-EYE?qs=l7cgNqFNU1iWrlpTZmwCRA==). 

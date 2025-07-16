@@ -3,6 +3,7 @@ layout: post
 title: How to Extract F2FS Image from Android Device Flash
 category: programming
 description: How to Extract F2FS Image from Android Device Flash
+tags: [hack, debug, binary]
 ---
 
 For my work, I had to read the flash memory from an android device, find the filesystem (f2fs), mount it, and extract some files. 

@@ -3,6 +3,7 @@ layout: post
 title: Top 5 Books to Start with Embedded Systems 
 category: programming
 description: top 5 books to start with embedded systems
+tags: [books, tips, basics]
 ---
 
 If you're completely new in this area, this is the selection I would recommend. It's important to note that if you have no programming experience or engineer background, these books would a bit hard to read. 

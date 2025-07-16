@@ -2,6 +2,7 @@
 layout: post
 title: First encounter with ESP32
 category: programming
+tags: [esp32, debug]
 ---
 
 I had some issues working with the ESP32. I will list all the issues I had and their solutions. For the record I use Manjaro 17.1.7 - 64bits.

@@ -3,6 +3,7 @@ layout: post
 title: No More Eclipse Workflow
 category: programming
 description: remove your workflow from eclipse
+tags: [opinion, build, tips]
 ---
 
 Working with makefiles has a huge advantage over working on Eclipse.

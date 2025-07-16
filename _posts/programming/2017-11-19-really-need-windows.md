@@ -2,6 +2,7 @@
 layout: post
 title: If you really need to use Windows
 category: programming
+tags: [windows, linux, tools, vim]
 ---
 
 I'm doing a masters in Germany but I don't have a _portable_ laptop. It is falling to pieces, so basically my laptop is used as a desktop. so weit, so gut... I am a **Linux** user, my keyboard layout is **programmer Dvorak**  and a use **vim** a lot as well.  However, sometimes I need to use Windows laptops or desktops to get my uni related things done when I am at the University.

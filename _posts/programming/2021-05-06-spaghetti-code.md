@@ -3,6 +3,7 @@ layout: post
 title: Spaghetti Code in C 
 category: programming
 description: reduce complexity in C spaghetti code 
+tags: [quality, tips, debug, coding standard, c]
 ---
 
 > It's OK to build very complex software, but you don't have to build it in a complicated way. 

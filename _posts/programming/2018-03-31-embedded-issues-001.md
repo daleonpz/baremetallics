@@ -2,6 +2,7 @@
 layout: post
 title: Embedded Issues 001 - Getting a new board
 category: programming
+tags: [hardware, tips]
 ---
 
 I just received a new board from a company to do some stuff as "entry test". 

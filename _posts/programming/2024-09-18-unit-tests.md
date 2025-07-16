@@ -3,6 +3,7 @@ layout: post
 title: Tips for Writing Embedded Unit Tests
 category: programming
 description: Unit testing helps ensure the reliability of software, especially in embedded systems where failures can be costly. In this post, we’ll cover behavior-driven testing, understanding test size and scope, and how to prepare your system for failures.
+tags: [testing, best practices, debug]
 ---
 
 Unit testing helps ensure the reliability of software, especially in embedded systems where failures can be costly. In this post, we’ll cover behavior-driven testing, understanding test size and scope, and how to prepare your system for failures.

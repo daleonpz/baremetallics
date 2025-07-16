@@ -3,6 +3,7 @@ layout: post
 title: Automatic C Formatting
 category: programming
 description: format C code fast, automatically 
+tags: [style, quality, tools, tips]
 ---
 
 When working alone or in a team, it's important to keep a consistent code style. And the easiest way is to automate it.

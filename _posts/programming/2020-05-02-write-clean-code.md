@@ -3,6 +3,7 @@ layout: post
 title: How To Write Clean Code
 category: programming
 description: Learn how to write clean C Code
+tags: [quality, tips]
 ---
 
 

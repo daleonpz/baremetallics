@@ -2,6 +2,7 @@
 layout: post
 title: How do microcontrollers load an application?
 category: programming
+tags: [basics, tips, arm]
 ---
 
 I was learning about how to program microcontrollers in C and I wasn't aware about the importance of startup files, vector tables and the linker.

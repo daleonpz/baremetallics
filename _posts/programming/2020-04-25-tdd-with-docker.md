@@ -3,6 +3,7 @@ layout: post
 title: TDD workflow with Docker
 category: programming
 description: Test-Driven Development. Use docker for building your system.
+tags: [testing, quality, tips, debug]
 ---
 
 This is the fifth and final post in our Test-Driven Development journey for beginners.

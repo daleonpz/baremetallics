@@ -2,6 +2,7 @@
 layout: post
 title: Embedded Ada Journey Extras - Ravenscar / SPARK
 category: programming
+tags: [ada, stm32]
 ---
 
 If your google something about Ada programming language you will encounter yourself with the following terms **Ravenscar Profile** and **SPARK**.
