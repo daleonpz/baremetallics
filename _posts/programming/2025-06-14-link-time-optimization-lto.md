@@ -17,6 +17,9 @@ CONFIG_LTO=y
 
 This alone reduced the firmware size by 4%, with zero code changes  🤯.
 
+* 
+{:toc}
+
 # Before and After: Size Comparison
 
 Without LTO:

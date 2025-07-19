@@ -20,6 +20,9 @@ Wouldn't it be better to manage all log levels from one point? ..mabye `prj.conf
 
 That’s exactly what this post is about.
 
+* 
+{:toc}
+
 # Setting Up a Custom Kconfig for Logging
 Zephyr's CMake system automatically picks up a Kconfig file if it’s placed in the same directory as your application’s CMakeLists.txt.
 
