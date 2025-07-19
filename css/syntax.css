@@ -10,12 +10,13 @@
   line-height: 1.5;
 }
 
-.highlight .c     { color: #75715e } /* Comment */
+.highlight .c     { color: #4babff } /* Comment */
 .highlight .err   { color: #f92672 } /* Error */
 .highlight .k     { color: #66d9ef } /* Keyword */
 .highlight .o     { color: #f92672 } /* Operator */
-.highlight .cm    { color: #75715e } /* Comment.Multiline */
-.highlight .cp    { color: #75715e } /* Comment.Preproc */
+.highlight .cm    { color: #4babff } /* Comment.Multiline */
+.highlight .cpf   { color: #59ff4b } /* Comment.PreprocFile */
+.highlight .cp    { color: #ff368b } /* Comment.Preproc */
 .highlight .nt    { color: #f92672 } /* Name.Tag */
 .highlight .s     { color: #e6db74 } /* Literal.String */
 .highlight .na    { color: #a6e22e } /* Name.Attribute */
