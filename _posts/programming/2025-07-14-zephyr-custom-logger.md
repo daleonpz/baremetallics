@@ -2,6 +2,7 @@
 layout: post
 title: Creating a Custom Logger with Zephyr and Kconfig
 category: programming
+description: Learn how to create a custom logger in Zephyr using Kconfig to manage log levels across multiple modules.
 tags: [zephyr, logger, arm, kconfig]
 ---
 

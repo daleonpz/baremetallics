@@ -29,6 +29,7 @@
 .highlight .nf    { color: #a6e22e } /* Name.Function */
 .highlight .nn    { color: #f8f8f2 } /* Name.Namespace */
 .highlight .nv    { color: #f8f8f2 } /* Name.Variable */
+.highlight .kt    { color: #ffff00 } /* Name.Type */
 .highlight .w     { color: #f8f8f2 } /* Text.Whitespace */
 .highlight .mf    { color: #ae81ff } /* Literal.Number.Float */
 .highlight .mh    { color: #ae81ff } /* Literal.Number.Hex */
