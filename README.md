@@ -15,7 +15,6 @@ We don't want you to decipher tutorials, guides or books to learn.
 
 ### Spread the Word
 Let people know about this proyect.
-And how can they [support us](https://www.patreon.com/baremetallics).
 
 ### Write a Post
 You can also write a post or tutorial. There are two ways to do it:
@@ -25,8 +24,6 @@ Write a post in Markdown format and send us by mail to [support@baremetallics.co
 You can find the template with instructions [here](https://raw.githubusercontent.com/daleonpz/baremetallics/master/_drafts/2017-02-04-getting-started.md).
 
 2. Create a pull request on Github.
-Detailed instructions are not yet ready. But we'll post it soon ;).
-
 
 ### Improve the Website
 Right now, there are no web-developers or graphic/UI-designers in our team.
