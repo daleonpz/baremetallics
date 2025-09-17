@@ -315,7 +315,7 @@ blockquote {
             }
         }
         h2 {
-            font-size: 1.4em;
+            font-size: 1.5em;
             font-weight: 700;
             margin-top: 25px;
             margin-bottom: 5px;
@@ -329,6 +329,13 @@ blockquote {
             margin-bottom: 20px;
             @media screen and (max-width: $br) {
                 font-size: 0.8em;
+            }
+            code {
+                background: #272822;
+                padding: 2px 4px;
+                border-radius: 4px;
+                font-size: 0.9em;
+                color: $color-white;
             }
         }
         a {
@@ -345,7 +352,7 @@ blockquote {
             font-style: italic;
         }
         ol,ul {
-            font-size: 1.2em;
+            font-size: 1.1em;
             list-style: circle;
             margin-left: 30px;
             margin-top: 10px;
@@ -698,7 +705,7 @@ footer {
     border-radius: 0.5rem;
     max-width: 100%;
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.6;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -737,6 +744,7 @@ footer {
     text-decoration: none;
     border-bottom: 1px dashed #ccc;
     transition: all 0.2s ease-in-out;
+    font-size: 1rem;
 }
 
 #markdown-toc a:hover {
