@@ -87,7 +87,7 @@ void set_c(PUBLIC_HANDLE h, int value);
 /* example 1 */
 void test() {     
 	Device dev2 = { .id = 2, .print = Device_print };     
-	dev2.print(&dev2);  // Pass by pointer, no malloc 
+	dev2.print(&dev2);  /* Pass as pointer, no malloc */
 }
 
 /* example  2 */
@@ -101,11 +101,11 @@ Device* Device_create(int id) {
         devices[next].print = Device_print;
         return &devices[next++];
     }
-    return NULL; // pool exhausted
+    return NULL; /* pool exhausted */
 }
 ```
 
-- Each methods takes the object instanced defined by `XX_HANDLER` or a `pointer to struct` as first argument. 
+- Each methods takes the object instance defined by `XX_HANDLER` or a `pointer to struct` as first argument. 
 
 For example in c++ you would do something like
 
@@ -119,7 +119,7 @@ my_method( my_obj, arg1, arg2, ...);
 ```
 
 ## FAQ
-- Is that the only way to define classes and methods in C?  Nope, I'll present more complicated examples, but the main idea is stays the same.  Use `struct` to emulate typical cpp or python classes, and pass the object instand as first argument to the  method.
+- Is that the only way to define classes and methods in C?  Nope, I'll present more complicated examples, but the main idea stays the same.  Use `struct` to emulate typical cpp or python classes, and pass the object instance as first argument to the  method.
 - Is it possible to have private class methods and members in C? Yes, you'll see in the following sections how. 
 
 # Public and private methods and interfaces
@@ -154,13 +154,13 @@ void set_c(public_t * self, int value);
 #include <stdlib.h>
 #include "foo.h"
 
-/*  Private Implementation */
+/*  Private Members */
 struct _internal {
     int h;
     char c;
 };
 
-/*  Public Implementation   */
+/*  Implementation of Public Methods */
 public_t * init(){
     public_t* self = (public_t*)malloc(sizeof(public_t));
     self->priv = (struct _internal *)malloc(sizeof (struct _internal));
@@ -182,7 +182,7 @@ void destroy(public_t* self){
 
 ## Things to notice
 1. `struct _public` has a member called `internal_t * priv` , which is a pointer to a struct defined in the implementation file `foo.c` 
-2. The public implementation of the class methods manipulates the internal variables in `struct _internal`.  [checkpoint]
+2. The implementation of the public class methods in `foo.c` manipulates the internal variables in `struct _internal`. 
 
 ```c
 /* main.c */
@@ -194,7 +194,7 @@ int main (){
     pub = init();
     pub->p = 10;
 
-   //  pub->priv->h = 10;  // Incomplete definition of type 'internal_t' (aka 'struct _internal')
+   //  pub->priv->h = 10;  /* Incomplete definition of type 'internal_t' (aka 'struct _internal') */
 
     set_c(pub, 20);
     destroy(pub);
@@ -305,10 +305,10 @@ int main (){
 }
 ```
 
-As you can see, the following code from `foo.c` is not visible in `main.c`
+As you can see, the code written in `foo.c` is not visible in `main.c`
 
 ```c
-// From foo.c
+/* From foo.c *
 struct _internal {
     int h;
     char c;
@@ -326,7 +326,7 @@ If you want to understand what happens after compilation, a while ago I wrote a 
 
 ## Example in Linux code
 
-in modem maneger using private and public.. more complex example
+Here's how the modem manager uses private and public code to define 3GPP profiles
 
 ```c
 /*********************************************/
