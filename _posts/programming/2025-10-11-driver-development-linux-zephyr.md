@@ -76,6 +76,7 @@ static const struct figure_ops circle_ops = {
 ## Things to notice
 - The base class defines methods as function pointers inside a struct.
 - The derived class assigns its own functions to those pointers.
+- The first member of the derived class **MUST BE** the base class. Because in C, the address of a struct is the same as the address of its first member. This allows us to cast between base and derived types easily.
 
 # Auto-registration
 Linux drivers also register themselves automatically at boot. This avoids hardcoding and makes driver discovery consistent.
