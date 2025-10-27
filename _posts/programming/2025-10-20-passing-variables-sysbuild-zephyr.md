@@ -70,7 +70,7 @@ west build --sysbuild ... -- -Dmy_sample_FOO=BAR
 
 But here’s the catch: **It doesn’t work**.
 
-```
+```sh
 west build --pristine --sysbuild  -- -DBOARD=nucleo_wb55rg -Dotau_example_SW_VERSION=9
 
 ...
