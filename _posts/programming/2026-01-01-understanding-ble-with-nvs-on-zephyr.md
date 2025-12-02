@@ -15,7 +15,6 @@ For reference, I’m testing on an nRF52840, but the same principles apply to ot
 * 
 {:toc}
 
-
 # Basic Concepts
 ## Non-Volatile Flash Memory
 To enable NVS in Zephyr, you first need this config in your `prj.conf`:
