@@ -64,6 +64,6 @@ Of course you should also send the image or images you use.
 
 # Quotes
 
-Read my quote. 
+Read my quote.
 
 > Here a quote 
