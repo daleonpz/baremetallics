@@ -2,24 +2,35 @@
 layout: post
 title: Maxwell's Equations
 categories: programming
-description:
+description: Summary of Maxwell's equations and their relevance to PCB design and embedded systems.
 tags: [pcb, embedded, physics]
 ---
+
+Maxwell’s equations describe how electric and magnetic fields behave. If you work on embedded systems or PCB design, these equations explain many things you see in real hardware.
 
 * 
 {:toc}
 
+# 0. Divergence and Curl
+
+Let's quickly review two important vector calculus concepts that appear in Maxwell’s equations:
+
+- **Divergence** ($\nabla \cdot$) measures how much a vector field spreads out from a point. Positive divergence means field lines are spreading out (like from a positive charge), while negative divergence means they are converging (like towards a negative charge).
+- **Curl** ($\nabla \times$) measures how much a vector field rotates around a point. A nonzero curl means the field has a swirling or rotational component.
+
+---
 
 # 1. Gauss’s Law
 
-Describen la influencie de una carga en el campo electrico que la rodia.
+Describes how an electric charge influences the electric field around it.
+
 
 ## Differential Form
 
-describe exactamente la influencia de una sola carga en el campo electrico que la rodea.
+Describes exactly how a single charge affects the electric field around it.
 
-Que tanto una carga hace que el $\mathbf{E}$ campo electrico se "diverge" alrededor de ella.
-Como la gravedad, si divergencia es **negativa**, o antigravedad, si divergencia es **positiva**.
+It tells us how much the electric field **diverges** from a charge.
+Think of it like gravity: if divergence is **positive**, field lines spread out; if negative, they converge.
 
 $$
 \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
@@ -31,14 +42,11 @@ $$
 | $\rho$ | Charge density | $\mathrm{C/m^3}$ |
 | $\varepsilon_0$ | Vacuum permittivity | $\mathrm{F/m}$ |
 
-
-<!-- add a picture of a charge with electric field lines diverging from it -->
-
-
 ## Integral Form
- describa cuanta "energia" o "potencial" hay debido a la presencia de una carga.
-Describes how much force (potential) a charge exerts on other charges in its vicinity.
-It states that the total electric flux through a closed surface is proportional to the charge enclosed by that surface.
+
+Describes how much total electric “flux” passes through a closed surface due to enclosed charge.
+
+In simple terms: how much “influence” a charge has on its surroundings.
 
 $$
 \oint_S \mathbf{E} \cdot d\mathbf{A}
@@ -49,94 +57,82 @@ $$
 | Symbol | Meaning | SI Unit |
 |---|---|---|
 | $Q_{\text{enc}}$ | Enclosed charge | $\mathrm{C}$ |
-| $d\mathbf{A}$ | Differential area vector | $\mathrm{m^2}$ |
+| $d\mathbf{A}$ | Surface area element | $\mathrm{m^2}$ |
 
+## PCB example
+- If you have a floating copper island on a PCB, it can accumulate charge and create unwanted coupling with nearby signal traces.
+- On a PCB, a single via or pad connected to a high voltage net creates an electric field around it, affecting nearby traces (especially in high-impedance analog circuits).
 
-## How Electric Fields are related to Currents
+## How Electric Fields relate to Currents
 
-Given a current density $\mathbf{J}$, we can relate it to the electric field $\mathbf{E}$:
+Current density $\mathbf{J}$ is related to electric field $\mathbf{E}$:
 
 $$
 \mathbf{J} = \sigma \mathbf{E}
 $$
 
-where $\sigma$ is the electrical conductivity of the material. This tells us how easily charges can move through the material in response to an electric field. In a conductor, $\sigma$ is high, so a small electric field can produce a large current density. In an insulator, $\sigma$ is low, so a larger electric field is needed to produce the same current density.
+where $\sigma$ is conductivity.
+
+- High $\sigma$ (copper trace) → current flows easily
+- Low $\sigma$ (FR4) → almost no current flow
+
+Total current:
 
 $$
 I = \int_S \mathbf{J} \cdot d\mathbf{A}
 $$
 
-then 
+Substituting:
 
 $$
 I = \int_S \sigma \mathbf{E} \cdot d\mathbf{A}
 $$
 
-if we assume an uniform cross-sectional area $A$ and a uniform electric field $\mathbf{E}$ along the length of the wire, this simplifies to:
+Assuming uniform electrical field and area:
 
 $$
 I = \sigma E A
 $$
 
+Voltage and electric field:
 
-Electric potential $V$ in a wire is related to the electric field $\mathbf{E}$ by:
 
 $$
 V_{ab} = -\int_a^b \mathbf{E} \cdot d\mathbf{l}
 $$
 
-if we assume a uniform electric field along the length of the wire, this simplifies to:
+Assuming a uniform electric field along the length of the wire:
 
 $$
-V = E \cdot L
+V = E \cdot L \implies E = \frac{V}{L}
 $$
 
-where $E$ becomes:
-
-$$
-E = \frac{V}{L}
-$$
-
-then replacing $E$ in the equation for current $I$:
-
-$$
-I = \sigma E A
-$$
-
+Substitute into current:
 
 $$
 I = \sigma \frac{V}{L} A
 $$
 
-and Resistance $R$ is defined as:
+Resistance:
 
 $$
 R = \frac{V}{I} = \frac{L}{\sigma A}
 $$
 
+**PCB example:**
+- Long thin trace → higher resistance
+- Wide copper pour → lower resistance
+- Power traces are made wide to reduce voltage drop
 
 ---
 
 # 2. Gauss’s Law for Magnetism
 
-Describen el comportamiento de los campos magneticos.
+Describes how magnetic fields behave.
 
 ## Differential Form
 
-dice que los campos magneticos $\mathbf{B}$ forman siempre loops que van de norte a sur.
-
-$$
-\oint_S \mathbf{B} \cdot d\mathbf{A} = 0
-$$
-
-| Symbol | Meaning | SI Unit |
-|---|---|---|
-| $\mathbf{B}$ | Magnetic flux density | $\mathrm{T}$ |
-| $d\mathbf{A}$ | Differential area vector | $\mathrm{m^2}$ |
-
-## Integral Form
-
-dice que si se coloca una carga magnetica $q_m$ en un campo magnetico $\mathbf{B}$, la carga $q_m$ no va a poder solo "alejar" o "atraer" el campo magnetico $\mathbf{B}$, ya que no existen los monopolos. Esa carga $q_m$ siempre va a tener un norte y un sur, el norte se "aleja" y el sur "atrae", lo que da como resultado un flujo neto de campo magnetico $\mathbf{B}$ a traves de cualquier superficie cerrada igual a cero. A differencia de las cargas electricas que si pueden solo "alejar" o "atraer" el campo electrico $\mathbf{E}$ alrededor de ellas, lo que da como resultado un flujo neto de campo electrico $\mathbf{E}$ a traves de cualquier superficie cerrada diferente de cero.
+A single "magnetic charge" would have a north and south pole, so the field lines that "diverge" from the north pole would "converge" at the south pole, resulting in zero net divergence. That's why there are no magnetic monopoles.
 
 $$
 \nabla \cdot \mathbf{B} = 0
@@ -144,17 +140,28 @@ $$
 
 | Symbol | Meaning | SI Unit |
 |---|---|---|
-| $\mathbf{B}$ | Magnetic flux density | $\mathrm{T}$ (tesla) |
+| $\mathbf{B}$ | Magnetic field | $\mathrm{T}$ |
+
+
+## Integral Form
+
+Total magnetic flux through any closed surface is zero, since all magnetic field lines that cross the surface must enter and exit, resulting in no net flux.
+
+$$
+\oint_S \mathbf{B} \cdot d\mathbf{A} = 0
+$$
 
 ---
 
 # 3. Faraday’s Law of Induction
 
-Describe la relacion como campos magneticos pueden generar campos electricos.
+Describes how changing magnetic fields generate electric fields.
 
 ## Differential Form
 
-describe que un cambio en un campo magnetico $\partial \mathbf{B}/\partial t$ induce un campo electrico $\mathbf{E}$. Y te dice que tan facil se puede hacer girar ese campo electrico $\mathbf{E}$ alrededor de un punto, o inidicates the circutaltion of a vector field around a point.
+A changing magnetic field creates a circulating electric field.
+It tells us how easy is to make the electric field $\mathbf{E}$ rotate around a point due to a changing magnetic field over time.
+The direction of rotation is given by the right-hand rule, and the negative sign indicates that the induced electric field opposes the change in magnetic flux.
 
 $$
 \nabla \times \mathbf{E}
@@ -165,14 +172,12 @@ $$
 | Symbol | Meaning | SI Unit |
 |---|---|---|
 | $\mathbf{E}$ | Electric field | $\mathrm{V/m}$ |
-| $\mathbf{B}$ | Magnetic flux density | $\mathrm{T}$ |
-
+| $\mathbf{B}$ | Magnetic field | $\mathrm{T}$ |
 
 ## Integral Form
 
-describe que un cambio en el flujo magnetico $\int_S \mathbf{B} \cdot d\mathbf{A}$ a traves de una superficie $S$ induce una fuerza electromotriz (emf) o voltaje $V$ en un circuito cerrado $C$ que rodea esa superficie $S$.
-
-Eso quiere decir que si se connecta una resistencia a ese circuito cerrado $C$, se va a generar una corriente $I$ en ese circuito cerrado $C$ debido a la fuerza electromotriz (emf) inducida.
+A changing magnetic flux induces voltage (EMF - electromotive force) in a loop. This is the principle behind transformers and inductors.
+If you connect a resistor to that loop, it will generate a current due to the induced EMF.
 
 $$
 \oint_C \mathbf{E} \cdot d\mathbf{l}
@@ -184,16 +189,27 @@ $$
 
 | Symbol | Meaning | SI Unit |
 |---|---|---|
-| $d\mathbf{l}$ | Differential line element | $\mathrm{m}$ |
-| $\mathbf{B}\cdot d\mathbf{A}$ | Magnetic flux element | $\mathrm{Wb}$ |
+| $d\mathbf{l}$ | Line element | $\mathrm{m}$ |
+| $\mathbf{B}\cdot d\mathbf{A}$ | Magnetic flux | $\mathrm{Wb}$ |
+
+## PCB example:
+- Any wire or trace can become an antenna if it has a changing magnetic field around it. The longer the traces and the higher the frequencies of the magnetic field, the worse the antenna effect.
 
 ---
 
 # 4. Ampère–Maxwell Law
 
-Describe la relacion como campos electricos pueden generar campos magneticos.
+Describes how electric currents and changing electric fields generate magnetic fields.
+Important for Electromagnetic Interference (EMI) in PCB design.
 
 ## Differential Form
+
+This form tells us that magnetic fields are created by two things:
+
+- Electric current flowing in a wire generates a magnetic field around it.
+- A changing electric field over time. Even if no current is physically flowing, a changing electric field can still create a magnetic field. This is why capacitors in circuits still allow AC signals to pass.
+
+It also indicates the direction of rotation of the magnetic field around the current or changing electric field, following the right-hand rule.
 
 $$
 \nabla \times \mathbf{B}
@@ -204,15 +220,32 @@ $$
 \frac{\partial \mathbf{E}}{\partial t}
 $$
 
+$$
+\nabla \times \mathbf{B}
+=
+\mu_0 \mathbf{\sigma} \mathbf{E}
++
+\mu_0 \varepsilon_0
+\frac{\partial \mathbf{E}}{\partial t}
+$$
+
 | Symbol | Meaning | SI Unit |
 |---|---|---|
-| $\mathbf{B}$ | Magnetic flux density | $\mathrm{T}$ |
+| $\mathbf{B}$ | Magnetic field | $\mathrm{T}$ |
 | $\mathbf{J}$ | Current density | $\mathrm{A/m^2}$ |
 | $\mu_0$ | Vacuum permeability | $\mathrm{H/m}$ |
 | $\varepsilon_0$ | Vacuum permittivity | $\mathrm{F/m}$ |
-| $\mathbf{E}$ | Electric field | $\mathrm{V/m}$ |
+
 
 ## Integral Form
+
+If you measure the magnetic field around a closed loop (like around a trace or wire),
+
+You will find it depends on:
+- The current passing through that loop
+- Plus the changing electric field inside it
+
+So, Magnetic fields “circulate” around currents, but also around changing electric fields.
 
 
 $$
@@ -228,7 +261,11 @@ $$
 | Symbol | Meaning | SI Unit |
 |---|---|---|
 | $I_{\text{enc}}$ | Enclosed current | $\mathrm{A}$ |
-| $\mathbf{E}\cdot d\mathbf{A}$ | Electric flux element | $\mathrm{V \cdot m}$ |
+
+## PCB example
+- The integral form explains why if you have two parallel traces that carry the same current in opposite directions, their magnetic fields will cancel each other out, reducing EMI. 
+- High-speed digital traces (SPI, USB, clocks) generate time-varying fields that can radiate EMI and also cause crosstalk with nearby traces. That's why it's important to keep them short and well-routed.
+- Current loops on a PCB create magnetic fields that can couple into nearby analog traces. That's why if a trace carries a high current, it's best to route it away from sensitive analog circuits.
 
 ---
 
@@ -242,7 +279,7 @@ $$
 \mu_0 = 4\pi \times 10^{-7}\ \mathrm{H/m}
 $$
 
-$\varepsilon_0$ and $\mu_0$ are fundamental constants that appear in Maxwell’s equations, relating electric and magnetic fields to their sources (charge and current) and to each other. They also determine the speed of light in vacuum.
+These constants define how electric and magnetic fields behave in vacuum and determine the speed of light.
 
 | Constant | Meaning | Value |
 |---|---|---|
