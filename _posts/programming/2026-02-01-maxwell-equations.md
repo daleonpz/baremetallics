@@ -59,10 +59,6 @@ $$
 | $Q_{\text{enc}}$ | Enclosed charge | $\mathrm{C}$ |
 | $d\mathbf{A}$ | Surface area element | $\mathrm{m^2}$ |
 
-## PCB example
-- If you have a floating copper island on a PCB, it can accumulate charge and create unwanted coupling with nearby signal traces.
-- On a PCB, a single via or pad connected to a high voltage net creates an electric field around it, affecting nearby traces (especially in high-impedance analog circuits).
-
 ## How Electric Fields relate to Currents
 
 Current density $\mathbf{J}$ is related to electric field $\mathbf{E}$:
@@ -285,3 +281,7 @@ These constants define how electric and magnetic fields behave in vacuum and det
 |---|---|---|
 | $\varepsilon_0$ | Vacuum permittivity | $8.854 \times 10^{-12}\ \mathrm{F/m}$ |
 | $\mu_0$ | Vacuum permeability | $4\pi \times 10^{-7}\ \mathrm{H/m}$ |
+
+# References
+- [A student's guide to Maxwell's equations](https://www.amazon.com/Students-Guide-Maxwells-Equations-Guides/dp/0521701473)
+- [Maxwell's equations - Wikipedia](https://en.wikipedia.org/wiki/Maxwell%27s_equations)
